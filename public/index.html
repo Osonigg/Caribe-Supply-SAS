@@ -1,43 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="logo2.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app for Caribe Supply S.A.S."
+    />
+    <link rel="apple-touch-icon" href="logo2.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <title>Caribe Supply SAS - Catálogo</title>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>Caribe Supply SAS</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <link rel="stylesheet" href="./src/styles.css"> 
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    
+        <div id="root">
+        
+        <header class="header">
+            <h1>CaribeSupply Catálogo</h1>
+            <nav>
+                <button id="abrir-carrito" class="btn-carrito">
+                    🛒 Carrito (<span id="contador-carrito">0</span>)
+                </button>
+            </nav>
+        </header>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+        <main class="container">
+            <section class="filtros-container">
+                <input type="text" id="filtro-busqueda" placeholder="Buscar producto...">
+                <select id="filtro-categoria">
+                    <option value="todos">Todas las categorías</option>
+                    </select>
+            </section>
+            
+            <section id="catalogo-productos" class="catalogo-productos">
+                </section>
+        </main>
+
+        <div id="modal-carrito" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" id="cerrar-carrito">&times;</span>
+                <h2>Tu Carrito de Compras</h2>
+                
+                <div id="carrito-items" class="carrito-items">
+                    </div>
+                
+                <p id="carrito-vacio-msg" style="display: none; text-align: center;">El carrito está vacío.</p>
+
+                <div class="totales-carrito">
+                    <p>Subtotal: RD$<span id="subtotal">0.00</span></p>
+                    <p>Impuestos (18%): RD$<span id="impuestos">0.00</span></p>
+                    <h3>Total: RD$<span id="total">0.00</span></h3>
+                </div>
+
+                <button id="proceder-checkout" class="btn-checkout" disabled>
+                    Proceder al Checkout
+                </button>
+            </div>
+        </div>
+
+        <div id="modal-checkout" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" id="cerrar-checkout">&times;</span>
+                <h2>Datos de Envío y Pago</h2>
+                
+                <form id="formulario-checkout">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" required>
+                    <span class="error-msg" id="error-nombre"></span>
+                    
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" required>
+                    <span class="error-msg" id="error-correo"></span>
+
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" pattern="[0-9]{10,}" required>
+                    <span class="error-msg" id="error-telefono"></span>
+
+                    <label for="direccion">Dirección de Envío:</label>
+                    <textarea id="direccion" required></textarea>
+                    <span class="error-msg" id="error-direccion"></span>
+                    
+                    <label for="provincia">Provincia / Destino:</label>
+                    <select id="provincia" required>
+                        <option value="">Seleccione un destino...</option>
+                        <option value="santo_domingo">Santo Domingo</option>
+                        <option value="santiago">Santiago</option>
+                        <option value="la_vega">La Vega</option>
+                        <option value="azua">Azua</option>
+                        <option value="barahona">Barahona</option>
+                        <option value="duarte">Duarte (San Fco. de Macorís)</option>
+                        <option value="espailiat">Espaillat (Moca)</option>
+                        <option value="la_altagracia">La Altagracia (Higuey)</option>
+                        <option value="la_romana">La Romana</option>
+                        <option value="maria_trinidad_sanchez">María T. Sánchez (Nagua)</option>
+                        <option value="monsenor_nouel">Monseñor Nouel (Bonao)</option>
+                        <option value="peravia">Peravia (Baní)</option>
+                        <option value="puerto_plata">Puerto Plata</option>
+                        <option value="salcedo">Hermanas Mirabal (Salcedo)</option>
+                        <option value="sanchez_ramirez">Sánchez Ramírez (Cotuí)</option>
+                        <option value="san_cristobal">San Cristóbal</option>
+                        <option value="san_pedro_de_macoris">San Pedro de Macorís</option>
+                        <option value="valverde">Valverde (Mao)</option>
+                        <option value="internacional">📦 Envío Internacional</option> 
+                    </select>
+                    <span class="error-msg" id="error-provincia"></span>
+                    
+                    <p class="resumen-total">Total a Pagar: **RD$<span id="total-checkout">0.00</span>**</p>
+                    
+                    <button type="submit" class="btn-confirmar">
+                        Confirmar Pedido y Pago Simulados
+                    </button>
+                </form>
+            </div>
+        </div>
+        
+    </div> 
+    
+    <script src="./src/carrito.js" defer></script> 
+  </body>
 </html>
