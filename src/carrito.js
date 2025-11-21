@@ -1,6 +1,6 @@
-// --- DATOS DE PRUEBA (Simulación de API) ---
+
 const PRODUCTOS = [
-    // 💡 Todas las extensiones cambiadas a .png 💡
+ 
     { id: 'art001', nombre: 'Tazas de aluminio', precio: 850, categoria: 'otros', imagen: 'tazas.png' },
     { id: 'art002', nombre: 'Pulsera de Larimar', precio: 3200, categoria: 'joyería', imagen: 'larimar.png' },
     { id: 'art003', nombre: 'Café Orgánico de Barahona (500g)', precio: 450, categoria: 'consumibles', imagen: 'cafeb.png' },
@@ -34,12 +34,12 @@ const PRODUCTOS = [
 ];
 
 
-// --- CONFIGURACIÓN Y ESTADO GLOBAL ---
+// --- CONFIGURACIÓN ---//
 const CARRO_KEY = 'caribeSupplyCarrito'; // Clave usada en localStorage para la persistencia.
 let carrito = []; 
 const TASA_IMPUESTOS = 0.18; // ITBIS simulado 18%
 
-// --- UTILIDADES DE LOCALSTORAGE Y PERSISTENCIA ---
+
 
 function cargarCarritoDesdeLocalStorage() {
     const carritoJSON = localStorage.getItem(CARRO_KEY);
@@ -93,7 +93,7 @@ function calcularTotales() {
     return { subtotal, impuestos, total };
 }
 
-// --- ACTUALIZACIÓN DEL DOM Y UI ---
+
 
 function renderizarProductos(productosAMostrar = PRODUCTOS) {
     const catalogoEl = document.getElementById('catalogo-productos');
@@ -118,7 +118,7 @@ function actualizarVistaCarrito() {
     const msgVacioEl = document.getElementById('carrito-vacio-msg');
     const checkoutBtn = document.getElementById('proceder-checkout');
     
-    // 1. Renderizar la lista de productos
+   
     if (carrito.length === 0) {
         carritoItemsEl.innerHTML = '';
         if (msgVacioEl) msgVacioEl.style.display = 'block';
@@ -138,7 +138,7 @@ function actualizarVistaCarrito() {
         `).join('');
     }
 
-    // 2. Renderizar los totales y contador (usando .toFixed(2) para precisión visual)
+    
     const { subtotal, impuestos, total } = calcularTotales();
     
     document.getElementById('subtotal').textContent = subtotal.toFixed(2);
@@ -147,7 +147,7 @@ function actualizarVistaCarrito() {
     document.getElementById('contador-carrito').textContent = carrito.length;
 }
 
-// --- FILTROS Y EVENTOS UI ---
+// --- FILTROS ---
 
 function aplicarFiltros() {
     const busqueda = document.getElementById('filtro-busqueda').value.toLowerCase();
@@ -163,7 +163,7 @@ function aplicarFiltros() {
 }
 
 function configurarFiltros() {
-    // Llenar dinámicamente el selector de categorías
+   
     const categorias = [...new Set(PRODUCTOS.map(p => p.categoria))];
     const selectEl = document.getElementById('filtro-categoria');
     
@@ -303,7 +303,6 @@ function configurarModal() {
 }
 
 
-// --- SOLUCIÓN A LA CONCURRENCIA DE PESTAÑAS ---
 
 function configurarListenerDeConcurrencia() {
     window.addEventListener('storage', (event) => {
