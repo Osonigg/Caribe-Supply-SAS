@@ -2,13 +2,31 @@
   text-align: justify;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    height: 10vmin;
   }
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+main {
+  display: block;
+  margin-top: 30%;
+  bottom: 30%;
+  width: 100%;
+}
+
+main .carousel {
+  background: #e0a028;
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
 }
