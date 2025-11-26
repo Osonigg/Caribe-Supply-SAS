@@ -3,8 +3,9 @@ import React from "react";
 function Carousel() {
   return (
     <>
-      <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+      <div id="myCarousel" class="carousel slide mb-6 bg-" data-bs-ride="carousel">
         {" "}
+        {/* indicadores de slide */}
         <div class="carousel-indicators">
           {""}
           <button
@@ -35,7 +36,7 @@ function Carousel() {
         
         <div class="carousel-inner">
           {" "}
-          <div class="carousel-item">
+          <div class="carousel-item ">
             {" "}
             <svg
               aria-hidden="true"
@@ -51,9 +52,10 @@ function Carousel() {
                 fill="var(--bs-secondary-color)"
               ></rect>
             </svg>{" "}
+            
             <div class="container">
               {" "}
-              <div class="carousel-caption text-start">
+              <div class="carousel-caption text-star">
                 {" "}
                 <h1>Example headline.</h1>{" "}
                 <p class="opacity-75">
@@ -78,13 +80,14 @@ function Carousel() {
               preserveAspectRatio="xMidYMid slice"
               width="100%"
               xmlns="http://www.w3.org/2000/svg"
-            >
+              >
               <rect
                 width="100%"
                 height="100%"
                 fill="var(--bs-secondary-color)"
               ></rect>
             </svg>{" "}
+            
             <div class="container">
               {" "}
               <div class="carousel-caption">
@@ -139,6 +142,7 @@ function Carousel() {
           </div>{" "}
         </div>{" "}
         
+        {/* controles de slide */}
         <button
           class="carousel-control-prev"
           type="button"

@@ -6,15 +6,17 @@ function Register() {
   const location = useLocation();
 
   return (
-    <div className="auth-container">
-      <h2>Registro de Usuario</h2>
+    <main><div className="auth-container w-60 m-auto">
       <form>
+        <h2 class="h3 mb-3 fw-normal">Registro de Usuario</h2>
+        
+       
         <label>Nombre Completo:</label>
         <br />
         <input type="text" placeholder="Jhon Doe" />
         <br />
         <br />
-
+        
         <label>Correo Electrónico:</label>
         <br />
         <input type="email" placeholder="jhondoe@example.com" />
@@ -33,7 +35,7 @@ function Register() {
         <br />
         <br />
 
-        <button type="submit">Registrarse</button>
+       <button class="btn btn-primary mb-3 w-80 py-2" type="submit">Entrar</button> 
       </form>
       <p>
         ¿Ya tienes cuenta?
@@ -41,7 +43,7 @@ function Register() {
           Inicia Sesión
         </Link>
       </p>
-    </div>
+    </div></main>
   );
 }
 

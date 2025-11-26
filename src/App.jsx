@@ -20,7 +20,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <Navigation />
       </header>
-
+ 
       <main>
         {/* Las Rutas definen qué componente se muestra según la URL */}
         <Routes>
