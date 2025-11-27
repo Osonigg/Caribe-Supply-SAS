@@ -3,5 +3,25 @@ nav {
   padding: 15px 20px;
   background: #e0a028;
   border-bottom: 1px solid #ddd;
+  justify-content: space-between;
 }
 
+.nav-link {
+  color: #fff
+}
+
+.nav-link.active  {
+  box-shadow: 0 4px 8px rgba(81, 82, 82, 0); 
+  color: brown;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  box-shadow: 0 6px 12px rgba(51, 52, 53, 0.728);
+}
+
+@media screen and (max-width: 768px) {
+  nav{
+    gap: 14px;
+  }
+}

@@ -25,7 +25,7 @@ function Login() {
           <label class="form-check-label" for="checkDefault">Recordarme</label> 
         </div> 
         
-        <button class="btn btn-primary mb-3 w-50 py-2" type="submit">Entrar</button> 
+        <button class="btn btn-primary mb-3 w-50 d-block mx-auto" type="submit">Entrar</button> 
       </form> 
 
       <p>

@@ -2,9 +2,9 @@ import React from "react";
 
 function FAQs() {
     return(
-        <>
-        <h1>FAQs</h1>
-        </>
+       <div class="form-floting my-4">
+        <h4>Preguntas Frecuentes (FAQ)</h4>
+       </div>
     );
 }
 

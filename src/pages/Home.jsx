@@ -72,17 +72,21 @@ function Home() {
       
       {/* contenido de pagina */}
       <div>
-        <div class="contentPage" height="80%" border>
-          <h1>Página de Inicio</h1>
-          <p>Bienvenido a la página principal de nuestro sitio web moderno y accesible.</p>
+        <div class="contentPage p-3" height="80%" border>
+          <h4>Caribe Supply: Tu Solución Integral en Suministros para el Hogar y la Industria en República Dominicana.</h4>
+          <p>Desde plásticos y ferretería hasta equipos para el hogar y la industria. Todo lo que necesitas, en un solo lugar, con la confianza local.</p>
         </div>
 
         <article>
 
         </article>
 
-        <section>
-
+        <section class="container-fluid my-2 p-3 border">
+         <strong><h5>Nuestros Pilares</h5></strong>
+         <p>Variedad Insuperable: Un poco de TODO lo que puedes conseguir en Caribe Supply.</p>
+         <p>Calidad Garantizada: Productos duraderos de marcas reconocidas.</p>
+         <p>Servicio Local: Ubicados en Villa Consuelo, Santo Domingo, con entrega a domicilio.</p>
+         <p>Precios Competitivos: Aprovecha nuestras grandes ofertas.</p>
         </section>
       </div>
     </div>
