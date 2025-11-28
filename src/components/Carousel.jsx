@@ -3,7 +3,7 @@ import React from "react";
 function Carousel() {
   return (
     <>
-      <div id="myCarousel" class="carousel slide-stick mb-2 mb-lg-6 py-2" data-bs-ride="carousel">
+      <div id="myCarousel" class="carousel slide-stick mb-2 mb-md-6 py-0" data-bs-ride="carousel">
 
         {/* indicadores de slide */}
         <div class="carousel-indicators">
@@ -77,5 +77,3 @@ function Carousel() {
 }
  
 export default Carousel;
-
-

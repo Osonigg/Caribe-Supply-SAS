@@ -1,9 +1,8 @@
-import { Link, useLocation } from "react-router-dom";
+import logo from "./logo1.png";
 import "./Navigation.css";
-import { FaSearch, FaShoppingBasket } from "react-icons/fa";
+import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
-import Login from "../pages/Login";
-import Product from "../pages/Product";
+
 
 function Navigation() {
   const location = useLocation();
@@ -44,18 +43,18 @@ function Navigation() {
         <a
           href="/"
           class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
+          onClick={() => handleLinkClick("home")}
+          className={`d-flex ${activeLink === "home" ? "active" : ""}`}
         >
-          <svg
-            class="bi me-2"
-            width="40"
-            height="32"
+          <img src={logo} className="App-logo" alt="logo" class="bi me-2"
+            width="100"
+            height=""
             role="img"
-            aria-label="Bootstrap"
-          ></svg>
+            aria-label="Bootstrap" />
         </a>
 
         {/* barra de navegacion*/}
-        <ul class="nav nav-justified col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <ul class="nav nav-justified col-12 col-md-auto me-md-auto mb-2 justify-content-center mb-md-0">
           <li>
             <Link
               to="/"
@@ -110,7 +109,7 @@ function Navigation() {
         </ul>
 
         {/* barra de busqueda */}
-        <div class="col-12 col-lg-4 mb-lg-0 py-0 me-lg-3">
+        <div class="col-4 col-md-4 py-0">
           <form class="input-group" role="search" onSubmit={handleSearch}>
             {" "}
             {/* Vinculamos la función al evento submit */}
@@ -162,7 +161,7 @@ function Navigation() {
         {/* autenticacion */}
         <div class="authetication">
           <a href="/login" class="btn btn-light">Login</a>
-          <a href="/login" class="btn btn-light">Sign-up</a>
+          <a href="/register" class="btn btn-light">Sign-up</a>
         </div>
       </div>
     </nav>

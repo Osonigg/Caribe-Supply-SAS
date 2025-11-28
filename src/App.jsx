@@ -1,4 +1,4 @@
-import logo from "./logo.png";
+
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Routes, Route } from "react-router-dom";
@@ -18,14 +18,42 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <aside class="d-flex col-lg-6 mb-2 alings-item-center justify-content-center">api bolsa</aside>
         <Navigation />
       </header>
 
       {/* anuncios */}
 
       <div class="main-content">
-        <aside class="col4">anuncios</aside>
+        <aside class="col4">anuncios
+          <div class="d-flex mb-1 p-2 pb-3 text-shadow-1 border"> 
+            <h3 >Another longer title belongs here</h3> 
+            <ul class="d-flex list-unstyled mt-auto"> 
+              <li class="d-flex align-items-center me-3"> 
+                 <small>California</small> 
+              </li> 
+            </ul> 
+          </div>
+
+          <div class="d-flex mb-1 p-2 pb-3 text-shadow-1 border"> 
+            <h3 >Another longer title belongs here</h3> 
+            <ul class="d-flex list-unstyled mt-auto"> 
+              <li class="d-flex align-items-center me-3"> 
+                 <small>California</small> 
+              </li> 
+            </ul> 
+          </div>
+
+          <div class="d-flex p-2 pb-3 text-shadow-1 border"> 
+            <h3 >Another longer title belongs here</h3> 
+            <ul class="d-flex list-unstyled mt-auto"> 
+              <li class="d-flex align-items-center me-3"> 
+                 <small>California</small> 
+              </li> 
+            </ul> 
+          </div>
+          
+        </aside>
         <main>
           {/* Las Rutas definen qué componente se muestra según la URL */}
           <Routes>
