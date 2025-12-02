@@ -1,59 +1,88 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
+import productsData from "./productsData";
+import Product from "./Product";
 
 function Catalogo() {
   const location = useLocation();
 
   return (
-    <div id="main-content">
-      <ul class="nav nav-tabs">
-        <li class="nav-item">
-          <a class="nav-link text-dark" href="#"
-            className={location.pathname === 'home' ? 'active' : ''}>
-            Todos
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-dark" href="#">
-            Herramientas
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-dark" href="#">
-            Almacenamiento
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-dark" href="#">
-            Plásticos
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-dark" href="#">
-            Hogar
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link  text-dark" href="#">
-            Accesorios
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-dark" href="#">
-            Industriales
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-dark" href="#">
-            Mantenimiento
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-dark" href="#">
-            Jardineria
-          </a>
-        </li>
-      </ul>
+    <div className="container">
+      <nav>
+        {/* Usamos overflow-auto para permitir scroll horizontal en móviles si hay muchas pestañas */}
+        <div className="overflow-auto">
+          <ul className="nav nav-tabs flex-wrap">
+            {/* Ejemplo de cómo manejar la clase 'active' con lógica de React/JSX */}
+            <li className="nav-item">
+              <Link
+                className={`nav-link text-secondary ${
+                  location.pathname === "/catalog" ? "active" : ""
+                }`}
+                to="/catalog"
+              >
+                Todos
+              </Link>
+            </li>
+
+            {/* El resto de los elementos (activos por defecto o inactivos) */}
+
+            <li className="nav-item">
+              <Link 
+                className={`nav-link text-secondary ${
+                  location.pathname === "/catalog" ? "active" : ""
+                  }`} 
+                to="/catalog">
+                Almacenamiento
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link 
+                className={`nav-link text-secondary ${
+                  location.pathname === "/catalog" ? "active" : ""
+                  }`}>
+                Plásticos
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link 
+                className={`nav-link text-secondary ${
+                  location.pathname === "/catalog" ? "active" : ""
+                  }`} >
+                Hogar
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link 
+                className={`nav-link text-secondary ${
+                  location.pathname === "/catalog" ? "active" : ""
+                  }`} >
+                Accesorios
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link 
+                className={`nav-link text-secondary ${
+                  location.pathname === "/catalog" ? "active" : ""
+                  }`} >
+                Jardineria
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      {/* contenido en pagina catalogo */}
+
+      <h1 className="catalog-title">Catálogo de Productos Caribe Supply</h1>
+      <div className="catalog-container">
+        <div className="product-list row">
+          {productsData.map((product) => (
+            // Renderiza un ProductCard para cada producto, usando el id como key
+            <Product key={product.id} product={product} />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,4 +1,3 @@
-
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Routes, Route } from "react-router-dom";
@@ -13,48 +12,23 @@ import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
 import FAQs from "./pages/FAQs.jsx";
 import Policy from "./pages/Policy.jsx";
+import Carousel  from "./components/Carousel.jsx";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <aside class="d-flex col-lg-6 mb-2 alings-item-center justify-content-center">api bolsa</aside>
+        <aside class="col-12 col-lg-6 mb-2 text-body-white">
+          api bolsa
+        </aside>
         <Navigation />
       </header>
+      
+      <Carousel />
 
       {/* anuncios */}
-
       <div class="main-content">
-        <aside class="col4">anuncios
-          <div class="d-flex mb-1 p-2 pb-3 text-shadow-1 border"> 
-            <h3 >Another longer title belongs here</h3> 
-            <ul class="d-flex list-unstyled mt-auto"> 
-              <li class="d-flex align-items-center me-3"> 
-                 <small>California</small> 
-              </li> 
-            </ul> 
-          </div>
-
-          <div class="d-flex mb-1 p-2 pb-3 text-shadow-1 border"> 
-            <h3 >Another longer title belongs here</h3> 
-            <ul class="d-flex list-unstyled mt-auto"> 
-              <li class="d-flex align-items-center me-3"> 
-                 <small>California</small> 
-              </li> 
-            </ul> 
-          </div>
-
-          <div class="d-flex p-2 pb-3 text-shadow-1 border"> 
-            <h3 >Another longer title belongs here</h3> 
-            <ul class="d-flex list-unstyled mt-auto"> 
-              <li class="d-flex align-items-center me-3"> 
-                 <small>California</small> 
-              </li> 
-            </ul> 
-          </div>
-          
-        </aside>
-        <main>
+        <main class="container col-12 col-md-8 col-md-4">
           {/* Las Rutas definen qué componente se muestra según la URL */}
           <Routes>
             <Route path="/" element={<Home />} />
@@ -72,36 +46,33 @@ function App() {
           </Routes>
         </main>
       </div>
-     
+
       <footer class="my-2">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
           <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-body-white">
+            <a href="/" class="nav-link px-2 text-body-white">
               Home
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-body-white">
-              Features
-            </a>
-          </li>
-          <li class="nav-item">
             <a href="/policy" class="nav-link px-2 text-body-white">
-              Policy 
+              Policy
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-body-white">
+            <a href="/faqs" class="nav-link px-2 text-body-white">
               FAQs
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-body-white">
+            <a href="/about" class="nav-link px-2 text-body-white">
               About
             </a>
           </li>
         </ul>
-        <p class="text-center text-body-white">© 2025 caribesupply.sas, Todos los derechos reservados.</p>{" "}
+        <p class="text-center text-body-white">
+          © 2025 caribesupply.sas, Todos los derechos reservados.
+        </p>{" "}
       </footer>
     </div>
   );
