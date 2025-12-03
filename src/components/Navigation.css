@@ -1,9 +1,6 @@
-nav {
+.navbar {
   gap: 20px;
-  padding: 15px 20px;
   background: #e0a028;
-  border-bottom: 1px solid #ddd;
-  justify-content: space-between;
 }
 
 .nav-link {
@@ -18,4 +15,15 @@ nav {
 
 .nav-link:hover {
   box-shadow: 0 6px 12px rgba(51, 52, 53, 0.728);
+}
+
+
+@media (max-width: 600px) {
+  .navbar-toggler-icon {
+    justify-items: center;
+  }
+  
+  .navbar {
+    justify-content: space-between;
+  }
 }

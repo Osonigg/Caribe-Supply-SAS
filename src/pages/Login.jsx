@@ -25,8 +25,7 @@ function Login() {
           <label class="form-check-label" for="checkDefault">Recordarme</label> 
         </div> 
         
-        <button class="btn btn-primary mb-3 w-50 d-block mx-auto" type="submit">Entrar</button> 
-      </form> 
+        <button class="btn btn-primary mb-3 d-block mx-auto" type="submit">Entrar</button> 
 
       <p>
         ¿No tienes cuenta?
@@ -34,6 +33,7 @@ function Login() {
           Registrate aqui
         </Link>
       </p>
+      </form> 
     </div></main>
   );
 }

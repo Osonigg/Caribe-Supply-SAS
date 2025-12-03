@@ -74,7 +74,7 @@ function Catalogo() {
 
       {/* contenido en pagina catalogo */}
 
-      <h1 className="catalog-title">Catálogo de Productos Caribe Supply</h1>
+      <h1 className="catalog-title p-3">Catálogo de Productos</h1>
       <div className="catalog-container">
         <div className="product-list row">
           {productsData.map((product) => (

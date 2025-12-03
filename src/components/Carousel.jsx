@@ -13,13 +13,13 @@ function Carousel() {
         </div>
         
         {/* imagenes para el slide */}
-        <div className="carousel-inner" role="listbox">
+        <div className="carousel-inner mt-md-0" role="listbox" height="100%">
           <div className="carousel-item">
             <svg aria-hidden="true" class="bd-placeholder-img" height="100%" preserveAspectRatio="xMidYMid slice" width="100%" xmlns="http://www.w3.org/2000/svg">
               <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
             </svg>
             
-            <div className="carousel-caption text-star">
+            <div className="carousel-caption p-2 text-star mt-2">
               <h1>Example headline.</h1>
               <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
             </div>
@@ -30,7 +30,7 @@ function Carousel() {
               <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
             </svg>
             
-            <div class="carousel-caption">
+            <div class="carousel-caption p-2 mt-2">
               <h1>Another example headline.</h1>
               <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
             </div>
@@ -41,7 +41,7 @@ function Carousel() {
               <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
             </svg>
             
-            <div class="carousel-caption text-end">
+            <div class="carousel-caption text-end p-2 mt-2">
               <h1>Another example headline.</h1>
               <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
             </div>

@@ -1,10 +1,9 @@
-import logo from "./logo1.png";
+import logo from "../logo.png";
 import "./Navigation.css";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 function Navigation() {
-  const location = useLocation();
 
   // Inicializamos el estado con la ruta actual o el ID del enlace activo
   const [activeLink, setActiveLink] = useState("");
@@ -15,7 +14,6 @@ function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const [searchTerm, setSearchTerm] = useState("");
-  const [results, setResults] = useState("");
   const handleSearch = (event) => {
     event.preventDefault();
     // Aquí puedes añadir la lógica para buscar productos reales
@@ -25,7 +23,6 @@ function Navigation() {
     alert(`Buscando productos que coincidan con: ${searchTerm}`);
   };
 
-  const [itemCount, setItemCount] = useState();
 
   const handleCartClick = () => {
     // alert("Funcionalidad del carrito de compras (Checkout) prÃ³ximamente.");
@@ -34,10 +31,9 @@ function Navigation() {
   };
 
   // Aquí podrías añadir lógica para comprobar si el usuario ya está logueado
-  const isLoggedIn = false; // Simulación: cambiar a true si el usuario ha iniciado
 
   return (
-    <nav className="navbar navbar-expand-lg" aria-label="Navegación principal">
+    <nav className="navbar navbar-expand-lg col-lg-0" aria-label="Navegación principal">
       <div className="container-fluid">
         <Link
           to="/"
@@ -48,14 +44,13 @@ function Navigation() {
             src={logo}
             className="App-logo bi me-2"
             alt="logo"
-            role="img"
             aria-label="Caribe Supply Logo"
           />
         </Link>
 
         {/* BOTÓN HAMBURGUESA (Toggler) */}
         <button
-          className="navbar-toggler"
+          className="navbar-toggler me-auto py-3"
           type="button"
           onClick={toggleMenu}
           aria-controls="navbarNavCollapse"
@@ -139,7 +134,8 @@ function Navigation() {
           </ul>
         </div>
 
-        <div className="d-flex flex-column flex-lg-row align-items-lg-center gap-2 mt-2 mt-lg-0">
+        {/* contenedor barra de busqueda, carrito y autenticacion */}
+        <div className="d-flex flex-column flex-lg-row align-items-lg-left gap-2 mt-lg-0">
           {/* barra de busqueda */}
           <div className="col-12 col-md-auto justify-content-center">
             <form
@@ -176,7 +172,7 @@ function Navigation() {
           </div>
 
           {/* Botón del Carrito a la derecha -->*/}
-          <div class="d-flex gap-2">
+          <div class="d-flex me-auto">
             <button
               type="button"
               className="btn btn-secundary"
@@ -196,11 +192,11 @@ function Navigation() {
             </button>
 
             {/* autenticacion */}
-            <div className="authetication d-flex gap-2">
-              <Link href="/login" className="btn btn-light">
+            <div className="authetication d-flex me-auto gap-2">
+              <Link to="/login" className="btn btn-light">
                 Login
               </Link>
-              <Link href="/register" className="btn btn-light">
+              <Link to="/register" className="btn btn-light">
                 Sign-up
               </Link>
             </div>

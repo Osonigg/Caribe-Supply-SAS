@@ -6,44 +6,83 @@ function Register() {
   const location = useLocation();
 
   return (
-    <main><div className="auth-container w-60 m-auto">
-      <form>
-        <h2 class="h3 mb-3 fw-normal">Registro de Usuario</h2>
-        
-       
-        <label>Nombre Completo:</label>
-        <br />
-        <input type="text" placeholder="Jhon Doe" />
-        <br />
-        <br />
-        
-        <label>Correo Electrónico:</label>
-        <br />
-        <input type="email" placeholder="jhondoe@example.com" />
-        <br />
-        <br />
+    <main>
+      <div className="auth-container d-flex justify-content-center py-4 vh-100">
+        <form className="col-8 p-2 rounded">
+          <h2 className="mb-4 fw-normal text-center">Registro de Usuario</h2>
 
-        <label>Contraseña:</label>
-        <br />
-        <input type="password" placeholder="***********" />
-        <br />
-        <br />
+          {/* Grupo de formulario para Nombre Completo */}
+          <div className="mb-3">
+            <label htmlFor="fullName" className="form-label">
+              Nombre Completo:
+            </label>
+            <input
+              type="text"
+              id="fullName"
+              className="form-control"
+              placeholder="Jhon Doe"
+            />
+          </div>
 
-        <label>Confirmar Contraseña:</label>
-        <br />
-        <input type="password" placeholder="***********" />
-        <br />
-        <br />
+          {/* Grupo de formulario para Correo Electrónico */}
+          <div className="mb-3">
+            <label htmlFor="email" className="form-label">
+              Correo Electrónico:
+            </label>
+            <input
+              type="email"
+              id="email"
+              className="form-control"
+              placeholder="jhondoe@example.com"
+            />
+          </div>
 
-       <button class="btn btn-primary mb-3 w-80 py-2" type="submit">Entrar</button> 
-      </form>
-      <p>
-        ¿Ya tienes cuenta?
-        <Link to="/login" className={location.pathname === "/login"}>
-          Inicia Sesión
-        </Link>
-      </p>
-    </div></main>
+          {/* Grupo de formulario para Contraseña */}
+          <div className="mb-3">
+            <label htmlFor="password" className="form-label">
+              Contraseña:
+            </label>
+            <input
+              type="password"
+              id="password"
+              className="form-control"
+              placeholder="***********"
+            />
+          </div>
+
+          {/* Grupo de formulario para Confirmar Contraseña */}
+          <div className="mb-3">
+            <label htmlFor="confirmPassword" className="form-label">
+              Confirmar Contraseña:
+            </label>
+            <input
+              type="password"
+              id="confirmPassword"
+              className="form-control"
+              placeholder="***********"
+            />
+          </div>
+
+          <button className="btn btn-primary mb-3 d-block mx-auto" type="submit">
+            Registrar
+          </button>
+
+          {/* Párrafo con enlace centrado */}
+          <p className="text-center">
+            ¿Ya tienes cuenta?
+            {/* Asumiendo que Link es de react-router-dom */}
+            <Link
+              to="/login"
+              className={`ms-1 ${
+                location.pathname === "/login" ? "active-link" : ""
+              }`}
+            >
+              Inicia Sesión
+            </Link>
+          </p>
+        </form>
+      </div>
+    </main>
   );
 }
 

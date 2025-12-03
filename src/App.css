@@ -11,17 +11,9 @@
 }
 
 header {
-  padding: 1rem;
   width: 100%;
   top: 0;
   background-color: #333;
-  margin-bottom: 0;
-}
-
-.carousel-inner img {
-  width: 100%; /* Set width to 100% */
-  margin: auto;
-  min-height:200px;
 }
 
 .main-content {
