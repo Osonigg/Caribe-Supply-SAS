@@ -14,7 +14,7 @@ function App() {
   return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <img src={Logo} className="App-logo" alt="Logo.jpeg" />
           <Navigation />
         </header>
   
