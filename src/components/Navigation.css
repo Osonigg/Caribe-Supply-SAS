@@ -19,9 +19,3 @@ nav {
 .nav-link:hover {
   box-shadow: 0 6px 12px rgba(51, 52, 53, 0.728);
 }
-
-@media screen and (max-width: 768px) {
-  nav{
-    gap: 14px;
-  }
-}

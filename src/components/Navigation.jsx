@@ -141,8 +141,12 @@ function Navigation() {
 
         <div className="d-flex flex-column flex-lg-row align-items-lg-center gap-2 mt-2 mt-lg-0">
           {/* barra de busqueda */}
-          <div className="col-12 col-md-auto">
-            <form className="input-group" role="search" onSubmit={handleSearch}>
+          <div className="col-12 col-md-auto justify-content-center">
+            <form
+              className="input-group col-md-auto"
+              role="search"
+              onSubmit={handleSearch}
+            >
               {/* Vinculamos la función al evento submit */}
               <input
                 type="search"
@@ -172,18 +176,16 @@ function Navigation() {
           </div>
 
           {/* Botón del Carrito a la derecha -->*/}
-          <div class="d-flex">
+          <div class="d-flex gap-2">
             <button
               type="button"
               className="btn btn-secundary"
-              height="16"
               onClick={handleCartClick}
               aria-label="View Shopping cart"
             >
               <svg
                 xmlns="www.w3.org"
                 width="24"
-                height="24"
                 fill="currentColor"
                 className="bi bi-basket"
                 viewBox="0 0 16 16"
@@ -192,16 +194,16 @@ function Navigation() {
                 <path d="M4.214 10.154L4 14.5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5l-.214-4.346L11.5 10H4z" />
               </svg>
             </button>
-          </div>
 
-          {/* autenticacion */}
-          <div className="authetication d-flex gap-2">
-            <Link href="/login" className="btn btn-light">
-              Login
-            </Link>
-            <Link href="/register" className="btn btn-light">
-              Sign-up
-            </Link>
+            {/* autenticacion */}
+            <div className="authetication d-flex gap-2">
+              <Link href="/login" className="btn btn-light">
+                Login
+              </Link>
+              <Link href="/register" className="btn btn-light">
+                Sign-up
+              </Link>
+            </div>
           </div>
         </div>
       </div>
