@@ -1,4 +1,4 @@
-import logo from './logo.png';
+import logo from './Logo.jpeg';
 import './App.css';
 import { Routes, Route, Link } from 'react-router-dom';
 import Navigation from './components/Navigation';
