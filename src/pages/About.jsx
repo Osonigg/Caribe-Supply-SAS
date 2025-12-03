@@ -2,8 +2,8 @@ import React from "react";
 
 function About() {
   return (
-    <div class="container">
-      <div class="container-fluid form-floating my-4">
+    <div className="container">
+      <div className="container-fluid form-floating my-4">
         <strong>Nuestra Historia:</strong>
         <p>
           Breve relato de cómo Caribe Supply se convirtió en un proveedor
@@ -19,8 +19,6 @@ function About() {
         <strong>Horarios:</strong>
         <p>Lunes a Sábado: 8:00am - 6:00pm | Domingos: 9:00am - 2:00pm.</p>
       </div>
-
-      
     </div>
   );
 }

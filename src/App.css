@@ -7,13 +7,17 @@
 }
 
 .App-logo {
-  height: 10vmin;
+  height: 5vmin;
 }
 
 header {
   width: 100%;
   top: 0;
-  background-color: #333;
+  background-color: #fff;
+}
+
+.carousel-item {
+  height: 350px;
 }
 
 .main-content {
@@ -23,6 +27,7 @@ header {
   padding: 20px;
   margin: 0 auto;
   width: 100%;
+  min-height: 100vh;
   box-shadow: 0 2px 4px rgba(0, 0, 0 ,0.1);
 }
 
@@ -31,6 +36,7 @@ header {
     grid-template-columns: 1fr 3fr;
   }
 }
+
 @media (max-width: 600px) {
     .carousel-caption {
       display: none; 
@@ -38,11 +44,12 @@ header {
   }
 
 footer {
-  position: fixed;
+  position: sticky;
   width: 100%;
-  padding: 1rem;
   bottom: 0;
   color: #fff;
   text-align: center;
   background-color: #333;
+  padding: 10px 0;
+  z-index: 1000;
 }

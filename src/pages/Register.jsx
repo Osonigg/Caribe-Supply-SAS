@@ -1,14 +1,13 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import Home from "./Home";
 
 function Register() {
   const location = useLocation();
 
   return (
     <main>
-      <div className="auth-container d-flex justify-content-center py-4 vh-100">
-        <form className="col-8 p-2 rounded">
+      <div className="form-signup d-flex justify-content-center py-4 vh-100">
+        <form>
           <h2 className="mb-4 fw-normal text-center">Registro de Usuario</h2>
 
           {/* Grupo de formulario para Nombre Completo */}

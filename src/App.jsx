@@ -17,8 +17,8 @@ import Carousel  from "./components/Carousel.jsx";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <aside class="col-12 col-lg-6 mb-2 text-body-white">
+      <header className="App-header ">
+        <aside class="container col-12 col-md-8 col-md-4 mb-3 me-auto text-dark">
           api bolsa
         </aside>
         <Navigation />

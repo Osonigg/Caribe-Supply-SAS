@@ -2,15 +2,15 @@ import React from "react";
 
 function FAQs() {
   return (
-    <div class="form-floting my-4">
+    <div className="form-floting my-4">
       <h4>Preguntas Frecuentes (FAQ)</h4>
 
-      <div class="container my-5">
-        <div class="accordion" id="faqsAccordion">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
+      <div className="container my-5">
+        <div className="accordion" id="faqsAccordion">
+          <div className="accordion-item">
+            <h2 className="accordion-header" id="headingOne">
               <button
-                class="accordion-button"
+                className="accordion-button"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#collapseOne"
@@ -22,11 +22,11 @@ function FAQs() {
             </h2>
             <div
               id="collapseOne"
-              class="accordion-collapse collapse show"
+              className="accordion-collapse collapse show"
               aria-labelledby="headingOne"
               data-bs-parent="#faqsAccordion"
             >
-              <div class="accordion-body">
+              <div className="accordion-body">
                 Aceptamos pagos en efectivo, transferencias bancarias y pagos
                 con tarjeta de crédito/débito directamente en nuestra tienda
                 física o mediante link de pago seguro para pedidos a domicilio.
@@ -34,10 +34,10 @@ function FAQs() {
             </div>
           </div>
 
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTwo">
+          <div className="accordion-item">
+            <h2 className="accordion-header" id="headingTwo">
               <button
-                class="accordion-button collapsed"
+                className="accordion-button collapsed"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#collapseTwo"
@@ -49,11 +49,11 @@ function FAQs() {
             </h2>
             <div
               id="collapseTwo"
-              class="accordion-collapse collapse"
+              className="accordion-collapse collapse"
               aria-labelledby="headingTwo"
               data-bs-parent="#faqsAccordion"
             >
-              <div class="accordion-body">
+              <div className="accordion-body">
                 Sí, ofrecemos servicio de delivery en todo el Distrito Nacional
                 y áreas circundantes de Santo Domingo. El costo del envío puede
                 variar según tu ubicación exacta. Contáctanos por WhatsApp al
@@ -62,10 +62,10 @@ function FAQs() {
             </div>
           </div>
 
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingThree">
+          <div className="accordion-item">
+            <h2 className="accordion-header" id="headingThree">
               <button
-                class="accordion-button collapsed"
+                className="accordion-button collapsed"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#collapseThree"
@@ -77,11 +77,11 @@ function FAQs() {
             </h2>
             <div
               id="collapseThree"
-              class="accordion-collapse collapse"
+              className="accordion-collapse collapse"
               aria-labelledby="headingThree"
               data-bs-parent="#faqsAccordion"
             >
-              <div class="accordion-body">
+              <div className="accordion-body">
                 Sí, en Caribe Supply ofrecemos precios especiales al por mayor
                 para clientes que requieran grandes volúmenes de plásticos,
                 ferretería o suministros industriales. Por favor, contáctanos
@@ -90,10 +90,10 @@ function FAQs() {
             </div>
           </div>
 
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingFour">
+          <div className="accordion-item">
+            <h2 className="accordion-header" id="headingFour">
               <button
-                class="accordion-button collapsed"
+                className="accordion-button collapsed"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#collapseFour"
@@ -105,11 +105,11 @@ function FAQs() {
             </h2>
             <div
               id="collapseFour"
-              class="accordion-collapse collapse"
+              className="accordion-collapse collapse"
               aria-labelledby="headingFour"
               data-bs-parent="#faqsAccordion"
             >
-              <div class="accordion-body">
+              <div className="accordion-body">
                 Nuestra tienda física está localizada en la Calle Pimentel no.
                 148, Villa Consuelo, Distrito Nacional, Santo Domingo.
               </div>
