@@ -1,0 +1,31 @@
+///-------REGISTRO DE EVIDENCIAS Y SOLUCIONES-------///
+
+Fecha: 2025-11-20
+Estudiante: Nabila M. Cabrera Castillo- 100614124
+Objetivo: Implementación del Catálogo y Carrito de Compras (JS Puro) e integración exitosa en la estructura de proyecto React (parte B).
+
+--- LOG DE COMMITS ---
+(Generado con: git log --pretty=format:"%h - %an, %ad : %s" --date=short)
+
+[HASH_1] - [TU NOMBRE], 2025-11-10 : feat: Implementación inicial de la lógica del carrito (carrito.js) y estilos base (styles.css).
+[HASH_2] - [TU NOMBRE], 2025-11-13 : feat: Fusión de la estructura HTML del catálogo y modales en public/index.html (dentro de #root).
+[HASH_3] - [TU NOMBRE], 2025-11-20 : feat: Se añade la lógica de filtros dinámicos y persistencia de LocalStorage a carrito.js.
+[HASH_4] - [TU NOMBRE], 2025-11-20 : feat: Se actualiza el modal de checkout para incluir 18 provincias de RD y la opción 'Envío Internacional'.
+[HASH_5] - [TU NOMBRE], 2025-11-20 : fix: Corrección crucial de rutas de imagen a /assets/ y cambio de extensiones de .jpg a .png en el array PRODUCTOS de carrito.js.
+[HASH_6] - [TU NOMBRE], 2025-11-20 : chore: Creación de la estructura public/assets/ y subida de todas las imágenes.
+[HASH_7] - [TU NOMBRE], 2025-11-20 : docs: Se agrega el log de commits al archivo de evidencia_historial.txt.
+
+--- RESUMEN DE PROBLEMAS RESUELTOS Y SOLUCIONES LÓGICAS ---
+
+ 1). Corrección de Extensión de Archivos
+
+*Problema:*Las imágenes reales subidas eran `.png`, pero las había colocado como 'jpg'.
+*Solución:* Se actualizaron todas las referencias de la clave `imagen` dentro del *array* `PRODUCTOS` a la extensión correcta *`.png`*.
+
+2). Mejora en la Lógica de Negocio (Checkout)
+
+*Problema:* La aplicación no reflejaba el alcance nacional e internacional de la microempresa.
+*Solución:* Se *expandió* la lista de provincias en el `<select>` de *checkout* (total 18 provincias de RD). Además, se añadió la opción **"📦 Envío Internacional"*, manteniendo la lógica de validación actual en `carrito.js` (solo verificando que se haya seleccionado cualquier opción no vacía).
+
+=================================================
+FIN DEL DOCUMENTO
