@@ -6,16 +6,20 @@ import { FaShoppingBasket } from "react-icons/fa";
 
 function Navigation() {
   const location = useLocation();
+  
   // Inicializamos el estado con la ruta actual o el ID del enlace activo
   const [activeLink, setActiveLink] = useState("");
+  
   const handleLinkClick = (linkName) => {
     setActiveLink(linkName);
   };
+  
   // Estado para controlar si el menú hamburguesa está abierto o cerrado
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const [searchTerm, setSearchTerm] = useState("");
-
+  
+  const [searchTerm, setSearchTerm] = useState();
+  
   const handleSearch = (event) => {
     event.preventDefault();
     // Aquí puedes añadir la lógica para buscar productos reales
@@ -24,6 +28,7 @@ function Navigation() {
     console.log("Buscando:", searchTerm);
     alert(`Buscando productos que coincidan con: ${searchTerm}`);
   };
+  
   const [itemCount, setItemCount] = useState();
 
   const handleCartClick = () => {
@@ -48,7 +53,7 @@ function Navigation() {
         >
           <img
             src={logo}
-            className="App-logo bi me-2"
+            className="App-logo"
             alt="logo"
             aria-label="Caribe Supply Logo"
           />

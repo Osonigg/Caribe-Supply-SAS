@@ -34,7 +34,7 @@ function Home() {
           </div>
         </aside>
 
-        <div className="contentPage col-12 col-md-8 p-3">
+        <div className="contentPage col-12 col-md-8 p-3 mb-3">
           <h4>
             Caribe Supply: Tu Solución Integral en Suministros para el Hogar y
             la Industria en República Dominicana.
@@ -45,9 +45,11 @@ function Home() {
             local.
           </p>
 
-          <article></article>
+          <article className="container-fluid mb-3 py-3 border">
+            destacados
+          </article>
 
-          <section className="container-fluid my-2 p-3 border">
+          <section className="container-fluid mb-3 py-3">
             <strong>
               <h5>Nuestros Pilares</h5>
             </strong>
