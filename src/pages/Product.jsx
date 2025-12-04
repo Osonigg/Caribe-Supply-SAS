@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Product({product}) {
   return (
@@ -15,12 +16,12 @@ function Product({product}) {
             ) : (
               <p className="product-price">Precio no disponible</p>
             )}
-            <a href="/carbasket" class="btn btn-outline-warning mb-3 d-block mx-auto">
+            <Link to="/carbasket" class="btn btn-outline-warning mb-3 d-block mx-auto">
               Agregar al carrito
-            </a>
-            <a href="/carbasket" class="btn btn-outline-warning mb-3 d-block mx-auto">
+            </Link>
+            <Link to="/checkout" class="btn btn-outline-warning mb-3 d-block mx-auto">
               Comprar
-            </a>
+            </Link>
           </div>
         </div>
       </article>

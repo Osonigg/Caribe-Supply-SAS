@@ -20,31 +20,35 @@ function Login() {
             />
             <label for="floatingInput">Correo electronico</label>
           </div>
-          
+
           {/* Grupo de formulario para contrasena */}
           <div class="form-floating my-4">
             <input
               type="password"
-              class="form-control"
+              className="form-control"
               id="floatingPassword"
               placeholder="Password"
             />
             <label for="floatingPassword">Contrasena</label>
           </div>
 
-          <div class="form-check my-4">
+          <div className="form-check my-4">
             <input
-              class="form-check-input"
+              className="form-check-input"
               type="checkbox"
               value="remember-me"
               id="checkDefault"
             />
-            <label class="form-check-label" for="checkDefault">
+            <label className="form-check-label" for="checkDefault">
               Recordarme
             </label>
           </div>
 
-          <button class="btn btn-primary mb-3 d-block mx-auto" type="submit">
+          <button
+            className="btn btn-primary mb-3 d-block mx-auto"
+            type="button"
+            onClick={() => alert('iniciando sesion...')}
+          >
             Entrar
           </button>
 

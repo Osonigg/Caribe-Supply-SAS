@@ -7,7 +7,7 @@
 }
 
 .App-logo {
-  height: 5vmin;
+  height: 10vmin;
 }
 
 header {
@@ -32,16 +32,16 @@ header {
 }
 
 @media (min-width: 600px) {
+  .App-logo {
+    height: 5vmin;
+  }
+  .carousel-caption {
+      display: none; 
+    }
   main-content {
     grid-template-columns: 1fr 3fr;
   }
 }
-
-@media (max-width: 600px) {
-    .carousel-caption {
-      display: none; 
-    }
-  }
 
 footer {
   position: sticky;

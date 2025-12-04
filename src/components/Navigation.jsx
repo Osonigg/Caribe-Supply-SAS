@@ -1,10 +1,11 @@
 import logo from "../logo.png";
 import "./Navigation.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
+import { FaShoppingBasket } from "react-icons/fa";
 
 function Navigation() {
-
+  const location = useLocation();
   // Inicializamos el estado con la ruta actual o el ID del enlace activo
   const [activeLink, setActiveLink] = useState("");
   const handleLinkClick = (linkName) => {
@@ -14,6 +15,7 @@ function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const [searchTerm, setSearchTerm] = useState("");
+
   const handleSearch = (event) => {
     event.preventDefault();
     // Aquí puedes añadir la lógica para buscar productos reales
@@ -22,7 +24,7 @@ function Navigation() {
     console.log("Buscando:", searchTerm);
     alert(`Buscando productos que coincidan con: ${searchTerm}`);
   };
-
+  const [itemCount, setItemCount] = useState();
 
   const handleCartClick = () => {
     // alert("Funcionalidad del carrito de compras (Checkout) prÃ³ximamente.");
@@ -31,9 +33,13 @@ function Navigation() {
   };
 
   // Aquí podrías añadir lógica para comprobar si el usuario ya está logueado
+  const isLoggedIn = false; // Simulación: cambiar a true si el usuario ha iniciado
 
   return (
-    <nav className="navbar navbar-expand-lg col-lg-0" aria-label="Navegación principal">
+    <nav
+      className="navbar navbar-expand-lg col-lg-0"
+      aria-label="Navegación principal"
+    >
       <div className="container-fluid">
         <Link
           to="/"
@@ -173,29 +179,42 @@ function Navigation() {
 
           {/* Botón del Carrito a la derecha -->*/}
           <div class="d-flex me-auto">
-            <button
-              type="button"
-              className="btn btn-secundary"
-              onClick={handleCartClick}
-              aria-label="View Shopping cart"
-            >
-              <svg
-                xmlns="www.w3.org"
-                width="24"
-                fill="currentColor"
-                className="bi bi-basket"
-                viewBox="0 0 16 16"
+            <div className="cart-icon-container">
+              <Link
+                to="/carbasket"
+                className={
+                  location.pathname === "/carbasket"
+                    ? "nav-item active"
+                    : "nav-item"
+                }
               >
-                <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.071 1.757a.5.5 0 1 1 .858-.514L13.71 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.79L5.071 1.243a.5.5 0 0 1 .686-.172zM3.383 6.5h9.234L11.5 10H4z" />
-                <path d="M4.214 10.154L4 14.5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5l-.214-4.346L11.5 10H4z" />
-              </svg>
-            </button>
-
-            {/* autenticacion */}
-            <div className="authetication d-flex me-auto gap-2">
-              <Link to="/login" className="btn btn-light">
-                Login
+                <button
+                  type="button"
+                  className="btn btn-secundary h-100"
+                  onClick={handleCartClick}
+                  aria-label="View Shopping cart"
+                >
+                  <FaShoppingBasket className="cart-icon" />
+                </button>
               </Link>
+              {itemCount > 0 && <span className="cart-count">{itemCount}</span>}
+            </div>
+
+            {/* autenticacion, Botón de Inicio de Sesión / Cerrar Sesión */}
+            <div className="authetication d-flex me-auto gap-2">
+              {isLoggedIn ? (
+                <button
+                  className="btn btn-light"
+                  type="button"
+                  onClick={() => alert("cerrando sesion...")}
+                >
+                  Log up
+                </button>
+              ) : (
+                <Link to="/login" className="btn btn-light">
+                  Log in
+                </Link>
+              )}
               <Link to="/register" className="btn btn-light">
                 Sign-up
               </Link>
