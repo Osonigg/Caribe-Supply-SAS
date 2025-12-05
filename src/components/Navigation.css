@@ -1,29 +1,50 @@
+
 .navbar {
   gap: 20px;
-  background: #e0a028;
+  background: var(--navbar-bg);
+  transition: background 0.3s ease;
 }
 
 .nav-link {
-  color: #fff
+  color: var(--navbar-link);
+  transition: color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.nav-link.active  {
-  box-shadow: 0 4px 8px rgba(81, 82, 82, 0); 
-  color: brown;
-  transition: box-shadow 0.3s ease-in-out;
+.nav-link.active {
+  box-shadow: 0 4px 8px rgba(81, 82, 82, 0.4);
+  color: var(--navbar-active);
 }
 
 .nav-link:hover {
-  box-shadow: 0 6px 12px rgba(51, 52, 53, 0.728);
+  box-shadow: 0 6px 12px rgba(51, 52, 53, 0.7);
 }
 
+/* 🔄 Variables para modo claro y oscuro */
+:root {
+  --navbar-bg: #e0a028;
+  --navbar-link: #ffffff;
+  --navbar-active: #4e1c03;
+}
 
+.dark-mode {
+  --navbar-bg: #2a2a2a;
+  --navbar-link: #f2f2f2;
+  --navbar-active: #ffd966;
+}
+
+/* 📱 Móviles */
 @media (max-width: 600px) {
   .navbar-toggler-icon {
     justify-items: center;
   }
-  
+
   .navbar {
     justify-content: space-between;
   }
 }
+
+  .navbar {
+    justify-content: space-between;
+  }
+  
+  

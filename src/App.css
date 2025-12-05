@@ -79,3 +79,81 @@ footer {
   padding: 10px 0;
   z-index: 1000;
 }
+
+body {
+  transition: background-color .4s ease, color .4s ease;
+}
+
+/* === 👇 MODO OSCURO GLOBAL 👇 === */
+body.dark-mode {
+  background-color: #121212 !important;
+  color: #e9eef8 !important;
+}
+
+/* Asegurar que App herede tema */
+body.dark-mode .App {
+  background-color: #121212 !important;
+  color: #e9eef8 !important;
+}
+
+/* Header */
+body.dark-mode header {
+  background-color: #1f1f1f !important;
+}
+
+/* Main content sin romper los artículos */
+body.dark-mode .main-content {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
+/* Tarjetas, artículos, productos */
+body.dark-mode .card,
+body.dark-mode article,
+body.dark-mode .product-card,
+body.dark-mode .item-card {
+  background-color: #1c1c1c !important;
+  color: #ffffff !important;
+}
+
+/* Footer */
+body.dark-mode footer {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+/* Nav links y enlaces */
+body.dark-mode a,
+body.dark-mode .nav-link {
+  color: #f0f0f0 !important;
+}
+
+/* Transiciones suaves */
+body, .App, header, .main-content, footer {
+  transition: background-color .35s ease, color .35s ease;
+}
+
+/* 🔹 Links del navbar y botones de sesión */
+body.dark-mode .navbar .nav-link,
+body.dark-mode .navbar a,
+body.dark-mode .btn-login,
+body.dark-mode .btn-signup {
+  color: black !important;
+}
+
+/* Hover para mejorar accesibilidad */
+body.dark-mode .navbar .nav-link:hover {
+  color: #ffd966 !important;
+}
+
+/* Si "Sign Up" es un botón con BG blanco en modo oscuro */
+body.dark-mode .btn-light {
+  background-color: #ffffff !important;
+  color: #111 !important;
+}
+
+/* Resaltar el link activo */
+body.dark-mode .nav-link.active {
+  color: black !important;
+  box-shadow: 0 3px 8px rgba(255,255,255,0.3);
+}
