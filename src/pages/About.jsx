@@ -1,11 +1,25 @@
-import React from 'react';
+import React from "react";
 
 function About() {
   return (
-    <main id="main-content" tabIndex="-1">
-      <h1>Acerca de Nosotros</h1>
-      <p>Conoce más sobre nuestra misión y nuestro equipo.</p>
-    </main>
+    <div className="container">
+      <div className="container-fluid form-floating my-4">
+        <strong>Nuestra Historia:</strong>
+        <p>
+          Breve relato de cómo Caribe Supply se convirtió en un proveedor
+          confiable en la RD.
+        </p>
+        <strong>Misión y Visión:</strong>
+        <p>Declaración simple de tu compromiso con los clientes.</p>
+        <strong>Ubicación Física:</strong>
+        <p>
+          <b>Visítanos:</b> Calle Pimentel no. 148, Villa Consuelo, Distrito
+          Nacional, Santo Domingo.
+        </p>
+        <strong>Horarios:</strong>
+        <p>Lunes a Sábado: 8:00am - 6:00pm | Domingos: 9:00am - 2:00pm.</p>
+      </div>
+    </div>
   );
 }
 

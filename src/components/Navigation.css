@@ -1,86 +1,29 @@
-nav {
-  display: flex;
+.navbar {
   gap: 20px;
-  padding: 15px 20px;
   background: #e0a028;
-  border-bottom: 1px solid #ddd;
 }
 
-.nav-item {
-    text-decoration: none;
-    color: #333;
-    padding-bottom: 4px;
-    transition: 0.1s ease-in-out;
+.nav-link {
+  color: #fff
 }
 
-.nav-item:hover {
-    color: #000;
+.nav-link.active  {
+  box-shadow: 0 4px 8px rgba(81, 82, 82, 0); 
+  color: brown;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
-.nav-item::selection{
-    color: #000;
+.nav-link:hover {
+  box-shadow: 0 6px 12px rgba(51, 52, 53, 0.728);
 }
 
-.active {
-    font-weight: bold;
-    color: #e63946;
-    border-bottom: 2px solid #e63946;
-}
 
-.search-bar {
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 4px;
-    overflow: hidden;
-    margin-left: 20px;
-}
-
-.search-bar input {
-    padding: 8px 12px;
-    border: none;
-    outline: none;
-    font-size: 14px;
-}
-
-.search-bar button {
-    background-color: #fff;
-    border: none;
-    padding: 8px 12px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.search-bar button:hover {
-    background-color: #e0a028;
-}
-
-.cart-icon {
-    font-size: 35px;
-}
-
-.cart-count {
-    position: absolute;
-    top: 0px;
-    background-color: #ff0000; /* Rojo llamativo */
-    color: white;
-    border-radius: 50%;
-    padding: 2px 6px;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-.auth-button {
-    background-color: #e0a028; /* Naranja corporativo */
-    padding: 10px 15px;
-    cursor: pointer;
-    margin-left: 20px;
-    text-decoration: none; /* Importante para que Link se vea como botón */
-    text-align: center;
-    color: #333;
-    font-size: 18px;
-    padding-bottom: 4px;
-    transition: 0.1s ease-in-out;
+@media (max-width: 600px) {
+  .navbar-toggler-icon {
+    justify-items: center;
+  }
+  
+  .navbar {
+    justify-content: space-between;
+  }
 }
