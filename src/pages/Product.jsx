@@ -1,8 +1,11 @@
+
 import React from "react";
 import "../App.css";
 import { Link } from "react-router-dom";
+import { useCart } from "../CartContext";
 
 function Product({product}) {
+  const {addToCart} =useCart();
   return (
     <>
       <article className="col-12 col-md-4 mb-3 me-auto">

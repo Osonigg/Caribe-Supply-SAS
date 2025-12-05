@@ -29,7 +29,7 @@ function Navigation() {
     alert(`Buscando productos que coincidan con: ${searchTerm}`);
   };
   
-  const [itemCount, setItemCount] = useState();
+  const [itemCount] = useState(0);
 
   const handleCartClick = () => {
     // alert("Funcionalidad del carrito de compras (Checkout) prÃ³ximamente.");

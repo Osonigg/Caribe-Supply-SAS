@@ -1,38 +1,42 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import CartContext from "../CartContext";
+import productsData from "./productsData";
 
-function CarBasket() {
-    // 💡 ESTADO INICIAL: El carrito inicia vacío, esperando la selección del usuario.
-    // En tu aplicación real, esta lista vendría de tu estado global (Context, Redux, etc.).
-    const [cartItems, setCartItems] = useState([]); 
 
-    // Lógica de cálculo del total
+// ⚠️ DATOS SIMULADOS (MOCK): 
+// Estos productos simulan lo que el usuario ha añadido al carrito.
+// En tu aplicación final, debes obtener esta lista del estado global de tu aplicación.
+
+
+function Cart() {
+    // 💡 REEMPLAZAR ESTO: Con la lista de artículos de tu estado global de carrito.
+    const [cartItems, setCartItems] = useState(productsData.id); 
+
+    
+
+    // 1. Lógica de cálculo del total
     const calculateTotal = () => {
-        // Usa reduce para sumar el precio * cantidad de cada artículo
         return cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
     };
 
     const totalSinImpuestos = calculateTotal();
-    const ITBIS = totalSinImpuestos * 0.18; // Cálculo del 18% de ITBIS
+    const ITBIS = totalSinImpuestos * 0.18; // 18% de ITBIS (Impuesto sobre Transferencia de Bienes Industrializados y Servicios)
     const totalConImpuestos = totalSinImpuestos + ITBIS;
 
-    // Función para eliminar un artículo
+    // 2. Función para eliminar un artículo
     const removeItem = (id) => {
         setCartItems(cartItems.filter(item => item.id !== id));
     };
 
-    // Función para ajustar la cantidad
+    // 3. Función para ajustar la cantidad (ejemplo básico)
     const updateQuantity = (id, newQuantity) => {
-        // Asegura que el valor sea un número entero
-        const quantity = parseInt(newQuantity); 
-        
-        if (quantity <= 0 || isNaN(quantity)) {
+        if (newQuantity <= 0) {
             removeItem(id);
             return;
         }
-        
         setCartItems(cartItems.map(item => 
-            item.id === id ? { ...item, quantity: quantity } : item
+            item.id === id ? { ...item, quantity: newQuantity } : item
         ));
     };
 
@@ -41,16 +45,12 @@ function CarBasket() {
             <h2 className="text-center mb-5 fw-bold text-primary">🛒 Su Cesta de Compras</h2>
             <hr />
 
-            {/* Condición: Muestra alerta si el carrito está vacío */}
+            {/* Condición para Carrito Vacío */}
             {cartItems.length === 0 ? (
                 <div className="alert alert-info text-center p-4 shadow-sm">
-                    El carrito está vacío. ¡Es momento de llenar el carro con tus productos favoritos! 
-                    <br/>
-                    {/* ENLACE AL CATÁLOGO: to="/" es la ruta correcta */}
-                    <Link to="/" className="alert-link fw-bold">Volver al Catálogo</Link>
+                    El carrito está vacío. ¡Es momento de llenarlo! <Link to="/" className="alert-link fw-bold">Ver Catálogo</Link>
                 </div>
             ) : (
-                // Estructura para mostrar los artículos
                 <div className="row">
                     {/* Columna de Artículos en el Carrito */}
                     <div className="col-lg-8">
@@ -60,7 +60,6 @@ function CarBasket() {
                                 <li key={item.id} className="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-center py-3">
                                     
                                     <div className="d-flex align-items-center w-50 mb-3 mb-md-0">
-                                        {/* La imagen usa la ruta 'assets/...' de tu array */}
                                         <img 
                                             src={item.image} 
                                             alt={item.name} 
@@ -74,20 +73,20 @@ function CarBasket() {
                                     
                                     <div className="d-flex flex-column flex-md-row align-items-center w-50 justify-content-end">
                                         
-                                        {/* Control de Cantidad (donde estaba el error de parsing) */}
+                                        {/* Control de Cantidad */}
                                         <div className="d-flex align-items-center me-3 mb-2 mb-md-0">
                                             <label className="me-2 text-nowrap">Cantidad:</label>
                                             <input
                                                 type="number"
                                                 value={item.quantity}
-                                                // ✨ Línea corregida: Sintaxis limpia y correcta
-                                                onChange={(e) => updateQuantity(item.id, e.target.value)}
+                                                onChange={(e) => updateQuantity(item.id, parseInt(e.target.value))}
                                                 min="1"
                                                 style={{ width: '60px' }}
                                                 className="form-control form-control-sm text-center"
                                             />
                                         </div>
                                         
+                                        {/* Precio y Botón de Eliminar */}
                                         <div className="text-end me-3 mb-2 mb-md-0">
                                             <span className="fw-bold d-block text-success">
                                                 RD$ {(item.price * item.quantity).toFixed(2)}
@@ -127,11 +126,12 @@ function CarBasket() {
                                 </li>
                             </ul>
                             
+                            {/* Botón de Finalizar Compra */}
                             <Link to="/checkout" className="btn btn-success d-block py-2 fw-bold text-uppercase mb-2">
                                 Finalizar Compra
                             </Link>
                             
-                            {/* ENLACE AL CATÁLOGO: to="/" */}
+                            {/* Botón de Volver al Catálogo (Apunta a la ruta principal '/') */}
                             <Link to="/" className="btn btn-outline-secondary d-block py-2">
                                 Volver al Catálogo
                             </Link>
@@ -143,4 +143,4 @@ function CarBasket() {
     );
 }
 
-export default CarBasket;
+export default Cart;

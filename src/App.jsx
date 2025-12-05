@@ -14,6 +14,8 @@ import FAQs from "./pages/FAQs.jsx";
 import Policy from "./pages/Policy.jsx";
 import Carousel from "./components/Carousel.jsx";
 import Checkout from "./pages/Checkout.jsx";
+import { CartProvider } from "./CartContext.js";
+
 
 function App() {
   return (
@@ -34,6 +36,7 @@ function App() {
       <div class="main-content">
         <main class="container col-12 col-md-8 col-md-4">
           {/* Las Rutas definen qué componente se muestra según la URL */}
+         <CartProvider>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -49,6 +52,7 @@ function App() {
             {/* Puedes añadir una ruta para errores 404 */}
             <Route path="*" element={<h2>404 Página no encontrada</h2>} />
           </Routes>
+         </CartProvider>
         </main>
       </div>
 
