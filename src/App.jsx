@@ -1,5 +1,4 @@
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation.jsx";
 import ThemeToggle from "./components/ThemeToggle.jsx";
