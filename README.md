@@ -54,13 +54,35 @@ Solución: Se adoptó el estándar de accesibilidad correcto, manteniendo la eti
  Métricas de Rendimiento (Lighthouse)
 (Resultado de las pruebas de rendimiento y accesibilidad)
 
-Rendimiento: [EJEMPLO: 95/100]
 
-Accesibilidad: [EJEMPLO: 100/100]
+---Capturas de pantalla---
+Inicio de la página o home
+![Página Principal](./public/assets/prueba1.png)
+![Página Principal](./public/assets/prueba2.png)
+![Página Principal](./public/assets/prueba3.png)
+![Página Principal](./public/assets/prueba4.png)
+Catalogo y productos
+![Catalogo](./public/assets/prueba5.png)
+![Catalogo](./public/assets/prueba6.png)
+![Catalogo](./public/assets/prueba10.png)
+![Filtros del Catalogo](./public/assets/prueba15.png)
+![Filtros del Catalogo](./public/assets/prueba16.png)
+Carrito, CheckOut y Seguimiento
+![Carrito](./public/assets/prueba17.png)
+![CheckOut](./public/assets/prueba18.png)
+![Seguimiento](./public/assets/prueba13.png)
+Contacto
+![Contacto](./public/assets/prueba14.png)
+FAQ y About
+![FAQ](./public/assets/prueba7.png)
+![About](./public/assets/prueba8.png)
+![About](./public/assets/prueba9.png)
+Inicio S. usuario/ Registro
+![Usuario](./public/assets/prueba11.png)
+![Registro](./public/assets/prueba12.png)
+Rendimiento o metricas
+![Rendimiento](./public/assets/prueba19.jpeg)
 
-First Contentful Paint (FCP): [EJEMPLO: 1.2s]
-
-Largest Contentful Paint (LCP): [EJEMPLO: 2.5s]
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
