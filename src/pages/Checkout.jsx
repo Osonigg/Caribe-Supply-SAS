@@ -95,16 +95,16 @@ function Checkout() {
         return (
             <div className="container my-5 text-center">
                 <div className="alert alert-success p-5 shadow-lg">
-                    <h1 className="display-4 text-success mb-4">¡Compra Completada con Éxito! 🎉</h1>
+                    <h1 className="display-6 text-success mb-6">¡Compra Completada con Éxito!</h1>
                     <p className="lead">
                         Gracias por tu compra. Tu pedido ha sido procesado correctamente.
                     </p>
                     <hr />
                     <h3 className="mb-3">
-                        Número de Tracking: <span className="text-primary fw-bold">{shippingNumber}</span>
+                        Número de Tracking: <span className="text-secundary fw-bold">{shippingNumber}</span>
                     </h3>
                     <p className="text-dark fw-medium">
-                        📧 **Confirmación por Email:** Recibirás un correo electrónico con el **código de shipping**, tu factura y un enlace de rastreo detallado del pedido en las próximas horas.
+                         Confirmación por Email: Recibirás un correo electrónico con el código de shipping, tu factura y un enlace de rastreo detallado del pedido en las próximas horas.
                     </p>
                     <Link to="/" className="btn btn-success mt-4 btn-lg">
                         Volver al inicio
