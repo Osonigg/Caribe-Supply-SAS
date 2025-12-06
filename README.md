@@ -60,4 +60,3 @@ Accesibilidad: [EJEMPLO: 100/100]
 First Contentful Paint (FCP): [EJEMPLO: 1.2s]
 
 Largest Contentful Paint (LCP): [EJEMPLO: 2.5s]
-
