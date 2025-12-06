@@ -1,31 +1,79 @@
-///-------REGISTRO DE EVIDENCIAS Y SOLUCIONES-------///
-
-Fecha: 2025-11-20
-Estudiante: Nabila M. Cabrera Castillo- 100614124
-Objetivo: Implementación del Catálogo y Carrito de Compras (JS Puro) e integración exitosa en la estructura de proyecto React (parte B).
-
---- LOG DE COMMITS ---
-(Generado con: git log --pretty=format:"%h - %an, %ad : %s" --date=short)
-
-[HASH_1] - [TU NOMBRE], 2025-11-10 : feat: Implementación inicial de la lógica del carrito (carrito.js) y estilos base (styles.css).
-[HASH_2] - [TU NOMBRE], 2025-11-13 : feat: Fusión de la estructura HTML del catálogo y modales en public/index.html (dentro de #root).
-[HASH_3] - [TU NOMBRE], 2025-11-20 : feat: Se añade la lógica de filtros dinámicos y persistencia de LocalStorage a carrito.js.
-[HASH_4] - [TU NOMBRE], 2025-11-20 : feat: Se actualiza el modal de checkout para incluir 18 provincias de RD y la opción 'Envío Internacional'.
-[HASH_5] - [TU NOMBRE], 2025-11-20 : fix: Corrección crucial de rutas de imagen a /assets/ y cambio de extensiones de .jpg a .png en el array PRODUCTOS de carrito.js.
-[HASH_6] - [TU NOMBRE], 2025-11-20 : chore: Creación de la estructura public/assets/ y subida de todas las imágenes.
-[HASH_7] - [TU NOMBRE], 2025-11-20 : docs: Se agrega el log de commits al archivo de evidencia_historial.txt.
-
---- RESUMEN DE PROBLEMAS RESUELTOS Y SOLUCIONES LÓGICAS ---
-
- 1). Corrección de Extensión de Archivos
-
-*Problema:*Las imágenes reales subidas eran `.png`, pero las había colocado como 'jpg'.
-*Solución:* Se actualizaron todas las referencias de la clave `imagen` dentro del *array* `PRODUCTOS` a la extensión correcta *`.png`*.
-
-2). Mejora en la Lógica de Negocio (Checkout)
-
-*Problema:* La aplicación no reflejaba el alcance nacional e internacional de la microempresa.
-*Solución:* Se *expandió* la lista de provincias en el `<select>` de *checkout* (total 18 provincias de RD). Además, se añadió la opción **"📦 Envío Internacional"*, manteniendo la lógica de validación actual en `carrito.js` (solo verificando que se haya seleccionado cualquier opción no vacía).
-
-=================================================
-FIN DEL DOCUMENTO
+git log --stat > evidencia_historial_detallado.txt* f8e9d9a (HEAD -> dev, origin/dev) Capturas
+* 7d41098 Actualizacion de algunos datos del Readme
+* 70e3f53 Reparacion de error de los filtros
+* dac192d Ultimos arreglos del checkout
+* 39d1bd1 Ultimos arreglos del catalogo
+*   8378dc0 Merge branch 'dev' of https://github.com/Osonigg/Caribe-Supply-SAS into dev
+|\  
+| *   27e3a72 Merge branch 'dev' of https://github.com/Osonigg/Caribe-Supply-SAS into dev
+| |\  
+| * | f080f5d Agregar estilos para el botón de cambio de tema
+* | | 3a1d554 Terminación del CheckOut
+* | | a736105 Actualizacion de carrito
+| |/  
+|/|   
+* | 6b0f600 actualinzando
+* | a37bcad Mejoras al CarBasket
+|/  
+* 06475fc ACTUALIZACION DEL CATALOGO, IMAGENES AGREGADAS Y MODIFICADAS
+* caec644 actualizando contenido y estilo
+* 85c3f46 actualizando contenido y estilo
+* 5822616 estilizando
+*   867774f Merge branch 'main' into dev
+|\  
+* | d0f5013 actualizando
+* | 6cd6b53 actualizando contenido y styles
+* | bae7562 actualizando contenido y styles
+* | 15718ea Delete backend directory
+* | 9c77df0 trabajando contenido
+* | 1462808 trabajando contenido
+* | f3092e5 actualizando
+* | abc0ffa trabando frontend
+* | 71ace03 Actualización del backend: rutas, controladores y APIs completadas
+* | f8aa75e Actualización del backend: rutas, controladores y APIs completadas
+* |   27fa176 Finalizando merge pendiente
+|\ \  
+* | | f3dfa52 Estructura inicial del backend y organización de carpetas
+| | | * 8fb5010 (origin/main, origin/HEAD) Update README.md
+| | | * b50d3fa (main) Update README.md
+| | | * 5878dd9 Update README.md
+| | | * f25d275 Update README.md
+| | |/  
+| | * d5452eb Update App.jsx
+| | * e5215dd Update App.jsx
+| | * 6f1f170 Update App.jsx
+| | * 1b13462 Update App.jsx
+| | * a3acb0e Update manifest.json
+| | * 19f6965 Update index.html
+| | * 84b1239 Delete public/logo2.png
+| | * d6b91aa Update carrito.js
+| | * be387f9 Add files via upload
+| | * d2236df Update index.html
+| | * a5d4f7a Update carrito.js
+| | * e5e9eb2 Delete public/assets/README.md
+| | * ec68e8d Add files via upload
+| | * c17055b Create README.md
+| | * 3144d20 Delete public/assets
+| | * 989dedb Create assets
+| | * f0ce078 Add files via upload
+| | * d4835b3 Add files via upload
+| | * 010544b Delete src/logo.png
+| | * 0e5a886 Delete src/services directory
+| | * 1000ee0 Delete src/examples directory
+| | * e348cf9 Delete src/architecture directory
+| | * 55637f0 Add files via upload
+| | * 04a25f3 Add files via upload
+| | * 6ee5730 Add files via upload
+| | * ad39a96 Merge pull request #3 from Osonigg/dev
+| |/| 
+|/|/  
+| *   2600473 Merge pull request #2 from Osonigg/main
+| |\  
+| |/  
+|/|   
+* | 6d6976e Merge pull request #1 from Osonigg/dev
+|\| 
+| * 93933ac trabajando navbar, y pages
+|/  
+* 27fa272 Este es mi repositorio
+* ab77fa2 Initial commit

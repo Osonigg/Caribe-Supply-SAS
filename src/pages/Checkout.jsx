@@ -13,7 +13,7 @@ const dominicanProvinces = [
     "Santo Domingo", "Valverde"
 ];
 
-// Solo algunos estados de EE. UU. a modo de ejemplo
+// Solo algunos estados de EE. UU//
 const usStates = [
     "Alabama", "Alaska", "California", "Florida", "Georgia", "New York", 
     "Ohio", "Texas", "Virginia", "Washington", "Wyoming"
