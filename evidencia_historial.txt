@@ -1,31 +1,2602 @@
-///-------REGISTRO DE EVIDENCIAS Y SOLUCIONES-------///
+commit f8e9d9ab628946c1c8ec0b2a20809db58bc42717
+Author: nabxo <131215045+nabxo@users.noreply.github.com>
+Date:   Fri Dec 5 22:06:14 2025 -0800
 
-Fecha: 2025-11-20
-Estudiante: Nabila M. Cabrera Castillo- 100614124
-Objetivo: Implementación del Catálogo y Carrito de Compras (JS Puro) e integración exitosa en la estructura de proyecto React (parte B).
+    Capturas
 
---- LOG DE COMMITS ---
-(Generado con: git log --pretty=format:"%h - %an, %ad : %s" --date=short)
+ README.md                   |  32 +++++++++++++++++++++++++++-----
+ public/assets/prueba1.png   | Bin 0 -> 1233971 bytes
+ public/assets/prueba10.png  | Bin 0 -> 486371 bytes
+ public/assets/prueba11.png  | Bin 0 -> 444671 bytes
+ public/assets/prueba12.png  | Bin 0 -> 321701 bytes
+ public/assets/prueba13.png  | Bin 0 -> 396116 bytes
+ public/assets/prueba14.png  | Bin 0 -> 284929 bytes
+ public/assets/prueba15.png  | Bin 0 -> 1017083 bytes
+ public/assets/prueba16.png  | Bin 0 -> 1163347 bytes
+ public/assets/prueba17.png  | Bin 0 -> 170702 bytes
+ public/assets/prueba18.png  | Bin 0 -> 115403 bytes
+ public/assets/prueba19.jpeg | Bin 0 -> 55331 bytes
+ public/assets/prueba2.png   | Bin 0 -> 82596 bytes
+ public/assets/prueba3.png   | Bin 0 -> 55823 bytes
+ public/assets/prueba4.png   | Bin 0 -> 68697 bytes
+ public/assets/prueba5.png   | Bin 0 -> 288556 bytes
+ public/assets/prueba6.png   | Bin 0 -> 297305 bytes
+ public/assets/prueba7.png   | Bin 0 -> 659881 bytes
+ public/assets/prueba8.png   | Bin 0 -> 805722 bytes
+ public/assets/prueba9.png   | Bin 0 -> 127081 bytes
+ 20 files changed, 27 insertions(+), 5 deletions(-)
 
-[HASH_1] - [TU NOMBRE], 2025-11-10 : feat: Implementación inicial de la lógica del carrito (carrito.js) y estilos base (styles.css).
-[HASH_2] - [TU NOMBRE], 2025-11-13 : feat: Fusión de la estructura HTML del catálogo y modales en public/index.html (dentro de #root).
-[HASH_3] - [TU NOMBRE], 2025-11-20 : feat: Se añade la lógica de filtros dinámicos y persistencia de LocalStorage a carrito.js.
-[HASH_4] - [TU NOMBRE], 2025-11-20 : feat: Se actualiza el modal de checkout para incluir 18 provincias de RD y la opción 'Envío Internacional'.
-[HASH_5] - [TU NOMBRE], 2025-11-20 : fix: Corrección crucial de rutas de imagen a /assets/ y cambio de extensiones de .jpg a .png en el array PRODUCTOS de carrito.js.
-[HASH_6] - [TU NOMBRE], 2025-11-20 : chore: Creación de la estructura public/assets/ y subida de todas las imágenes.
-[HASH_7] - [TU NOMBRE], 2025-11-20 : docs: Se agrega el log de commits al archivo de evidencia_historial.txt.
+commit 7d41098c8e60dc763da116eccc073f3c98f211b0
+Author: nabxo <131215045+nabxo@users.noreply.github.com>
+Date:   Fri Dec 5 21:29:10 2025 -0800
 
---- RESUMEN DE PROBLEMAS RESUELTOS Y SOLUCIONES LÓGICAS ---
+    Actualizacion de algunos datos del Readme
 
- 1). Corrección de Extensión de Archivos
+ README.md | 63 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 63 insertions(+)
 
-*Problema:*Las imágenes reales subidas eran `.png`, pero las había colocado como 'jpg'.
-*Solución:* Se actualizaron todas las referencias de la clave `imagen` dentro del *array* `PRODUCTOS` a la extensión correcta *`.png`*.
+commit 70e3f5301267629ad1393512cffff168245f706c
+Author: nabxo <131215045+nabxo@users.noreply.github.com>
+Date:   Fri Dec 5 20:50:28 2025 -0800
 
-2). Mejora en la Lógica de Negocio (Checkout)
+    Reparacion de error de los filtros
 
-*Problema:* La aplicación no reflejaba el alcance nacional e internacional de la microempresa.
-*Solución:* Se *expandió* la lista de provincias en el `<select>` de *checkout* (total 18 provincias de RD). Además, se añadió la opción **"📦 Envío Internacional"*, manteniendo la lógica de validación actual en `carrito.js` (solo verificando que se haya seleccionado cualquier opción no vacía).
+ src/pages/Catolog.jsx | 45 +++++++++++++--------------------------------
+ 1 file changed, 13 insertions(+), 32 deletions(-)
 
-=================================================
-FIN DEL DOCUMENTO
+commit dac192db7ac6cfb141d6385618f7f9a083ddfeba
+Author: nabxo <131215045+nabxo@users.noreply.github.com>
+Date:   Fri Dec 5 16:23:20 2025 -0800
+
+    Ultimos arreglos del checkout
+
+ src/pages/Checkout.jsx | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+commit 39d1bd11db8fdb1547001c4fdfe3992d2047e324
+Author: nabxo <131215045+nabxo@users.noreply.github.com>
+Date:   Fri Dec 5 16:17:04 2025 -0800
+
+    Ultimos arreglos del catalogo
+
+ src/CartContext.js        |   9 +-
+ src/pages/About.jsx       |  99 +++++--
+ src/pages/Catolog.jsx     | 256 +++++++++++------
+ src/pages/Checkout.jsx    | 693 ++++++++++++++++++++++++++--------------------
+ src/pages/Home.jsx        | 149 +++++-----
+ src/pages/productsData.js |  41 +--
+ 6 files changed, 770 insertions(+), 477 deletions(-)
+
+commit 8378dc00bbe8001b5aee4260f193d3a5cc76395f
+Merge: 3a1d554 27e3a72
+Author: nabxo <131215045+nabxo@users.noreply.github.com>
+Date:   Fri Dec 5 00:58:30 2025 -0800
+
+    Merge branch 'dev' of https://github.com/Osonigg/Caribe-Supply-SAS into dev
+
+commit 3a1d554b1130e1e4cecc4af763464f2202fa873c
+Author: nabxo <131215045+nabxo@users.noreply.github.com>
+Date:   Fri Dec 5 00:57:42 2025 -0800
+
+    Terminación del CheckOut
+
+ src/CartContext.js      | 131 +++++++++++++++++++-----------------------------
+ src/pages/CarBasket.jsx |  60 +++++++---------------
+ src/pages/Checkout.jsx  |  86 +++++++++++++++----------------
+ src/pages/Product.jsx   |  83 +++++++++++++++++-------------
+ 4 files changed, 162 insertions(+), 198 deletions(-)
+
+commit a736105652c08a2eb0bc1da6f1bedb01b89a61f3
+Author: nabxo <131215045+nabxo@users.noreply.github.com>
+Date:   Fri Dec 5 00:11:42 2025 -0800
+
+    Actualizacion de carrito
+
+ src/App.jsx                     |  4 ++
+ src/CartContext.js              | 88 +++++++++++++++++++++++++++++++++++++++++
+ src/{carrito.js => catalogo.js} |  0
+ src/components/Navigation.jsx   |  2 +-
+ src/pages/CarBasket.jsx         | 54 ++++++++++++-------------
+ src/pages/Product.jsx           |  3 ++
+ 6 files changed, 123 insertions(+), 28 deletions(-)
+
+commit 27e3a7294ded696b0cf195d2111863cabfe72963
+Merge: f080f5d 6b0f600
+Author: Aldon161 <aldonrodriguez161@gmail.com>
+Date:   Fri Dec 5 00:24:05 2025 -0400
+
+    Merge branch 'dev' of https://github.com/Osonigg/Caribe-Supply-SAS into dev
+
+commit f080f5df97ebf1ae0904bcc9c279e0213f4ec7f6
+Author: Aldon161 <aldonrodriguez161@gmail.com>
+Date:   Fri Dec 5 00:23:09 2025 -0400
+
+    Agregar estilos para el botón de cambio de tema
+
+ package-lock.json              |  43 +++++++++-------
+ src/App.css                    |  80 +++++++++++++++++++++++++++++-
+ src/components/Navigation.css  |  39 +++++++++++----
+ src/components/ThemeToggle.css |  20 ++++++++
+ src/components/ThemeToggle.jsx | 109 ++++++++---------------------------------
+ 5 files changed, 175 insertions(+), 116 deletions(-)
+
+commit 06475fcb6bacf6d116f0bfe55c58e94c71fe58a8
+Author: nabxo <131215045+nabxo@users.noreply.github.com>
+Date:   Thu Dec 4 22:14:13 2025 -0800
+
+    ACTUALIZACION DEL CATALOGO, IMAGENES AGREGADAS Y MODIFICADAS
+
+ package-lock.json         |  42 +++---
+ public/assets/arbol.jpg   | Bin 0 -> 100141 bytes
+ public/assets/bocina.jpg  | Bin 0 -> 173728 bytes
+ public/assets/silla.jpg   | Bin 0 -> 19452 bytes
+ public/assets/tanque.jpg  | Bin 0 -> 6464 bytes
+ src/pages/productsData.js | 331 +++++++++++++++++++++++++++++++++++++---------
+ 6 files changed, 289 insertions(+), 84 deletions(-)
+
+commit 6b0f600436cea141e9ccd0a2b4f200f98e666d39
+Author: Wilmi Lucas <wilmilucas89@gmail.com>
+Date:   Thu Dec 4 23:06:54 2025 -0400
+
+    actualinzando
+
+ src/App.css           | 30 ++++++++++++++++++++++++++++--
+ src/pages/Product.jsx | 21 ++++++++++++++-------
+ 2 files changed, 42 insertions(+), 9 deletions(-)
+
+commit a37bcad6f74b631b87e7b3c437921fbc1bb3bd39
+Author: nabxo <131215045+nabxo@users.noreply.github.com>
+Date:   Thu Dec 4 22:56:52 2025 -0800
+
+    Mejoras al CarBasket
+
+ src/App.jsx               |   1 -
+ src/pages/CarBasket.jsx   | 197 +++++++++++++++++++++++++++++++++-------------
+ src/pages/productsData.js |   3 +-
+ 3 files changed, 144 insertions(+), 57 deletions(-)
+
+commit caec644eae56244e4ab7734aebf86d9728d93acc
+Author: Wilmi Lucas <wilmilucas89@gmail.com>
+Date:   Thu Dec 4 11:41:01 2025 -0400
+
+    actualizando contenido y estilo
+
+ src/App.css                    |  4 +-
+ src/App.jsx                    | 84 +--------------------------------------
+ src/components/Navigation.jsx  | 11 ++++--
+ src/components/ThemeToggle.jsx | 90 +++++++++++++++++++++++-------------------
+ src/pages/Home.jsx             |  8 ++--
+ 5 files changed, 67 insertions(+), 130 deletions(-)
+
+commit 85c3f46882b5285c08d9fd7b8ba3f15e393004d5
+Author: Wilmi Lucas <wilmilucas89@gmail.com>
+Date:   Thu Dec 4 10:22:00 2025 -0400
+
+    actualizando contenido y estilo
+
+ src/App.css                    |  14 +-
+ src/App.jsx                    |  96 ++++++++++++-
+ src/components/Navigation.jsx  |  67 +++++----
+ src/components/ThemeToggle.jsx |  88 ++++++++++++
+ src/pages/CarBasket.jsx        |  51 ++++++-
+ src/pages/Checkout.jsx         | 307 +++++++++++++++++++++++++++++++++++++++++
+ src/pages/Login.jsx            |  16 ++-
+ src/pages/Product.jsx          |   9 +-
+ 8 files changed, 600 insertions(+), 48 deletions(-)
+
+commit 5822616efcfbb41e17d1b42e9f80b657e8e4384c
+Author: Wilmi Lucas <wilmilucas89@gmail.com>
+Date:   Wed Dec 3 16:15:21 2025 -0400
+
+    estilizando
+
+ src/App.css                 |  15 ++++--
+ src/App.jsx                 |   4 +-
+ src/Logo.jpeg               | Bin 54737 -> 0 bytes
+ src/components/Carousel.jsx | 124 +++++++++++++++++++++++++++++-------------
+ src/logo.png                | Bin 0 -> 220902 bytes
+ src/pages/About.jsx         |   6 +--
+ src/pages/CarBasket.jsx     |   2 +-
+ src/pages/Contact.jsx       | 129 +++++++++++++++++++++++++++-----------------
+ src/pages/FAQs.jsx          |  46 ++++++++--------
+ src/pages/Home.jsx          |  79 ++++++++++++++++-----------
+ src/pages/Login.jsx         |  82 +++++++++++++++++-----------
+ src/pages/Register.jsx      |   5 +-
+ 12 files changed, 310 insertions(+), 182 deletions(-)
+
+commit 867774f041cde105188ce5d3d6e35dda8ac35622
+Merge: d0f5013 d5452eb
+Author: wLucas <127319880+Osonigg@users.noreply.github.com>
+Date:   Wed Dec 3 14:36:25 2025 -0400
+
+    Merge branch 'main' into dev
+
+commit d0f5013f24254495426b55c7f403a393d1c64396
+Author: Wilmi Lucas <wilmilucas89@gmail.com>
+Date:   Wed Dec 3 14:29:17 2025 -0400
+
+    actualizando
+
+ src/App.css                   |   8 ---
+ src/components/Carousel.jsx   |   8 +--
+ src/components/Navigation.css |  16 ++++--
+ src/components/Navigation.jsx |  24 ++++-----
+ src/components/logo1.png      | Bin 162774 -> 0 bytes
+ src/pages/Catolog.jsx         |   2 +-
+ src/pages/Login.jsx           |   4 +-
+ src/pages/Register.jsx        | 115 ++++++++++++++++++++++++++++--------------
+ 8 files changed, 106 insertions(+), 71 deletions(-)
+
+commit 6cd6b5306826303458a68dd4f6e075e4577bf809
+Author: Wilmi Lucas <wilmilucas89@gmail.com>
+Date:   Wed Dec 3 13:22:47 2025 -0400
+
+    actualizando contenido y styles
+
+ src/components/Carousel.jsx   | 49 ++++++++++++++++++-------------------------
+ src/components/Navigation.css |  6 ------
+ src/components/Navigation.jsx | 30 +++++++++++++-------------
+ 3 files changed, 36 insertions(+), 49 deletions(-)
+
+commit d5452eb1c5da20dc81a60cf62efa572338730085
+Author: Nabila C. Castillo <131215045+nabxo@users.noreply.github.com>
+Date:   Tue Dec 2 19:02:40 2025 -0800
+
+    Update App.jsx
+
+ src/App.jsx | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit e5215dd829a25d5cd9f1a719772a85c9c3ddca81
+Author: Nabila C. Castillo <131215045+nabxo@users.noreply.github.com>
+Date:   Tue Dec 2 19:01:42 2025 -0800
+
+    Update App.jsx
+
+ src/App.jsx | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 6f1f1700a5b983e985f5e25a39e213e394cbe9b9
+Author: Nabila C. Castillo <131215045+nabxo@users.noreply.github.com>
+Date:   Tue Dec 2 19:01:22 2025 -0800
+
+    Update App.jsx
+
+ src/App.jsx | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 1b1346222fa2f8dab031c26189bdac420b24b527
+Author: Nabila C. Castillo <131215045+nabxo@users.noreply.github.com>
+Date:   Tue Dec 2 18:57:03 2025 -0800
+
+    Update App.jsx
+
+ src/App.jsx | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit a3acb0e6b8ea84160cf2c62c8c8b0d5168e2036e
+Author: Nabila C. Castillo <131215045+nabxo@users.noreply.github.com>
+Date:   Tue Dec 2 18:54:52 2025 -0800
+
+    Update manifest.json
+
+ public/manifest.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 19f6965edc2f5681922b41652f484e9970d12ebc
+Author: Nabila C. Castillo <131215045+nabxo@users.noreply.github.com>
+Date:   Tue Dec 2 18:54:07 2025 -0800
+
+    Update index.html
+
+ public/index.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 84b1239cb5862fd0070cc65b69b232f7e4697cd0
+Author: Nabila C. Castillo <131215045+nabxo@users.noreply.github.com>
+Date:   Tue Dec 2 18:52:45 2025 -0800
+
+    Delete public/logo2.png
+
+ public/logo2.png | Bin 162774 -> 0 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit bae75624f35c6dc5fc9459c8aba2c8844429b2f4
+Author: Wilmi Lucas <wilmilucas89@gmail.com>
+Date:   Tue Dec 2 15:14:36 2025 -0400
+
+    actualizando contenido y styles
+
+ src/App.css                   |  56 ++++-----
+ src/App.jsx                   |  59 +++------
+ src/components/Carousel.jsx   |  52 ++++----
+ src/components/Navigation.jsx | 269 ++++++++++++++++++++++++------------------
+ src/pages/Catolog.jsx         | 127 ++++++++++++--------
+ src/pages/Home.jsx            | 106 +++++------------
+ src/pages/Product.jsx         |  23 ++--
+ src/pages/productsData.js     |  62 ++++++++++
+ 8 files changed, 403 insertions(+), 351 deletions(-)
+
+commit 15718ead2fbe25a49b64a157dcc18f6851c58339
+Author: Simeleidy <160167009+Simeleidy@users.noreply.github.com>
+Date:   Sat Nov 29 19:12:15 2025 +0100
+
+    Delete backend directory
+    
+    Borando para implementar lo  que se pide en los requisitos
+
+ backend/node_modules/.bin/nodemon                  |   16 -
+ backend/node_modules/.bin/nodemon.cmd              |   17 -
+ backend/node_modules/.bin/nodemon.ps1              |   28 -
+ backend/node_modules/.bin/nodetouch                |   16 -
+ backend/node_modules/.bin/nodetouch.cmd            |   17 -
+ backend/node_modules/.bin/nodetouch.ps1            |   28 -
+ backend/node_modules/.bin/semver                   |   16 -
+ backend/node_modules/.bin/semver.cmd               |   17 -
+ backend/node_modules/.bin/semver.ps1               |   28 -
+ backend/node_modules/.package-lock.json            | 1198 ---
+ backend/node_modules/accepts/HISTORY.md            |  250 -
+ backend/node_modules/accepts/LICENSE               |   23 -
+ backend/node_modules/accepts/README.md             |  140 -
+ backend/node_modules/accepts/index.js              |  238 -
+ backend/node_modules/accepts/package.json          |   47 -
+ backend/node_modules/anymatch/LICENSE              |   15 -
+ backend/node_modules/anymatch/README.md            |   87 -
+ backend/node_modules/anymatch/index.d.ts           |   20 -
+ backend/node_modules/anymatch/index.js             |  104 -
+ backend/node_modules/anymatch/package.json         |   48 -
+ .../balanced-match/.github/FUNDING.yml             |    2 -
+ backend/node_modules/balanced-match/LICENSE.md     |   21 -
+ backend/node_modules/balanced-match/README.md      |   97 -
+ backend/node_modules/balanced-match/index.js       |   62 -
+ backend/node_modules/balanced-match/package.json   |   48 -
+ .../binary-extensions/binary-extensions.json       |  263 -
+ .../binary-extensions/binary-extensions.json.d.ts  |    3 -
+ backend/node_modules/binary-extensions/index.d.ts  |   14 -
+ backend/node_modules/binary-extensions/index.js    |    1 -
+ backend/node_modules/binary-extensions/license     |   10 -
+ .../node_modules/binary-extensions/package.json    |   40 -
+ backend/node_modules/binary-extensions/readme.md   |   25 -
+ backend/node_modules/body-parser/HISTORY.md        |  731 --
+ backend/node_modules/body-parser/LICENSE           |   23 -
+ backend/node_modules/body-parser/README.md         |  491 -
+ backend/node_modules/body-parser/index.js          |   80 -
+ backend/node_modules/body-parser/lib/read.js       |  210 -
+ backend/node_modules/body-parser/lib/types/json.js |  206 -
+ backend/node_modules/body-parser/lib/types/raw.js  |   75 -
+ backend/node_modules/body-parser/lib/types/text.js |   80 -
+ .../body-parser/lib/types/urlencoded.js            |  177 -
+ backend/node_modules/body-parser/lib/utils.js      |   83 -
+ backend/node_modules/body-parser/package.json      |   49 -
+ backend/node_modules/brace-expansion/LICENSE       |   21 -
+ backend/node_modules/brace-expansion/README.md     |  129 -
+ backend/node_modules/brace-expansion/index.js      |  201 -
+ backend/node_modules/brace-expansion/package.json  |   50 -
+ backend/node_modules/braces/LICENSE                |   21 -
+ backend/node_modules/braces/README.md              |  586 --
+ backend/node_modules/braces/index.js               |  170 -
+ backend/node_modules/braces/lib/compile.js         |   60 -
+ backend/node_modules/braces/lib/constants.js       |   57 -
+ backend/node_modules/braces/lib/expand.js          |  113 -
+ backend/node_modules/braces/lib/parse.js           |  331 -
+ backend/node_modules/braces/lib/stringify.js       |   32 -
+ backend/node_modules/braces/lib/utils.js           |  122 -
+ backend/node_modules/braces/package.json           |   77 -
+ backend/node_modules/bytes/History.md              |   97 -
+ backend/node_modules/bytes/LICENSE                 |   23 -
+ backend/node_modules/bytes/Readme.md               |  152 -
+ backend/node_modules/bytes/index.js                |  170 -
+ backend/node_modules/bytes/package.json            |   42 -
+ .../node_modules/call-bind-apply-helpers/.eslintrc |   17 -
+ .../call-bind-apply-helpers/.github/FUNDING.yml    |   12 -
+ .../node_modules/call-bind-apply-helpers/.nycrc    |    9 -
+ .../call-bind-apply-helpers/CHANGELOG.md           |   30 -
+ .../node_modules/call-bind-apply-helpers/LICENSE   |   21 -
+ .../node_modules/call-bind-apply-helpers/README.md |   62 -
+ .../call-bind-apply-helpers/actualApply.d.ts       |    1 -
+ .../call-bind-apply-helpers/actualApply.js         |   10 -
+ .../call-bind-apply-helpers/applyBind.d.ts         |   19 -
+ .../call-bind-apply-helpers/applyBind.js           |   10 -
+ .../call-bind-apply-helpers/functionApply.d.ts     |    1 -
+ .../call-bind-apply-helpers/functionApply.js       |    4 -
+ .../call-bind-apply-helpers/functionCall.d.ts      |    1 -
+ .../call-bind-apply-helpers/functionCall.js        |    4 -
+ .../call-bind-apply-helpers/index.d.ts             |   64 -
+ .../node_modules/call-bind-apply-helpers/index.js  |   15 -
+ .../call-bind-apply-helpers/package.json           |   85 -
+ .../call-bind-apply-helpers/reflectApply.d.ts      |    3 -
+ .../call-bind-apply-helpers/reflectApply.js        |    4 -
+ .../call-bind-apply-helpers/test/index.js          |   63 -
+ .../call-bind-apply-helpers/tsconfig.json          |    9 -
+ backend/node_modules/call-bound/.eslintrc          |   13 -
+ .../node_modules/call-bound/.github/FUNDING.yml    |   12 -
+ backend/node_modules/call-bound/.nycrc             |    9 -
+ backend/node_modules/call-bound/CHANGELOG.md       |   42 -
+ backend/node_modules/call-bound/LICENSE            |   21 -
+ backend/node_modules/call-bound/README.md          |   53 -
+ backend/node_modules/call-bound/index.d.ts         |   94 -
+ backend/node_modules/call-bound/index.js           |   19 -
+ backend/node_modules/call-bound/package.json       |   99 -
+ backend/node_modules/call-bound/test/index.js      |   61 -
+ backend/node_modules/call-bound/tsconfig.json      |   10 -
+ backend/node_modules/chokidar/LICENSE              |   21 -
+ backend/node_modules/chokidar/README.md            |  308 -
+ backend/node_modules/chokidar/index.js             |  973 --
+ backend/node_modules/chokidar/lib/constants.js     |   66 -
+ .../node_modules/chokidar/lib/fsevents-handler.js  |  526 --
+ .../node_modules/chokidar/lib/nodefs-handler.js    |  654 --
+ backend/node_modules/chokidar/package.json         |   70 -
+ backend/node_modules/chokidar/types/index.d.ts     |  192 -
+ backend/node_modules/concat-map/.travis.yml        |    4 -
+ backend/node_modules/concat-map/LICENSE            |   18 -
+ backend/node_modules/concat-map/README.markdown    |   62 -
+ backend/node_modules/concat-map/example/map.js     |    6 -
+ backend/node_modules/concat-map/index.js           |   13 -
+ backend/node_modules/concat-map/package.json       |   43 -
+ backend/node_modules/concat-map/test/map.js        |   39 -
+ .../node_modules/content-disposition/HISTORY.md    |   72 -
+ backend/node_modules/content-disposition/LICENSE   |   22 -
+ backend/node_modules/content-disposition/README.md |  142 -
+ backend/node_modules/content-disposition/index.js  |  458 -
+ .../node_modules/content-disposition/package.json  |   43 -
+ backend/node_modules/content-type/HISTORY.md       |   29 -
+ backend/node_modules/content-type/LICENSE          |   22 -
+ backend/node_modules/content-type/README.md        |   94 -
+ backend/node_modules/content-type/index.js         |  225 -
+ backend/node_modules/content-type/package.json     |   42 -
+ backend/node_modules/cookie-signature/History.md   |   70 -
+ backend/node_modules/cookie-signature/LICENSE      |   22 -
+ backend/node_modules/cookie-signature/Readme.md    |   23 -
+ backend/node_modules/cookie-signature/index.js     |   47 -
+ backend/node_modules/cookie-signature/package.json |   24 -
+ backend/node_modules/cookie/LICENSE                |   24 -
+ backend/node_modules/cookie/README.md              |  317 -
+ backend/node_modules/cookie/SECURITY.md            |   25 -
+ backend/node_modules/cookie/index.js               |  335 -
+ backend/node_modules/cookie/package.json           |   44 -
+ backend/node_modules/cors/CONTRIBUTING.md          |   33 -
+ backend/node_modules/cors/HISTORY.md               |   58 -
+ backend/node_modules/cors/LICENSE                  |   22 -
+ backend/node_modules/cors/README.md                |  243 -
+ backend/node_modules/cors/lib/index.js             |  238 -
+ backend/node_modules/cors/package.json             |   41 -
+ backend/node_modules/debug/LICENSE                 |   20 -
+ backend/node_modules/debug/README.md               |  481 -
+ backend/node_modules/debug/package.json            |   64 -
+ backend/node_modules/debug/src/browser.js          |  272 -
+ backend/node_modules/debug/src/common.js           |  292 -
+ backend/node_modules/debug/src/index.js            |   10 -
+ backend/node_modules/debug/src/node.js             |  263 -
+ backend/node_modules/depd/History.md               |  103 -
+ backend/node_modules/depd/LICENSE                  |   22 -
+ backend/node_modules/depd/Readme.md                |  280 -
+ backend/node_modules/depd/index.js                 |  538 --
+ backend/node_modules/depd/lib/browser/index.js     |   77 -
+ backend/node_modules/depd/package.json             |   45 -
+ backend/node_modules/dotenv/CHANGELOG.md           |  598 --
+ backend/node_modules/dotenv/LICENSE                |   23 -
+ backend/node_modules/dotenv/README-es.md           |  405 -
+ backend/node_modules/dotenv/README.md              |  692 --
+ backend/node_modules/dotenv/SECURITY.md            |    1 -
+ backend/node_modules/dotenv/config.d.ts            |    1 -
+ backend/node_modules/dotenv/config.js              |    9 -
+ backend/node_modules/dotenv/lib/cli-options.js     |   17 -
+ backend/node_modules/dotenv/lib/env-options.js     |   28 -
+ backend/node_modules/dotenv/lib/main.d.ts          |  179 -
+ backend/node_modules/dotenv/lib/main.js            |  434 -
+ backend/node_modules/dotenv/package.json           |   62 -
+ backend/node_modules/dunder-proto/.eslintrc        |    5 -
+ .../node_modules/dunder-proto/.github/FUNDING.yml  |   12 -
+ backend/node_modules/dunder-proto/.nycrc           |   13 -
+ backend/node_modules/dunder-proto/CHANGELOG.md     |   24 -
+ backend/node_modules/dunder-proto/LICENSE          |   21 -
+ backend/node_modules/dunder-proto/README.md        |   54 -
+ backend/node_modules/dunder-proto/get.d.ts         |    5 -
+ backend/node_modules/dunder-proto/get.js           |   30 -
+ backend/node_modules/dunder-proto/package.json     |   76 -
+ backend/node_modules/dunder-proto/set.d.ts         |    5 -
+ backend/node_modules/dunder-proto/set.js           |   35 -
+ backend/node_modules/dunder-proto/test/get.js      |   34 -
+ backend/node_modules/dunder-proto/test/index.js    |    4 -
+ backend/node_modules/dunder-proto/test/set.js      |   50 -
+ backend/node_modules/dunder-proto/tsconfig.json    |    9 -
+ backend/node_modules/ee-first/LICENSE              |   22 -
+ backend/node_modules/ee-first/README.md            |   80 -
+ backend/node_modules/ee-first/index.js             |   95 -
+ backend/node_modules/ee-first/package.json         |   29 -
+ backend/node_modules/encodeurl/LICENSE             |   22 -
+ backend/node_modules/encodeurl/README.md           |  109 -
+ backend/node_modules/encodeurl/index.js            |   60 -
+ backend/node_modules/encodeurl/package.json        |   40 -
+ backend/node_modules/es-define-property/.eslintrc  |   13 -
+ .../es-define-property/.github/FUNDING.yml         |   12 -
+ backend/node_modules/es-define-property/.nycrc     |    9 -
+ .../node_modules/es-define-property/CHANGELOG.md   |   29 -
+ backend/node_modules/es-define-property/LICENSE    |   21 -
+ backend/node_modules/es-define-property/README.md  |   49 -
+ backend/node_modules/es-define-property/index.d.ts |    3 -
+ backend/node_modules/es-define-property/index.js   |   14 -
+ .../node_modules/es-define-property/package.json   |   81 -
+ .../node_modules/es-define-property/test/index.js  |   56 -
+ .../node_modules/es-define-property/tsconfig.json  |   10 -
+ backend/node_modules/es-errors/.eslintrc           |    5 -
+ backend/node_modules/es-errors/.github/FUNDING.yml |   12 -
+ backend/node_modules/es-errors/CHANGELOG.md        |   40 -
+ backend/node_modules/es-errors/LICENSE             |   21 -
+ backend/node_modules/es-errors/README.md           |   55 -
+ backend/node_modules/es-errors/eval.d.ts           |    3 -
+ backend/node_modules/es-errors/eval.js             |    4 -
+ backend/node_modules/es-errors/index.d.ts          |    3 -
+ backend/node_modules/es-errors/index.js            |    4 -
+ backend/node_modules/es-errors/package.json        |   80 -
+ backend/node_modules/es-errors/range.d.ts          |    3 -
+ backend/node_modules/es-errors/range.js            |    4 -
+ backend/node_modules/es-errors/ref.d.ts            |    3 -
+ backend/node_modules/es-errors/ref.js              |    4 -
+ backend/node_modules/es-errors/syntax.d.ts         |    3 -
+ backend/node_modules/es-errors/syntax.js           |    4 -
+ backend/node_modules/es-errors/test/index.js       |   19 -
+ backend/node_modules/es-errors/tsconfig.json       |   49 -
+ backend/node_modules/es-errors/type.d.ts           |    3 -
+ backend/node_modules/es-errors/type.js             |    4 -
+ backend/node_modules/es-errors/uri.d.ts            |    3 -
+ backend/node_modules/es-errors/uri.js              |    4 -
+ backend/node_modules/es-object-atoms/.eslintrc     |   16 -
+ .../es-object-atoms/.github/FUNDING.yml            |   12 -
+ backend/node_modules/es-object-atoms/CHANGELOG.md  |   37 -
+ backend/node_modules/es-object-atoms/LICENSE       |   21 -
+ backend/node_modules/es-object-atoms/README.md     |   63 -
+ .../es-object-atoms/RequireObjectCoercible.d.ts    |    3 -
+ .../es-object-atoms/RequireObjectCoercible.js      |   11 -
+ backend/node_modules/es-object-atoms/ToObject.d.ts |    7 -
+ backend/node_modules/es-object-atoms/ToObject.js   |   10 -
+ backend/node_modules/es-object-atoms/index.d.ts    |    3 -
+ backend/node_modules/es-object-atoms/index.js      |    4 -
+ backend/node_modules/es-object-atoms/isObject.d.ts |    3 -
+ backend/node_modules/es-object-atoms/isObject.js   |    6 -
+ backend/node_modules/es-object-atoms/package.json  |   80 -
+ backend/node_modules/es-object-atoms/test/index.js |   38 -
+ backend/node_modules/es-object-atoms/tsconfig.json |    6 -
+ backend/node_modules/escape-html/LICENSE           |   24 -
+ backend/node_modules/escape-html/Readme.md         |   43 -
+ backend/node_modules/escape-html/index.js          |   78 -
+ backend/node_modules/escape-html/package.json      |   24 -
+ backend/node_modules/etag/HISTORY.md               |   83 -
+ backend/node_modules/etag/LICENSE                  |   22 -
+ backend/node_modules/etag/README.md                |  159 -
+ backend/node_modules/etag/index.js                 |  131 -
+ backend/node_modules/etag/package.json             |   47 -
+ backend/node_modules/express/History.md            | 3858 --------
+ backend/node_modules/express/LICENSE               |   24 -
+ backend/node_modules/express/Readme.md             |  266 -
+ backend/node_modules/express/index.js              |   11 -
+ backend/node_modules/express/lib/application.js    |  631 --
+ backend/node_modules/express/lib/express.js        |   81 -
+ backend/node_modules/express/lib/request.js        |  515 --
+ backend/node_modules/express/lib/response.js       | 1039 ---
+ backend/node_modules/express/lib/utils.js          |  269 -
+ backend/node_modules/express/lib/view.js           |  205 -
+ backend/node_modules/express/package.json          |   98 -
+ backend/node_modules/fill-range/LICENSE            |   21 -
+ backend/node_modules/fill-range/README.md          |  237 -
+ backend/node_modules/fill-range/index.js           |  248 -
+ backend/node_modules/fill-range/package.json       |   74 -
+ backend/node_modules/finalhandler/HISTORY.md       |  233 -
+ backend/node_modules/finalhandler/LICENSE          |   22 -
+ backend/node_modules/finalhandler/README.md        |  147 -
+ backend/node_modules/finalhandler/index.js         |  293 -
+ backend/node_modules/finalhandler/package.json     |   43 -
+ backend/node_modules/forwarded/HISTORY.md          |   21 -
+ backend/node_modules/forwarded/LICENSE             |   22 -
+ backend/node_modules/forwarded/README.md           |   57 -
+ backend/node_modules/forwarded/index.js            |   90 -
+ backend/node_modules/forwarded/package.json        |   45 -
+ backend/node_modules/fresh/HISTORY.md              |   80 -
+ backend/node_modules/fresh/LICENSE                 |   23 -
+ backend/node_modules/fresh/README.md               |  117 -
+ backend/node_modules/fresh/index.js                |  136 -
+ backend/node_modules/fresh/package.json            |   46 -
+ backend/node_modules/function-bind/.eslintrc       |   21 -
+ .../node_modules/function-bind/.github/FUNDING.yml |   12 -
+ .../node_modules/function-bind/.github/SECURITY.md |    3 -
+ backend/node_modules/function-bind/.nycrc          |   13 -
+ backend/node_modules/function-bind/CHANGELOG.md    |  136 -
+ backend/node_modules/function-bind/LICENSE         |   20 -
+ backend/node_modules/function-bind/README.md       |   46 -
+ .../node_modules/function-bind/implementation.js   |   84 -
+ backend/node_modules/function-bind/index.js        |    5 -
+ backend/node_modules/function-bind/package.json    |   87 -
+ backend/node_modules/function-bind/test/.eslintrc  |    9 -
+ backend/node_modules/function-bind/test/index.js   |  252 -
+ backend/node_modules/get-intrinsic/.eslintrc       |   42 -
+ .../node_modules/get-intrinsic/.github/FUNDING.yml |   12 -
+ backend/node_modules/get-intrinsic/.nycrc          |    9 -
+ backend/node_modules/get-intrinsic/CHANGELOG.md    |  186 -
+ backend/node_modules/get-intrinsic/LICENSE         |   21 -
+ backend/node_modules/get-intrinsic/README.md       |   71 -
+ backend/node_modules/get-intrinsic/index.js        |  378 -
+ backend/node_modules/get-intrinsic/package.json    |   97 -
+ .../get-intrinsic/test/GetIntrinsic.js             |  274 -
+ backend/node_modules/get-proto/.eslintrc           |   10 -
+ backend/node_modules/get-proto/.github/FUNDING.yml |   12 -
+ backend/node_modules/get-proto/.nycrc              |    9 -
+ backend/node_modules/get-proto/CHANGELOG.md        |   21 -
+ backend/node_modules/get-proto/LICENSE             |   21 -
+ .../get-proto/Object.getPrototypeOf.d.ts           |    5 -
+ .../get-proto/Object.getPrototypeOf.js             |    6 -
+ backend/node_modules/get-proto/README.md           |   50 -
+ .../get-proto/Reflect.getPrototypeOf.d.ts          |    3 -
+ .../get-proto/Reflect.getPrototypeOf.js            |    4 -
+ backend/node_modules/get-proto/index.d.ts          |    5 -
+ backend/node_modules/get-proto/index.js            |   27 -
+ backend/node_modules/get-proto/package.json        |   81 -
+ backend/node_modules/get-proto/test/index.js       |   68 -
+ backend/node_modules/get-proto/tsconfig.json       |    9 -
+ backend/node_modules/glob-parent/CHANGELOG.md      |  110 -
+ backend/node_modules/glob-parent/LICENSE           |   15 -
+ backend/node_modules/glob-parent/README.md         |  137 -
+ backend/node_modules/glob-parent/index.js          |   42 -
+ backend/node_modules/glob-parent/package.json      |   48 -
+ backend/node_modules/gopd/.eslintrc                |   16 -
+ backend/node_modules/gopd/.github/FUNDING.yml      |   12 -
+ backend/node_modules/gopd/CHANGELOG.md             |   45 -
+ backend/node_modules/gopd/LICENSE                  |   21 -
+ backend/node_modules/gopd/README.md                |   40 -
+ backend/node_modules/gopd/gOPD.d.ts                |    1 -
+ backend/node_modules/gopd/gOPD.js                  |    4 -
+ backend/node_modules/gopd/index.d.ts               |    5 -
+ backend/node_modules/gopd/index.js                 |   15 -
+ backend/node_modules/gopd/package.json             |   77 -
+ backend/node_modules/gopd/test/index.js            |   36 -
+ backend/node_modules/gopd/tsconfig.json            |    9 -
+ backend/node_modules/has-flag/index.js             |    8 -
+ backend/node_modules/has-flag/license              |    9 -
+ backend/node_modules/has-flag/package.json         |   44 -
+ backend/node_modules/has-flag/readme.md            |   70 -
+ backend/node_modules/has-symbols/.eslintrc         |   11 -
+ .../node_modules/has-symbols/.github/FUNDING.yml   |   12 -
+ backend/node_modules/has-symbols/.nycrc            |    9 -
+ backend/node_modules/has-symbols/CHANGELOG.md      |   91 -
+ backend/node_modules/has-symbols/LICENSE           |   21 -
+ backend/node_modules/has-symbols/README.md         |   46 -
+ backend/node_modules/has-symbols/index.d.ts        |    3 -
+ backend/node_modules/has-symbols/index.js          |   14 -
+ backend/node_modules/has-symbols/package.json      |  111 -
+ backend/node_modules/has-symbols/shams.d.ts        |    3 -
+ backend/node_modules/has-symbols/shams.js          |   45 -
+ backend/node_modules/has-symbols/test/index.js     |   22 -
+ .../node_modules/has-symbols/test/shams/core-js.js |   29 -
+ .../test/shams/get-own-property-symbols.js         |   29 -
+ backend/node_modules/has-symbols/test/tests.js     |   58 -
+ backend/node_modules/has-symbols/tsconfig.json     |   10 -
+ backend/node_modules/hasown/.eslintrc              |    5 -
+ backend/node_modules/hasown/.github/FUNDING.yml    |   12 -
+ backend/node_modules/hasown/.nycrc                 |   13 -
+ backend/node_modules/hasown/CHANGELOG.md           |   40 -
+ backend/node_modules/hasown/LICENSE                |   21 -
+ backend/node_modules/hasown/README.md              |   40 -
+ backend/node_modules/hasown/index.d.ts             |    3 -
+ backend/node_modules/hasown/index.js               |    8 -
+ backend/node_modules/hasown/package.json           |   92 -
+ backend/node_modules/hasown/tsconfig.json          |    6 -
+ backend/node_modules/http-errors/HISTORY.md        |  180 -
+ backend/node_modules/http-errors/LICENSE           |   23 -
+ backend/node_modules/http-errors/README.md         |  169 -
+ backend/node_modules/http-errors/index.js          |  289 -
+ .../http-errors/node_modules/statuses/HISTORY.md   |   82 -
+ .../http-errors/node_modules/statuses/LICENSE      |   23 -
+ .../http-errors/node_modules/statuses/README.md    |  136 -
+ .../http-errors/node_modules/statuses/codes.json   |   65 -
+ .../http-errors/node_modules/statuses/index.js     |  146 -
+ .../http-errors/node_modules/statuses/package.json |   49 -
+ backend/node_modules/http-errors/package.json      |   50 -
+ .../node_modules/iconv-lite/.github/dependabot.yml |   11 -
+ .../iconv-lite/.idea/codeStyles/Project.xml        |   47 -
+ .../.idea/codeStyles/codeStyleConfig.xml           |    5 -
+ .../node_modules/iconv-lite/.idea/iconv-lite.iml   |   12 -
+ .../.idea/inspectionProfiles/Project_Default.xml   |    6 -
+ backend/node_modules/iconv-lite/.idea/modules.xml  |    8 -
+ backend/node_modules/iconv-lite/.idea/vcs.xml      |    6 -
+ backend/node_modules/iconv-lite/Changelog.md       |  212 -
+ backend/node_modules/iconv-lite/LICENSE            |   21 -
+ backend/node_modules/iconv-lite/README.md          |  130 -
+ .../iconv-lite/encodings/dbcs-codec.js             |  597 --
+ .../node_modules/iconv-lite/encodings/dbcs-data.js |  188 -
+ backend/node_modules/iconv-lite/encodings/index.js |   23 -
+ .../node_modules/iconv-lite/encodings/internal.js  |  198 -
+ .../iconv-lite/encodings/sbcs-codec.js             |   72 -
+ .../iconv-lite/encodings/sbcs-data-generated.js    |  451 -
+ .../node_modules/iconv-lite/encodings/sbcs-data.js |  179 -
+ .../iconv-lite/encodings/tables/big5-added.json    |  122 -
+ .../iconv-lite/encodings/tables/cp936.json         |  264 -
+ .../iconv-lite/encodings/tables/cp949.json         |  273 -
+ .../iconv-lite/encodings/tables/cp950.json         |  177 -
+ .../iconv-lite/encodings/tables/eucjp.json         |  182 -
+ .../encodings/tables/gb18030-ranges.json           |    1 -
+ .../iconv-lite/encodings/tables/gbk-added.json     |   56 -
+ .../iconv-lite/encodings/tables/shiftjis.json      |  125 -
+ backend/node_modules/iconv-lite/encodings/utf16.js |  197 -
+ backend/node_modules/iconv-lite/encodings/utf32.js |  319 -
+ backend/node_modules/iconv-lite/encodings/utf7.js  |  290 -
+ .../node_modules/iconv-lite/lib/bom-handling.js    |   52 -
+ backend/node_modules/iconv-lite/lib/index.d.ts     |   41 -
+ backend/node_modules/iconv-lite/lib/index.js       |  180 -
+ backend/node_modules/iconv-lite/lib/streams.js     |  109 -
+ backend/node_modules/iconv-lite/package.json       |   44 -
+ backend/node_modules/ignore-by-default/LICENSE     |   14 -
+ backend/node_modules/ignore-by-default/README.md   |   26 -
+ backend/node_modules/ignore-by-default/index.js    |   12 -
+ .../node_modules/ignore-by-default/package.json    |   34 -
+ backend/node_modules/inherits/LICENSE              |   16 -
+ backend/node_modules/inherits/README.md            |   42 -
+ backend/node_modules/inherits/inherits.js          |    9 -
+ backend/node_modules/inherits/inherits_browser.js  |   27 -
+ backend/node_modules/inherits/package.json         |   29 -
+ backend/node_modules/ipaddr.js/LICENSE             |   19 -
+ backend/node_modules/ipaddr.js/README.md           |  233 -
+ backend/node_modules/ipaddr.js/ipaddr.min.js       |    1 -
+ backend/node_modules/ipaddr.js/lib/ipaddr.js       |  673 --
+ backend/node_modules/ipaddr.js/lib/ipaddr.js.d.ts  |   68 -
+ backend/node_modules/ipaddr.js/package.json        |   35 -
+ backend/node_modules/is-binary-path/index.d.ts     |   17 -
+ backend/node_modules/is-binary-path/index.js       |    7 -
+ backend/node_modules/is-binary-path/license        |    9 -
+ backend/node_modules/is-binary-path/package.json   |   40 -
+ backend/node_modules/is-binary-path/readme.md      |   34 -
+ backend/node_modules/is-extglob/LICENSE            |   21 -
+ backend/node_modules/is-extglob/README.md          |  107 -
+ backend/node_modules/is-extglob/index.js           |   20 -
+ backend/node_modules/is-extglob/package.json       |   69 -
+ backend/node_modules/is-glob/LICENSE               |   21 -
+ backend/node_modules/is-glob/README.md             |  206 -
+ backend/node_modules/is-glob/index.js              |  150 -
+ backend/node_modules/is-glob/package.json          |   81 -
+ backend/node_modules/is-number/LICENSE             |   21 -
+ backend/node_modules/is-number/README.md           |  187 -
+ backend/node_modules/is-number/index.js            |   18 -
+ backend/node_modules/is-number/package.json        |   82 -
+ backend/node_modules/is-promise/LICENSE            |   19 -
+ backend/node_modules/is-promise/index.d.ts         |    2 -
+ backend/node_modules/is-promise/index.js           |    6 -
+ backend/node_modules/is-promise/index.mjs          |    3 -
+ backend/node_modules/is-promise/package.json       |   30 -
+ backend/node_modules/is-promise/readme.md          |   33 -
+ backend/node_modules/math-intrinsics/.eslintrc     |   16 -
+ .../math-intrinsics/.github/FUNDING.yml            |   12 -
+ backend/node_modules/math-intrinsics/CHANGELOG.md  |   24 -
+ backend/node_modules/math-intrinsics/LICENSE       |   21 -
+ backend/node_modules/math-intrinsics/README.md     |   50 -
+ backend/node_modules/math-intrinsics/abs.d.ts      |    1 -
+ backend/node_modules/math-intrinsics/abs.js        |    4 -
+ .../math-intrinsics/constants/maxArrayLength.d.ts  |    3 -
+ .../math-intrinsics/constants/maxArrayLength.js    |    4 -
+ .../math-intrinsics/constants/maxSafeInteger.d.ts  |    3 -
+ .../math-intrinsics/constants/maxSafeInteger.js    |    5 -
+ .../math-intrinsics/constants/maxValue.d.ts        |    3 -
+ .../math-intrinsics/constants/maxValue.js          |    5 -
+ backend/node_modules/math-intrinsics/floor.d.ts    |    1 -
+ backend/node_modules/math-intrinsics/floor.js      |    4 -
+ backend/node_modules/math-intrinsics/isFinite.d.ts |    3 -
+ backend/node_modules/math-intrinsics/isFinite.js   |   12 -
+ .../node_modules/math-intrinsics/isInteger.d.ts    |    3 -
+ backend/node_modules/math-intrinsics/isInteger.js  |   16 -
+ backend/node_modules/math-intrinsics/isNaN.d.ts    |    1 -
+ backend/node_modules/math-intrinsics/isNaN.js      |    6 -
+ .../math-intrinsics/isNegativeZero.d.ts            |    3 -
+ .../node_modules/math-intrinsics/isNegativeZero.js |    6 -
+ backend/node_modules/math-intrinsics/max.d.ts      |    1 -
+ backend/node_modules/math-intrinsics/max.js        |    4 -
+ backend/node_modules/math-intrinsics/min.d.ts      |    1 -
+ backend/node_modules/math-intrinsics/min.js        |    4 -
+ backend/node_modules/math-intrinsics/mod.d.ts      |    3 -
+ backend/node_modules/math-intrinsics/mod.js        |    9 -
+ backend/node_modules/math-intrinsics/package.json  |   86 -
+ backend/node_modules/math-intrinsics/pow.d.ts      |    1 -
+ backend/node_modules/math-intrinsics/pow.js        |    4 -
+ backend/node_modules/math-intrinsics/round.d.ts    |    1 -
+ backend/node_modules/math-intrinsics/round.js      |    4 -
+ backend/node_modules/math-intrinsics/sign.d.ts     |    3 -
+ backend/node_modules/math-intrinsics/sign.js       |   11 -
+ backend/node_modules/math-intrinsics/test/index.js |  192 -
+ backend/node_modules/math-intrinsics/tsconfig.json |    3 -
+ backend/node_modules/media-typer/HISTORY.md        |   50 -
+ backend/node_modules/media-typer/LICENSE           |   22 -
+ backend/node_modules/media-typer/README.md         |   93 -
+ backend/node_modules/media-typer/index.js          |  143 -
+ backend/node_modules/media-typer/package.json      |   33 -
+ backend/node_modules/merge-descriptors/index.d.ts  |   11 -
+ backend/node_modules/merge-descriptors/index.js    |   26 -
+ backend/node_modules/merge-descriptors/license     |   11 -
+ .../node_modules/merge-descriptors/package.json    |   50 -
+ backend/node_modules/merge-descriptors/readme.md   |   55 -
+ backend/node_modules/mime-db/HISTORY.md            |  541 --
+ backend/node_modules/mime-db/LICENSE               |   23 -
+ backend/node_modules/mime-db/README.md             |  109 -
+ backend/node_modules/mime-db/db.json               | 9342 --------------------
+ backend/node_modules/mime-db/index.js              |   12 -
+ backend/node_modules/mime-db/package.json          |   56 -
+ backend/node_modules/mime-types/HISTORY.md         |  421 -
+ backend/node_modules/mime-types/LICENSE            |   23 -
+ backend/node_modules/mime-types/README.md          |  126 -
+ backend/node_modules/mime-types/index.js           |  211 -
+ backend/node_modules/mime-types/mimeScore.js       |   52 -
+ backend/node_modules/mime-types/package.json       |   45 -
+ backend/node_modules/minimatch/LICENSE             |   15 -
+ backend/node_modules/minimatch/README.md           |  230 -
+ backend/node_modules/minimatch/minimatch.js        |  947 --
+ backend/node_modules/minimatch/package.json        |   33 -
+ backend/node_modules/ms/index.js                   |  162 -
+ backend/node_modules/ms/license.md                 |   21 -
+ backend/node_modules/ms/package.json               |   38 -
+ backend/node_modules/ms/readme.md                  |   59 -
+ backend/node_modules/negotiator/HISTORY.md         |  114 -
+ backend/node_modules/negotiator/LICENSE            |   24 -
+ backend/node_modules/negotiator/README.md          |  212 -
+ backend/node_modules/negotiator/index.js           |   83 -
+ backend/node_modules/negotiator/lib/charset.js     |  169 -
+ backend/node_modules/negotiator/lib/encoding.js    |  205 -
+ backend/node_modules/negotiator/lib/language.js    |  179 -
+ backend/node_modules/negotiator/lib/mediaType.js   |  294 -
+ backend/node_modules/negotiator/package.json       |   43 -
+ backend/node_modules/nodemon/.prettierrc.json      |    3 -
+ backend/node_modules/nodemon/LICENSE               |   21 -
+ backend/node_modules/nodemon/README.md             |  436 -
+ backend/node_modules/nodemon/bin/nodemon.js        |   16 -
+ backend/node_modules/nodemon/bin/windows-kill.exe  |  Bin 80384 -> 0 bytes
+ backend/node_modules/nodemon/doc/cli/authors.txt   |    8 -
+ backend/node_modules/nodemon/doc/cli/config.txt    |   44 -
+ backend/node_modules/nodemon/doc/cli/help.txt      |   29 -
+ backend/node_modules/nodemon/doc/cli/logo.txt      |   20 -
+ backend/node_modules/nodemon/doc/cli/options.txt   |   36 -
+ backend/node_modules/nodemon/doc/cli/topics.txt    |    8 -
+ backend/node_modules/nodemon/doc/cli/usage.txt     |    3 -
+ backend/node_modules/nodemon/doc/cli/whoami.txt    |    9 -
+ backend/node_modules/nodemon/index.d.ts            |  125 -
+ backend/node_modules/nodemon/jsconfig.json         |    7 -
+ backend/node_modules/nodemon/lib/cli/index.js      |   49 -
+ backend/node_modules/nodemon/lib/cli/parse.js      |  230 -
+ backend/node_modules/nodemon/lib/config/command.js |   43 -
+ .../node_modules/nodemon/lib/config/defaults.js    |   34 -
+ backend/node_modules/nodemon/lib/config/exec.js    |  240 -
+ backend/node_modules/nodemon/lib/config/index.js   |   93 -
+ backend/node_modules/nodemon/lib/config/load.js    |  225 -
+ backend/node_modules/nodemon/lib/help/index.js     |   27 -
+ backend/node_modules/nodemon/lib/index.js          |    1 -
+ backend/node_modules/nodemon/lib/monitor/index.js  |    4 -
+ backend/node_modules/nodemon/lib/monitor/match.js  |  287 -
+ backend/node_modules/nodemon/lib/monitor/run.js    |  562 --
+ .../node_modules/nodemon/lib/monitor/signals.js    |   34 -
+ backend/node_modules/nodemon/lib/monitor/watch.js  |  244 -
+ backend/node_modules/nodemon/lib/nodemon.js        |  317 -
+ backend/node_modules/nodemon/lib/rules/add.js      |   89 -
+ backend/node_modules/nodemon/lib/rules/index.js    |   53 -
+ backend/node_modules/nodemon/lib/rules/parse.js    |   43 -
+ backend/node_modules/nodemon/lib/spawn.js          |   74 -
+ backend/node_modules/nodemon/lib/utils/bus.js      |   44 -
+ backend/node_modules/nodemon/lib/utils/clone.js    |   40 -
+ backend/node_modules/nodemon/lib/utils/colour.js   |   26 -
+ backend/node_modules/nodemon/lib/utils/index.js    |  103 -
+ backend/node_modules/nodemon/lib/utils/log.js      |   82 -
+ backend/node_modules/nodemon/lib/utils/merge.js    |   47 -
+ backend/node_modules/nodemon/lib/version.js        |  100 -
+ backend/node_modules/nodemon/package.json          |   75 -
+ backend/node_modules/normalize-path/LICENSE        |   21 -
+ backend/node_modules/normalize-path/README.md      |  127 -
+ backend/node_modules/normalize-path/index.js       |   35 -
+ backend/node_modules/normalize-path/package.json   |   77 -
+ backend/node_modules/object-assign/index.js        |   90 -
+ backend/node_modules/object-assign/license         |   21 -
+ backend/node_modules/object-assign/package.json    |   42 -
+ backend/node_modules/object-assign/readme.md       |   61 -
+ backend/node_modules/object-inspect/.eslintrc      |   53 -
+ .../object-inspect/.github/FUNDING.yml             |   12 -
+ backend/node_modules/object-inspect/.nycrc         |   13 -
+ backend/node_modules/object-inspect/CHANGELOG.md   |  424 -
+ backend/node_modules/object-inspect/LICENSE        |   21 -
+ backend/node_modules/object-inspect/example/all.js |   23 -
+ .../object-inspect/example/circular.js             |    6 -
+ backend/node_modules/object-inspect/example/fn.js  |    5 -
+ .../node_modules/object-inspect/example/inspect.js |   10 -
+ backend/node_modules/object-inspect/index.js       |  544 --
+ .../object-inspect/package-support.json            |   20 -
+ backend/node_modules/object-inspect/package.json   |  105 -
+ .../node_modules/object-inspect/readme.markdown    |   84 -
+ .../node_modules/object-inspect/test-core-js.js    |   26 -
+ backend/node_modules/object-inspect/test/bigint.js |   58 -
+ .../object-inspect/test/browser/dom.js             |   15 -
+ .../node_modules/object-inspect/test/circular.js   |   16 -
+ backend/node_modules/object-inspect/test/deep.js   |   12 -
+ .../node_modules/object-inspect/test/element.js    |   53 -
+ backend/node_modules/object-inspect/test/err.js    |   48 -
+ backend/node_modules/object-inspect/test/fakes.js  |   29 -
+ backend/node_modules/object-inspect/test/fn.js     |   76 -
+ backend/node_modules/object-inspect/test/global.js |   17 -
+ backend/node_modules/object-inspect/test/has.js    |   15 -
+ backend/node_modules/object-inspect/test/holes.js  |   15 -
+ .../object-inspect/test/indent-option.js           |  271 -
+ .../node_modules/object-inspect/test/inspect.js    |  139 -
+ .../node_modules/object-inspect/test/lowbyte.js    |   12 -
+ backend/node_modules/object-inspect/test/number.js |   58 -
+ .../node_modules/object-inspect/test/quoteStyle.js |   26 -
+ .../object-inspect/test/toStringTag.js             |   40 -
+ backend/node_modules/object-inspect/test/undef.js  |   12 -
+ backend/node_modules/object-inspect/test/values.js |  261 -
+ .../node_modules/object-inspect/util.inspect.js    |    1 -
+ backend/node_modules/on-finished/HISTORY.md        |   98 -
+ backend/node_modules/on-finished/LICENSE           |   23 -
+ backend/node_modules/on-finished/README.md         |  162 -
+ backend/node_modules/on-finished/index.js          |  234 -
+ backend/node_modules/on-finished/package.json      |   39 -
+ backend/node_modules/once/LICENSE                  |   15 -
+ backend/node_modules/once/README.md                |   79 -
+ backend/node_modules/once/once.js                  |   42 -
+ backend/node_modules/once/package.json             |   33 -
+ backend/node_modules/parseurl/HISTORY.md           |   58 -
+ backend/node_modules/parseurl/LICENSE              |   24 -
+ backend/node_modules/parseurl/README.md            |  133 -
+ backend/node_modules/parseurl/index.js             |  158 -
+ backend/node_modules/parseurl/package.json         |   40 -
+ backend/node_modules/path-to-regexp/LICENSE        |   21 -
+ backend/node_modules/path-to-regexp/Readme.md      |  224 -
+ .../node_modules/path-to-regexp/dist/index.d.ts    |  144 -
+ backend/node_modules/path-to-regexp/dist/index.js  |  409 -
+ .../node_modules/path-to-regexp/dist/index.js.map  |    1 -
+ backend/node_modules/path-to-regexp/package.json   |   64 -
+ backend/node_modules/picomatch/CHANGELOG.md        |  136 -
+ backend/node_modules/picomatch/LICENSE             |   21 -
+ backend/node_modules/picomatch/README.md           |  708 --
+ backend/node_modules/picomatch/index.js            |    3 -
+ backend/node_modules/picomatch/lib/constants.js    |  179 -
+ backend/node_modules/picomatch/lib/parse.js        | 1091 ---
+ backend/node_modules/picomatch/lib/picomatch.js    |  342 -
+ backend/node_modules/picomatch/lib/scan.js         |  391 -
+ backend/node_modules/picomatch/lib/utils.js        |   64 -
+ backend/node_modules/picomatch/package.json        |   81 -
+ backend/node_modules/proxy-addr/HISTORY.md         |  161 -
+ backend/node_modules/proxy-addr/LICENSE            |   22 -
+ backend/node_modules/proxy-addr/README.md          |  139 -
+ backend/node_modules/proxy-addr/index.js           |  327 -
+ backend/node_modules/proxy-addr/package.json       |   47 -
+ backend/node_modules/pstree.remy/.travis.yml       |    8 -
+ backend/node_modules/pstree.remy/LICENSE           |    7 -
+ backend/node_modules/pstree.remy/README.md         |   26 -
+ backend/node_modules/pstree.remy/lib/index.js      |   37 -
+ backend/node_modules/pstree.remy/lib/tree.js       |   37 -
+ backend/node_modules/pstree.remy/lib/utils.js      |   53 -
+ backend/node_modules/pstree.remy/package.json      |   33 -
+ .../pstree.remy/tests/fixtures/index.js            |   13 -
+ .../node_modules/pstree.remy/tests/fixtures/out1   |   10 -
+ .../node_modules/pstree.remy/tests/fixtures/out2   |   29 -
+ .../node_modules/pstree.remy/tests/index.test.js   |   51 -
+ backend/node_modules/qs/.editorconfig              |   46 -
+ backend/node_modules/qs/.eslintrc                  |   39 -
+ backend/node_modules/qs/.github/FUNDING.yml        |   12 -
+ backend/node_modules/qs/.nycrc                     |   13 -
+ backend/node_modules/qs/CHANGELOG.md               |  622 --
+ backend/node_modules/qs/LICENSE.md                 |   29 -
+ backend/node_modules/qs/README.md                  |  733 --
+ backend/node_modules/qs/dist/qs.js                 |  141 -
+ backend/node_modules/qs/lib/formats.js             |   23 -
+ backend/node_modules/qs/lib/index.js               |   11 -
+ backend/node_modules/qs/lib/parse.js               |  328 -
+ backend/node_modules/qs/lib/stringify.js           |  356 -
+ backend/node_modules/qs/lib/utils.js               |  268 -
+ backend/node_modules/qs/package.json               |   93 -
+ backend/node_modules/qs/test/empty-keys-cases.js   |  267 -
+ backend/node_modules/qs/test/parse.js              | 1276 ---
+ backend/node_modules/qs/test/stringify.js          | 1306 ---
+ backend/node_modules/qs/test/utils.js              |  262 -
+ backend/node_modules/range-parser/HISTORY.md       |   56 -
+ backend/node_modules/range-parser/LICENSE          |   23 -
+ backend/node_modules/range-parser/README.md        |   84 -
+ backend/node_modules/range-parser/index.js         |  162 -
+ backend/node_modules/range-parser/package.json     |   44 -
+ backend/node_modules/raw-body/HISTORY.md           |  333 -
+ backend/node_modules/raw-body/LICENSE              |   22 -
+ backend/node_modules/raw-body/README.md            |  223 -
+ backend/node_modules/raw-body/SECURITY.md          |   24 -
+ backend/node_modules/raw-body/index.d.ts           |   85 -
+ backend/node_modules/raw-body/index.js             |  336 -
+ .../raw-body/node_modules/iconv-lite/Changelog.md  |  236 -
+ .../raw-body/node_modules/iconv-lite/LICENSE       |   21 -
+ .../raw-body/node_modules/iconv-lite/README.md     |  138 -
+ .../iconv-lite/encodings/dbcs-codec.js             |  532 --
+ .../node_modules/iconv-lite/encodings/dbcs-data.js |  185 -
+ .../node_modules/iconv-lite/encodings/index.js     |   23 -
+ .../node_modules/iconv-lite/encodings/internal.js  |  218 -
+ .../iconv-lite/encodings/sbcs-codec.js             |   75 -
+ .../iconv-lite/encodings/sbcs-data-generated.js    |  451 -
+ .../node_modules/iconv-lite/encodings/sbcs-data.js |  178 -
+ .../iconv-lite/encodings/tables/big5-added.json    |  122 -
+ .../iconv-lite/encodings/tables/cp936.json         |  264 -
+ .../iconv-lite/encodings/tables/cp949.json         |  273 -
+ .../iconv-lite/encodings/tables/cp950.json         |  177 -
+ .../iconv-lite/encodings/tables/eucjp.json         |  182 -
+ .../encodings/tables/gb18030-ranges.json           |    1 -
+ .../iconv-lite/encodings/tables/gbk-added.json     |   56 -
+ .../iconv-lite/encodings/tables/shiftjis.json      |  125 -
+ .../node_modules/iconv-lite/encodings/utf16.js     |  187 -
+ .../node_modules/iconv-lite/encodings/utf32.js     |  307 -
+ .../node_modules/iconv-lite/encodings/utf7.js      |  283 -
+ .../node_modules/iconv-lite/lib/bom-handling.js    |   48 -
+ .../iconv-lite/lib/helpers/merge-exports.js        |   13 -
+ .../node_modules/iconv-lite/lib/index.d.ts         |   41 -
+ .../raw-body/node_modules/iconv-lite/lib/index.js  |  183 -
+ .../node_modules/iconv-lite/lib/streams.js         |  105 -
+ .../raw-body/node_modules/iconv-lite/package.json  |   59 -
+ backend/node_modules/raw-body/package.json         |   50 -
+ backend/node_modules/readdirp/LICENSE              |   21 -
+ backend/node_modules/readdirp/README.md            |  122 -
+ backend/node_modules/readdirp/index.d.ts           |   43 -
+ backend/node_modules/readdirp/index.js             |  287 -
+ backend/node_modules/readdirp/package.json         |  122 -
+ backend/node_modules/router/HISTORY.md             |  228 -
+ backend/node_modules/router/LICENSE                |   23 -
+ backend/node_modules/router/README.md              |  416 -
+ backend/node_modules/router/index.js               |  748 --
+ backend/node_modules/router/lib/layer.js           |  247 -
+ backend/node_modules/router/lib/route.js           |  242 -
+ backend/node_modules/router/package.json           |   44 -
+ backend/node_modules/safer-buffer/LICENSE          |   21 -
+ .../node_modules/safer-buffer/Porting-Buffer.md    |  268 -
+ backend/node_modules/safer-buffer/Readme.md        |  156 -
+ backend/node_modules/safer-buffer/dangerous.js     |   58 -
+ backend/node_modules/safer-buffer/package.json     |   34 -
+ backend/node_modules/safer-buffer/safer.js         |   77 -
+ backend/node_modules/safer-buffer/tests.js         |  406 -
+ backend/node_modules/semver/LICENSE                |   15 -
+ backend/node_modules/semver/README.md              |  664 --
+ backend/node_modules/semver/bin/semver.js          |  191 -
+ backend/node_modules/semver/classes/comparator.js  |  143 -
+ backend/node_modules/semver/classes/index.js       |    7 -
+ backend/node_modules/semver/classes/range.js       |  557 --
+ backend/node_modules/semver/classes/semver.js      |  333 -
+ backend/node_modules/semver/functions/clean.js     |    8 -
+ backend/node_modules/semver/functions/cmp.js       |   54 -
+ backend/node_modules/semver/functions/coerce.js    |   62 -
+ .../node_modules/semver/functions/compare-build.js |    9 -
+ .../node_modules/semver/functions/compare-loose.js |    5 -
+ backend/node_modules/semver/functions/compare.js   |    7 -
+ backend/node_modules/semver/functions/diff.js      |   60 -
+ backend/node_modules/semver/functions/eq.js        |    5 -
+ backend/node_modules/semver/functions/gt.js        |    5 -
+ backend/node_modules/semver/functions/gte.js       |    5 -
+ backend/node_modules/semver/functions/inc.js       |   21 -
+ backend/node_modules/semver/functions/lt.js        |    5 -
+ backend/node_modules/semver/functions/lte.js       |    5 -
+ backend/node_modules/semver/functions/major.js     |    5 -
+ backend/node_modules/semver/functions/minor.js     |    5 -
+ backend/node_modules/semver/functions/neq.js       |    5 -
+ backend/node_modules/semver/functions/parse.js     |   18 -
+ backend/node_modules/semver/functions/patch.js     |    5 -
+ .../node_modules/semver/functions/prerelease.js    |    8 -
+ backend/node_modules/semver/functions/rcompare.js  |    5 -
+ backend/node_modules/semver/functions/rsort.js     |    5 -
+ backend/node_modules/semver/functions/satisfies.js |   12 -
+ backend/node_modules/semver/functions/sort.js      |    5 -
+ backend/node_modules/semver/functions/valid.js     |    8 -
+ backend/node_modules/semver/index.js               |   91 -
+ backend/node_modules/semver/internal/constants.js  |   37 -
+ backend/node_modules/semver/internal/debug.js      |   11 -
+ .../node_modules/semver/internal/identifiers.js    |   29 -
+ backend/node_modules/semver/internal/lrucache.js   |   42 -
+ .../node_modules/semver/internal/parse-options.js  |   17 -
+ backend/node_modules/semver/internal/re.js         |  223 -
+ backend/node_modules/semver/package.json           |   78 -
+ backend/node_modules/semver/preload.js             |    4 -
+ backend/node_modules/semver/range.bnf              |   16 -
+ backend/node_modules/semver/ranges/gtr.js          |    6 -
+ backend/node_modules/semver/ranges/intersects.js   |    9 -
+ backend/node_modules/semver/ranges/ltr.js          |    6 -
+ .../node_modules/semver/ranges/max-satisfying.js   |   27 -
+ .../node_modules/semver/ranges/min-satisfying.js   |   26 -
+ backend/node_modules/semver/ranges/min-version.js  |   63 -
+ backend/node_modules/semver/ranges/outside.js      |   82 -
+ backend/node_modules/semver/ranges/simplify.js     |   49 -
+ backend/node_modules/semver/ranges/subset.js       |  249 -
+ .../node_modules/semver/ranges/to-comparators.js   |   10 -
+ backend/node_modules/semver/ranges/valid.js        |   13 -
+ backend/node_modules/send/HISTORY.md               |  580 --
+ backend/node_modules/send/LICENSE                  |   23 -
+ backend/node_modules/send/README.md                |  317 -
+ backend/node_modules/send/index.js                 |  997 ---
+ backend/node_modules/send/package.json             |   60 -
+ backend/node_modules/serve-static/HISTORY.md       |  516 --
+ backend/node_modules/serve-static/LICENSE          |   25 -
+ backend/node_modules/serve-static/README.md        |  253 -
+ backend/node_modules/serve-static/index.js         |  208 -
+ backend/node_modules/serve-static/package.json     |   41 -
+ backend/node_modules/setprototypeof/LICENSE        |   13 -
+ backend/node_modules/setprototypeof/README.md      |   31 -
+ backend/node_modules/setprototypeof/index.d.ts     |    2 -
+ backend/node_modules/setprototypeof/index.js       |   17 -
+ backend/node_modules/setprototypeof/package.json   |   38 -
+ backend/node_modules/setprototypeof/test/index.js  |   24 -
+ .../node_modules/side-channel-list/.editorconfig   |    9 -
+ backend/node_modules/side-channel-list/.eslintrc   |   11 -
+ .../side-channel-list/.github/FUNDING.yml          |   12 -
+ backend/node_modules/side-channel-list/.nycrc      |   13 -
+ .../node_modules/side-channel-list/CHANGELOG.md    |   15 -
+ backend/node_modules/side-channel-list/LICENSE     |   21 -
+ backend/node_modules/side-channel-list/README.md   |   62 -
+ backend/node_modules/side-channel-list/index.d.ts  |   13 -
+ backend/node_modules/side-channel-list/index.js    |  113 -
+ backend/node_modules/side-channel-list/list.d.ts   |   14 -
+ .../node_modules/side-channel-list/package.json    |   77 -
+ .../node_modules/side-channel-list/test/index.js   |  104 -
+ .../node_modules/side-channel-list/tsconfig.json   |    9 -
+ .../node_modules/side-channel-map/.editorconfig    |    9 -
+ backend/node_modules/side-channel-map/.eslintrc    |   11 -
+ .../side-channel-map/.github/FUNDING.yml           |   12 -
+ backend/node_modules/side-channel-map/.nycrc       |   13 -
+ backend/node_modules/side-channel-map/CHANGELOG.md |   22 -
+ backend/node_modules/side-channel-map/LICENSE      |   21 -
+ backend/node_modules/side-channel-map/README.md    |   62 -
+ backend/node_modules/side-channel-map/index.d.ts   |   15 -
+ backend/node_modules/side-channel-map/index.js     |   68 -
+ backend/node_modules/side-channel-map/package.json |   80 -
+ .../node_modules/side-channel-map/test/index.js    |  114 -
+ .../node_modules/side-channel-map/tsconfig.json    |    9 -
+ .../side-channel-weakmap/.editorconfig             |    9 -
+ .../node_modules/side-channel-weakmap/.eslintrc    |   12 -
+ .../side-channel-weakmap/.github/FUNDING.yml       |   12 -
+ backend/node_modules/side-channel-weakmap/.nycrc   |   13 -
+ .../node_modules/side-channel-weakmap/CHANGELOG.md |   28 -
+ backend/node_modules/side-channel-weakmap/LICENSE  |   21 -
+ .../node_modules/side-channel-weakmap/README.md    |   62 -
+ .../node_modules/side-channel-weakmap/index.d.ts   |   15 -
+ backend/node_modules/side-channel-weakmap/index.js |   84 -
+ .../node_modules/side-channel-weakmap/package.json |   87 -
+ .../side-channel-weakmap/test/index.js             |  114 -
+ .../side-channel-weakmap/tsconfig.json             |    9 -
+ backend/node_modules/side-channel/.editorconfig    |    9 -
+ backend/node_modules/side-channel/.eslintrc        |   12 -
+ .../node_modules/side-channel/.github/FUNDING.yml  |   12 -
+ backend/node_modules/side-channel/.nycrc           |   13 -
+ backend/node_modules/side-channel/CHANGELOG.md     |  110 -
+ backend/node_modules/side-channel/LICENSE          |   21 -
+ backend/node_modules/side-channel/README.md        |   61 -
+ backend/node_modules/side-channel/index.d.ts       |   14 -
+ backend/node_modules/side-channel/index.js         |   43 -
+ backend/node_modules/side-channel/package.json     |   85 -
+ backend/node_modules/side-channel/test/index.js    |  104 -
+ backend/node_modules/side-channel/tsconfig.json    |    9 -
+ .../node_modules/simple-update-notifier/LICENSE    |   21 -
+ .../node_modules/simple-update-notifier/README.md  |   82 -
+ .../simple-update-notifier/build/index.d.ts        |   13 -
+ .../simple-update-notifier/build/index.js          |  210 -
+ .../simple-update-notifier/package.json            |  100 -
+ .../simple-update-notifier/src/borderedText.ts     |   12 -
+ .../simple-update-notifier/src/cache.spec.ts       |   17 -
+ .../simple-update-notifier/src/cache.ts            |   44 -
+ .../src/getDistVersion.spec.ts                     |   35 -
+ .../simple-update-notifier/src/getDistVersion.ts   |   29 -
+ .../src/hasNewVersion.spec.ts                      |   82 -
+ .../simple-update-notifier/src/hasNewVersion.ts    |   40 -
+ .../simple-update-notifier/src/index.spec.ts       |   27 -
+ .../simple-update-notifier/src/index.ts            |   34 -
+ .../simple-update-notifier/src/isNpmOrYarn.ts      |   12 -
+ .../simple-update-notifier/src/types.ts            |    8 -
+ backend/node_modules/statuses/HISTORY.md           |   87 -
+ backend/node_modules/statuses/LICENSE              |   23 -
+ backend/node_modules/statuses/README.md            |  139 -
+ backend/node_modules/statuses/codes.json           |   65 -
+ backend/node_modules/statuses/index.js             |  146 -
+ backend/node_modules/statuses/package.json         |   49 -
+ backend/node_modules/supports-color/browser.js     |    5 -
+ backend/node_modules/supports-color/index.js       |  131 -
+ backend/node_modules/supports-color/license        |    9 -
+ backend/node_modules/supports-color/package.json   |   53 -
+ backend/node_modules/supports-color/readme.md      |   66 -
+ backend/node_modules/to-regex-range/LICENSE        |   21 -
+ backend/node_modules/to-regex-range/README.md      |  305 -
+ backend/node_modules/to-regex-range/index.js       |  288 -
+ backend/node_modules/to-regex-range/package.json   |   88 -
+ backend/node_modules/toidentifier/HISTORY.md       |    9 -
+ backend/node_modules/toidentifier/LICENSE          |   21 -
+ backend/node_modules/toidentifier/README.md        |   61 -
+ backend/node_modules/toidentifier/index.js         |   32 -
+ backend/node_modules/toidentifier/package.json     |   38 -
+ backend/node_modules/touch/LICENSE                 |   15 -
+ backend/node_modules/touch/README.md               |   52 -
+ backend/node_modules/touch/bin/nodetouch.js        |  112 -
+ backend/node_modules/touch/index.js                |  224 -
+ backend/node_modules/touch/package.json            |   25 -
+ backend/node_modules/type-is/HISTORY.md            |  292 -
+ backend/node_modules/type-is/LICENSE               |   23 -
+ backend/node_modules/type-is/README.md             |  198 -
+ backend/node_modules/type-is/index.js              |  250 -
+ backend/node_modules/type-is/package.json          |   47 -
+ .../undefsafe/.github/workflows/release.yml        |   25 -
+ backend/node_modules/undefsafe/.jscsrc             |   13 -
+ backend/node_modules/undefsafe/.jshintrc           |   16 -
+ backend/node_modules/undefsafe/.travis.yml         |   18 -
+ backend/node_modules/undefsafe/LICENSE             |   22 -
+ backend/node_modules/undefsafe/README.md           |   63 -
+ backend/node_modules/undefsafe/example.js          |   14 -
+ backend/node_modules/undefsafe/lib/undefsafe.js    |  125 -
+ backend/node_modules/undefsafe/package.json        |   34 -
+ backend/node_modules/unpipe/HISTORY.md             |    4 -
+ backend/node_modules/unpipe/LICENSE                |   22 -
+ backend/node_modules/unpipe/README.md              |   43 -
+ backend/node_modules/unpipe/index.js               |   69 -
+ backend/node_modules/unpipe/package.json           |   27 -
+ backend/node_modules/vary/HISTORY.md               |   39 -
+ backend/node_modules/vary/LICENSE                  |   22 -
+ backend/node_modules/vary/README.md                |  101 -
+ backend/node_modules/vary/index.js                 |  149 -
+ backend/node_modules/vary/package.json             |   43 -
+ backend/node_modules/wrappy/LICENSE                |   15 -
+ backend/node_modules/wrappy/README.md              |   36 -
+ backend/node_modules/wrappy/package.json           |   29 -
+ backend/node_modules/wrappy/wrappy.js              |   33 -
+ backend/package-lock.json                          | 1210 ---
+ backend/package.json                               |   19 -
+ backend/server.js                                  |   36 -
+ backend/src/api/authApi.js                         |   45 -
+ backend/src/api/catalogoApi.js                     |    6 -
+ backend/src/api/climaApi.js                        |   28 -
+ backend/src/api/faqApi.js                          |   22 -
+ backend/src/api/tasasApi.js                        |   16 -
+ backend/src/api/trackingApi.js                     |   29 -
+ backend/src/controllers/auth.controller.js         |   13 -
+ backend/src/controllers/catalogo.controller.js     |    6 -
+ backend/src/controllers/clima.controller.js        |    7 -
+ backend/src/controllers/faq.controller.js          |    6 -
+ backend/src/controllers/tasas.controller.js        |    6 -
+ backend/src/controllers/tracking.controller.js     |    7 -
+ backend/src/routes/auth.routes.js                  |    8 -
+ backend/src/routes/catalogo.routes.js              |    7 -
+ backend/src/routes/clima.routes.js                 |    7 -
+ backend/src/routes/faq.route.js                    |    7 -
+ backend/src/routes/tasas.routes.js                 |    7 -
+ backend/src/routes/tracking.routes.js              |    7 -
+ 926 files changed, 99818 deletions(-)
+
+commit 9c77df0e0626441c2b20cd581f05b1c92f96a71c
+Author: Wilmi Lucas <wilmilucas89@gmail.com>
+Date:   Fri Nov 28 13:02:00 2025 -0400
+
+    trabajando contenido
+
+ src/App.css                   |   3 +-
+ src/App.jsx                   |  34 +++++++++++-
+ src/components/Carousel.jsx   |   6 +-
+ src/components/Navigation.jsx |  25 ++++-----
+ src/components/logo1.png      | Bin 0 -> 162774 bytes
+ src/pages/FAQs.jsx            | 125 ++++++++++++++++++++++++++++++++++++++++--
+ 6 files changed, 166 insertions(+), 27 deletions(-)
+
+commit 14628087ca6af97f0702a71638c1cdd4215fb756
+Author: Wilmi Lucas <wilmilucas89@gmail.com>
+Date:   Thu Nov 27 16:25:03 2025 -0400
+
+    trabajando contenido
+
+ src/App.css                   |  46 ++++++++--
+ src/App.jsx                   |  75 ++++++++++++-----
+ src/components/Carousel.jsx   | 185 ++++++++++------------------------------
+ src/components/Navigation.css |  20 +++++
+ src/components/Navigation.jsx | 191 ++++++++++++++++++++++++++++--------------
+ src/pages/About.jsx           |  24 ++++--
+ src/pages/Catolog.jsx         |  56 +++++++++++--
+ src/pages/Contact.jsx         |  61 +++++++++++++-
+ src/pages/FAQs.jsx            |   6 +-
+ src/pages/Home.jsx            |  14 ++--
+ src/pages/Login.jsx           |   2 +-
+ src/pages/Policy.jsx          |  73 ++++++++++++++++
+ src/pages/Product.jsx         |  28 +++----
+ 13 files changed, 514 insertions(+), 267 deletions(-)
+
+commit f3092e5ae430cd3bc2e25a36cb5741807b74a167
+Author: Wilmi Lucas <wilmilucas89@gmail.com>
+Date:   Wed Nov 26 16:04:41 2025 -0400
+
+    actualizando
+
+ src/App.css                 | 23 ++++++------
+ src/App.jsx                 |  2 +-
+ src/components/Carousel.jsx | 12 ++++--
+ src/pages/About.jsx         | 10 +++--
+ src/pages/Catolog.jsx       |  4 +-
+ src/pages/Contact.jsx       |  4 +-
+ src/pages/Home.jsx          | 91 +++++++++++++++++++++++++++++++++++++++++----
+ src/pages/Login.jsx         | 42 +++++++++++----------
+ src/pages/Register.jsx      | 12 +++---
+ 9 files changed, 144 insertions(+), 56 deletions(-)
+
+commit abc0ffa052d219f85856333ffb1617c31139b175
+Author: Wilmi Lucas <wilmilucas89@gmail.com>
+Date:   Tue Nov 25 15:51:04 2025 -0400
+
+    trabando frontend
+
+ package-lock.json             | 304 ++++++++++++++++++++++++++++++++++++++++--
+ package.json                  |   2 +
+ public/index.html             |  50 +++----
+ src/App.css                   |  30 ++++-
+ src/App.jsx                   |  57 ++++----
+ src/components/Carousel.jsx   | 172 ++++++++++++++++++++++++
+ src/components/Navigation.css |  79 -----------
+ src/components/Navigation.jsx | 150 +++++++++++----------
+ src/pages/About.jsx           |   2 +-
+ src/pages/CarBasket.jsx       |  14 +-
+ src/pages/Catolog.jsx         |  15 +++
+ src/pages/Catologo.jsx        |  12 --
+ src/pages/Contact.jsx         |   2 +-
+ src/pages/FAQs.jsx            |  11 ++
+ src/pages/Home.jsx            |   9 +-
+ src/pages/Login.jsx           |  46 ++++---
+ src/pages/Product.jsx         |  26 ++++
+ src/pages/Register.jsx        |  65 +++++----
+ 18 files changed, 764 insertions(+), 282 deletions(-)
+
+commit 71ace03f93884fd620ab0d5608bd32f31e66ee25
+Author: Simeleidy <raileidysdeleon070922@gmail.com>
+Date:   Sat Nov 22 20:31:21 2025 +0100
+
+    Actualización del backend: rutas, controladores y APIs completadas
+
+ backend/src/api/catalogoApi.js                 | 210 +------------------------
+ backend/src/controllers/catalogo.controller.js |  23 +--
+ 2 files changed, 8 insertions(+), 225 deletions(-)
+
+commit f8aa75eeff4c86c644d6c6b08301b16c356b3f3b
+Author: Simeleidy <raileidysdeleon070922@gmail.com>
+Date:   Sat Nov 22 20:06:10 2025 +0100
+
+    Actualización del backend: rutas, controladores y APIs completadas
+
+ backend/server.js                              |  36 +++++
+ backend/src/api/catalogoApi.js                 | 208 +++++++++++++++++++++++++
+ backend/src/api/climaApi.js                    |  28 ++++
+ backend/src/api/faqApi.js                      |  22 +++
+ backend/src/api/tasasApi.js                    |  16 ++
+ backend/src/api/trackingApi.js                 |  29 ++++
+ backend/src/controllers/auth.controller.js     |  13 ++
+ backend/src/controllers/catalogo.controller.js |  21 +++
+ backend/src/controllers/clima.controller.js    |   7 +
+ backend/src/controllers/faq.controller.js      |   6 +
+ backend/src/controllers/tasas.controller.js    |   6 +
+ backend/src/controllers/tracking.controller.js |   7 +
+ backend/src/routes/auth.routes.js              |   8 +
+ backend/src/routes/catalogo.routes.js          |   7 +
+ backend/src/routes/clima.routes.js             |   7 +
+ backend/src/routes/faq.route.js                |   7 +
+ backend/src/routes/tasas.routes.js             |   7 +
+ backend/src/routes/tracking.routes.js          |   7 +
+ 18 files changed, 442 insertions(+)
+
+commit d6b91aa2786d557109dc6645d16d880e6878a47f
+Author: Nabila C. Castillo <131215045+nabxo@users.noreply.github.com>
+Date:   Thu Nov 20 19:22:31 2025 -0800
+
+    Update carrito.js
+
+ src/carrito.js | 19 +++++++++----------
+ 1 file changed, 9 insertions(+), 10 deletions(-)
+
+commit be387f92e918cf64e2417ea0b869fc4e7c27f185
+Author: Nabila C. Castillo <131215045+nabxo@users.noreply.github.com>
+Date:   Thu Nov 20 19:18:28 2025 -0800
+
+    Add files via upload
+
+ evidencia_historial.txt | 31 +++++++++++++++++++++++++++++++
+ 1 file changed, 31 insertions(+)
+
+commit d2236df3ac26f554d03e609d3ba8793bdfa4073d
+Author: Nabila C. Castillo <131215045+nabxo@users.noreply.github.com>
+Date:   Thu Nov 20 19:07:34 2025 -0800
+
+    Update index.html
+
+ public/index.html | 165 +++++++++++++++++++++++++++++++++++++++++-------------
+ 1 file changed, 125 insertions(+), 40 deletions(-)
+
+commit a5d4f7afccbffb8868fb5856fc7ebc918cc1844c
+Author: Nabila C. Castillo <131215045+nabxo@users.noreply.github.com>
+Date:   Thu Nov 20 19:01:04 2025 -0800
+
+    Update carrito.js
+
+ src/carrito.js | 64 ++++++++++++++++++++++++++++++----------------------------
+ 1 file changed, 33 insertions(+), 31 deletions(-)
+
+commit e5e9eb230faefb72bb5cda1bc68b12c72ee803c9
+Author: Nabila C. Castillo <131215045+nabxo@users.noreply.github.com>
+Date:   Thu Nov 20 19:00:15 2025 -0800
+
+    Delete public/assets/README.md
+
+ public/assets/README.md | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit ec68e8d1d9591395f0c5e8434b18b1dfbeda423d
+Author: Nabila C. Castillo <131215045+nabxo@users.noreply.github.com>
+Date:   Thu Nov 20 18:59:39 2025 -0800
+
+    Add files via upload
+
+ public/assets/ambar.png     | Bin 0 -> 376916 bytes
+ public/assets/cafeb.png     | Bin 0 -> 724246 bytes
+ public/assets/cafesd.png    | Bin 0 -> 506824 bytes
+ public/assets/cartera.png   | Bin 0 -> 344404 bytes
+ public/assets/dominos.png   | Bin 0 -> 536990 bytes
+ public/assets/gorra1.png    | Bin 0 -> 265202 bytes
+ public/assets/gorra2.png    | Bin 0 -> 271057 bytes
+ public/assets/gorra3.png    | Bin 0 -> 269471 bytes
+ public/assets/gorra4.png    | Bin 0 -> 334797 bytes
+ public/assets/grecas.png    | Bin 0 -> 278511 bytes
+ public/assets/kit1.png      | Bin 0 -> 304572 bytes
+ public/assets/kit2.png      | Bin 0 -> 275679 bytes
+ public/assets/kit3.png      | Bin 0 -> 247776 bytes
+ public/assets/kit4.png      | Bin 0 -> 284935 bytes
+ public/assets/kit5.png      | Bin 0 -> 296386 bytes
+ public/assets/kit6.png      | Bin 0 -> 283678 bytes
+ public/assets/kit7.png      | Bin 0 -> 234274 bytes
+ public/assets/larimar.png   | Bin 0 -> 572083 bytes
+ public/assets/mamajuana.png | Bin 0 -> 606374 bytes
+ public/assets/maracas.png   | Bin 0 -> 523087 bytes
+ public/assets/muneca.png    | Bin 0 -> 652256 bytes
+ public/assets/pilones.png   | Bin 0 -> 451984 bytes
+ public/assets/pintura1.png  | Bin 0 -> 649404 bytes
+ public/assets/pintura2.png  | Bin 0 -> 613803 bytes
+ public/assets/pintura3.png  | Bin 0 -> 337560 bytes
+ public/assets/puros.png     | Bin 0 -> 997829 bytes
+ public/assets/ron.png       | Bin 0 -> 162754 bytes
+ public/assets/souvenir.png  | Bin 0 -> 198945 bytes
+ public/assets/taina.png     | Bin 0 -> 600787 bytes
+ public/assets/tazas.png     | Bin 0 -> 645947 bytes
+ 30 files changed, 0 insertions(+), 0 deletions(-)
+
+commit c17055bdbb6d00c39ce14adaf73c69fd5545bb62
+Author: Nabila C. Castillo <131215045+nabxo@users.noreply.github.com>
+Date:   Thu Nov 20 18:57:07 2025 -0800
+
+    Create README.md
+
+ public/assets/README.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 3144d204f4254ace371fa1a763de8417423b2292
+Author: Nabila C. Castillo <131215045+nabxo@users.noreply.github.com>
+Date:   Thu Nov 20 18:53:27 2025 -0800
+
+    Delete public/assets
+
+ public/assets | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 989dedb94fb9e035ce1e844a429e6c5417d29ede
+Author: Nabila C. Castillo <131215045+nabxo@users.noreply.github.com>
+Date:   Thu Nov 20 18:53:09 2025 -0800
+
+    Create assets
+
+ public/assets | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit f0ce0786ae457b8b28cf738cfe73368840aea7f6
+Author: Nabila C. Castillo <131215045+nabxo@users.noreply.github.com>
+Date:   Thu Nov 20 18:45:51 2025 -0800
+
+    Add files via upload
+
+ src/carrito.js | 331 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ src/styles.css |  53 +++++++++
+ 2 files changed, 384 insertions(+)
+
+commit d4835b340deb7aa4ce3ac2848229e67dc184c140
+Author: Nabila C. Castillo <131215045+nabxo@users.noreply.github.com>
+Date:   Thu Nov 20 17:51:15 2025 -0800
+
+    Add files via upload
+
+ src/Logo.jpeg | Bin 0 -> 54737 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 010544b990ed821b76b827d11742fd5e8cbdb7c8
+Author: Nabila C. Castillo <131215045+nabxo@users.noreply.github.com>
+Date:   Thu Nov 20 17:50:56 2025 -0800
+
+    Delete src/logo.png
+
+ src/logo.png | Bin 162774 -> 0 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 0e5a886baab55698c2c3934a03698b5be23275f6
+Author: Nabila C. Castillo <131215045+nabxo@users.noreply.github.com>
+Date:   Thu Nov 20 16:25:28 2025 -0800
+
+    Delete src/services directory
+
+ src/services/exchangeRateService.js | 26 --------------------------
+ src/services/productService.js      | 20 --------------------
+ src/services/supportService.js      | 20 --------------------
+ src/services/trackingService.js     | 21 ---------------------
+ src/services/weatherService.js      | 28 ----------------------------
+ 5 files changed, 115 deletions(-)
+
+commit 1000ee0672447da5ce447d2303cc998e1d46defa
+Author: Nabila C. Castillo <131215045+nabxo@users.noreply.github.com>
+Date:   Thu Nov 20 16:25:08 2025 -0800
+
+    Delete src/examples directory
+
+ src/examples/dataFlowExample.js | 27 ---------------------------
+ 1 file changed, 27 deletions(-)
+
+commit e348cf9a31391d1b65b5375a26aa752d4eabc4bc
+Author: Nabila C. Castillo <131215045+nabxo@users.noreply.github.com>
+Date:   Thu Nov 20 16:24:29 2025 -0800
+
+    Delete src/architecture directory
+
+ src/architecture/projectStructure.js | 35 -----------------------------------
+ 1 file changed, 35 deletions(-)
+
+commit 55637f04779c3e55d9060b65320d3e9646f630ce
+Author: Nabila C. Castillo <131215045+nabxo@users.noreply.github.com>
+Date:   Wed Nov 19 10:10:31 2025 -0800
+
+    Add files via upload
+
+ src/examples/dataFlowExample.js | 27 +++++++++++++++++++++++++++
+ 1 file changed, 27 insertions(+)
+
+commit 04a25f36df06fe855c6ad9f6adb79885cec728f2
+Author: Nabila C. Castillo <131215045+nabxo@users.noreply.github.com>
+Date:   Wed Nov 19 10:09:36 2025 -0800
+
+    Add files via upload
+
+ src/services/exchangeRateService.js | 26 ++++++++++++++++++++++++++
+ src/services/productService.js      | 20 ++++++++++++++++++++
+ src/services/supportService.js      | 20 ++++++++++++++++++++
+ src/services/trackingService.js     | 21 +++++++++++++++++++++
+ src/services/weatherService.js      | 28 ++++++++++++++++++++++++++++
+ 5 files changed, 115 insertions(+)
+
+commit 6ee5730c0652c51d0482f6d8a1b878627eb35b1f
+Author: Nabila C. Castillo <131215045+nabxo@users.noreply.github.com>
+Date:   Wed Nov 19 10:09:01 2025 -0800
+
+    Add files via upload
+
+ src/architecture/projectStructure.js | 35 +++++++++++++++++++++++++++++++++++
+ 1 file changed, 35 insertions(+)
+
+commit 27fa176347b407cb1ec9cdfc20d1c516820fcb09
+Merge: f3dfa52 2600473
+Author: Simeleidy <raileidysdeleon070922@gmail.com>
+Date:   Wed Nov 19 16:00:59 2025 +0100
+
+    Finalizando merge pendiente
+
+commit ad39a96adcc889fb97206e39d0acfe632e56dbd0
+Merge: 6d6976e 2600473
+Author: wLucas <127319880+Osonigg@users.noreply.github.com>
+Date:   Tue Nov 18 14:10:29 2025 -0400
+
+    Merge pull request #3 from Osonigg/dev
+
+commit f3dfa52cd32a15109cd481878aa278adcd28eef8
+Author: Simeleidy <raileidysdeleon070922@gmail.com>
+Date:   Tue Nov 18 17:57:04 2025 +0100
+
+    Estructura inicial del backend y organización de carpetas
+
+ backend/node_modules/.bin/nodemon                  |   16 +
+ backend/node_modules/.bin/nodemon.cmd              |   17 +
+ backend/node_modules/.bin/nodemon.ps1              |   28 +
+ backend/node_modules/.bin/nodetouch                |   16 +
+ backend/node_modules/.bin/nodetouch.cmd            |   17 +
+ backend/node_modules/.bin/nodetouch.ps1            |   28 +
+ backend/node_modules/.bin/semver                   |   16 +
+ backend/node_modules/.bin/semver.cmd               |   17 +
+ backend/node_modules/.bin/semver.ps1               |   28 +
+ backend/node_modules/.package-lock.json            | 1198 +++
+ backend/node_modules/accepts/HISTORY.md            |  250 +
+ backend/node_modules/accepts/LICENSE               |   23 +
+ backend/node_modules/accepts/README.md             |  140 +
+ backend/node_modules/accepts/index.js              |  238 +
+ backend/node_modules/accepts/package.json          |   47 +
+ backend/node_modules/anymatch/LICENSE              |   15 +
+ backend/node_modules/anymatch/README.md            |   87 +
+ backend/node_modules/anymatch/index.d.ts           |   20 +
+ backend/node_modules/anymatch/index.js             |  104 +
+ backend/node_modules/anymatch/package.json         |   48 +
+ .../balanced-match/.github/FUNDING.yml             |    2 +
+ backend/node_modules/balanced-match/LICENSE.md     |   21 +
+ backend/node_modules/balanced-match/README.md      |   97 +
+ backend/node_modules/balanced-match/index.js       |   62 +
+ backend/node_modules/balanced-match/package.json   |   48 +
+ .../binary-extensions/binary-extensions.json       |  263 +
+ .../binary-extensions/binary-extensions.json.d.ts  |    3 +
+ backend/node_modules/binary-extensions/index.d.ts  |   14 +
+ backend/node_modules/binary-extensions/index.js    |    1 +
+ backend/node_modules/binary-extensions/license     |   10 +
+ .../node_modules/binary-extensions/package.json    |   40 +
+ backend/node_modules/binary-extensions/readme.md   |   25 +
+ backend/node_modules/body-parser/HISTORY.md        |  731 ++
+ backend/node_modules/body-parser/LICENSE           |   23 +
+ backend/node_modules/body-parser/README.md         |  491 +
+ backend/node_modules/body-parser/index.js          |   80 +
+ backend/node_modules/body-parser/lib/read.js       |  210 +
+ backend/node_modules/body-parser/lib/types/json.js |  206 +
+ backend/node_modules/body-parser/lib/types/raw.js  |   75 +
+ backend/node_modules/body-parser/lib/types/text.js |   80 +
+ .../body-parser/lib/types/urlencoded.js            |  177 +
+ backend/node_modules/body-parser/lib/utils.js      |   83 +
+ backend/node_modules/body-parser/package.json      |   49 +
+ backend/node_modules/brace-expansion/LICENSE       |   21 +
+ backend/node_modules/brace-expansion/README.md     |  129 +
+ backend/node_modules/brace-expansion/index.js      |  201 +
+ backend/node_modules/brace-expansion/package.json  |   50 +
+ backend/node_modules/braces/LICENSE                |   21 +
+ backend/node_modules/braces/README.md              |  586 ++
+ backend/node_modules/braces/index.js               |  170 +
+ backend/node_modules/braces/lib/compile.js         |   60 +
+ backend/node_modules/braces/lib/constants.js       |   57 +
+ backend/node_modules/braces/lib/expand.js          |  113 +
+ backend/node_modules/braces/lib/parse.js           |  331 +
+ backend/node_modules/braces/lib/stringify.js       |   32 +
+ backend/node_modules/braces/lib/utils.js           |  122 +
+ backend/node_modules/braces/package.json           |   77 +
+ backend/node_modules/bytes/History.md              |   97 +
+ backend/node_modules/bytes/LICENSE                 |   23 +
+ backend/node_modules/bytes/Readme.md               |  152 +
+ backend/node_modules/bytes/index.js                |  170 +
+ backend/node_modules/bytes/package.json            |   42 +
+ .../node_modules/call-bind-apply-helpers/.eslintrc |   17 +
+ .../call-bind-apply-helpers/.github/FUNDING.yml    |   12 +
+ .../node_modules/call-bind-apply-helpers/.nycrc    |    9 +
+ .../call-bind-apply-helpers/CHANGELOG.md           |   30 +
+ .../node_modules/call-bind-apply-helpers/LICENSE   |   21 +
+ .../node_modules/call-bind-apply-helpers/README.md |   62 +
+ .../call-bind-apply-helpers/actualApply.d.ts       |    1 +
+ .../call-bind-apply-helpers/actualApply.js         |   10 +
+ .../call-bind-apply-helpers/applyBind.d.ts         |   19 +
+ .../call-bind-apply-helpers/applyBind.js           |   10 +
+ .../call-bind-apply-helpers/functionApply.d.ts     |    1 +
+ .../call-bind-apply-helpers/functionApply.js       |    4 +
+ .../call-bind-apply-helpers/functionCall.d.ts      |    1 +
+ .../call-bind-apply-helpers/functionCall.js        |    4 +
+ .../call-bind-apply-helpers/index.d.ts             |   64 +
+ .../node_modules/call-bind-apply-helpers/index.js  |   15 +
+ .../call-bind-apply-helpers/package.json           |   85 +
+ .../call-bind-apply-helpers/reflectApply.d.ts      |    3 +
+ .../call-bind-apply-helpers/reflectApply.js        |    4 +
+ .../call-bind-apply-helpers/test/index.js          |   63 +
+ .../call-bind-apply-helpers/tsconfig.json          |    9 +
+ backend/node_modules/call-bound/.eslintrc          |   13 +
+ .../node_modules/call-bound/.github/FUNDING.yml    |   12 +
+ backend/node_modules/call-bound/.nycrc             |    9 +
+ backend/node_modules/call-bound/CHANGELOG.md       |   42 +
+ backend/node_modules/call-bound/LICENSE            |   21 +
+ backend/node_modules/call-bound/README.md          |   53 +
+ backend/node_modules/call-bound/index.d.ts         |   94 +
+ backend/node_modules/call-bound/index.js           |   19 +
+ backend/node_modules/call-bound/package.json       |   99 +
+ backend/node_modules/call-bound/test/index.js      |   61 +
+ backend/node_modules/call-bound/tsconfig.json      |   10 +
+ backend/node_modules/chokidar/LICENSE              |   21 +
+ backend/node_modules/chokidar/README.md            |  308 +
+ backend/node_modules/chokidar/index.js             |  973 ++
+ backend/node_modules/chokidar/lib/constants.js     |   66 +
+ .../node_modules/chokidar/lib/fsevents-handler.js  |  526 ++
+ .../node_modules/chokidar/lib/nodefs-handler.js    |  654 ++
+ backend/node_modules/chokidar/package.json         |   70 +
+ backend/node_modules/chokidar/types/index.d.ts     |  192 +
+ backend/node_modules/concat-map/.travis.yml        |    4 +
+ backend/node_modules/concat-map/LICENSE            |   18 +
+ backend/node_modules/concat-map/README.markdown    |   62 +
+ backend/node_modules/concat-map/example/map.js     |    6 +
+ backend/node_modules/concat-map/index.js           |   13 +
+ backend/node_modules/concat-map/package.json       |   43 +
+ backend/node_modules/concat-map/test/map.js        |   39 +
+ .../node_modules/content-disposition/HISTORY.md    |   72 +
+ backend/node_modules/content-disposition/LICENSE   |   22 +
+ backend/node_modules/content-disposition/README.md |  142 +
+ backend/node_modules/content-disposition/index.js  |  458 +
+ .../node_modules/content-disposition/package.json  |   43 +
+ backend/node_modules/content-type/HISTORY.md       |   29 +
+ backend/node_modules/content-type/LICENSE          |   22 +
+ backend/node_modules/content-type/README.md        |   94 +
+ backend/node_modules/content-type/index.js         |  225 +
+ backend/node_modules/content-type/package.json     |   42 +
+ backend/node_modules/cookie-signature/History.md   |   70 +
+ backend/node_modules/cookie-signature/LICENSE      |   22 +
+ backend/node_modules/cookie-signature/Readme.md    |   23 +
+ backend/node_modules/cookie-signature/index.js     |   47 +
+ backend/node_modules/cookie-signature/package.json |   24 +
+ backend/node_modules/cookie/LICENSE                |   24 +
+ backend/node_modules/cookie/README.md              |  317 +
+ backend/node_modules/cookie/SECURITY.md            |   25 +
+ backend/node_modules/cookie/index.js               |  335 +
+ backend/node_modules/cookie/package.json           |   44 +
+ backend/node_modules/cors/CONTRIBUTING.md          |   33 +
+ backend/node_modules/cors/HISTORY.md               |   58 +
+ backend/node_modules/cors/LICENSE                  |   22 +
+ backend/node_modules/cors/README.md                |  243 +
+ backend/node_modules/cors/lib/index.js             |  238 +
+ backend/node_modules/cors/package.json             |   41 +
+ backend/node_modules/debug/LICENSE                 |   20 +
+ backend/node_modules/debug/README.md               |  481 +
+ backend/node_modules/debug/package.json            |   64 +
+ backend/node_modules/debug/src/browser.js          |  272 +
+ backend/node_modules/debug/src/common.js           |  292 +
+ backend/node_modules/debug/src/index.js            |   10 +
+ backend/node_modules/debug/src/node.js             |  263 +
+ backend/node_modules/depd/History.md               |  103 +
+ backend/node_modules/depd/LICENSE                  |   22 +
+ backend/node_modules/depd/Readme.md                |  280 +
+ backend/node_modules/depd/index.js                 |  538 ++
+ backend/node_modules/depd/lib/browser/index.js     |   77 +
+ backend/node_modules/depd/package.json             |   45 +
+ backend/node_modules/dotenv/CHANGELOG.md           |  598 ++
+ backend/node_modules/dotenv/LICENSE                |   23 +
+ backend/node_modules/dotenv/README-es.md           |  405 +
+ backend/node_modules/dotenv/README.md              |  692 ++
+ backend/node_modules/dotenv/SECURITY.md            |    1 +
+ backend/node_modules/dotenv/config.d.ts            |    1 +
+ backend/node_modules/dotenv/config.js              |    9 +
+ backend/node_modules/dotenv/lib/cli-options.js     |   17 +
+ backend/node_modules/dotenv/lib/env-options.js     |   28 +
+ backend/node_modules/dotenv/lib/main.d.ts          |  179 +
+ backend/node_modules/dotenv/lib/main.js            |  434 +
+ backend/node_modules/dotenv/package.json           |   62 +
+ backend/node_modules/dunder-proto/.eslintrc        |    5 +
+ .../node_modules/dunder-proto/.github/FUNDING.yml  |   12 +
+ backend/node_modules/dunder-proto/.nycrc           |   13 +
+ backend/node_modules/dunder-proto/CHANGELOG.md     |   24 +
+ backend/node_modules/dunder-proto/LICENSE          |   21 +
+ backend/node_modules/dunder-proto/README.md        |   54 +
+ backend/node_modules/dunder-proto/get.d.ts         |    5 +
+ backend/node_modules/dunder-proto/get.js           |   30 +
+ backend/node_modules/dunder-proto/package.json     |   76 +
+ backend/node_modules/dunder-proto/set.d.ts         |    5 +
+ backend/node_modules/dunder-proto/set.js           |   35 +
+ backend/node_modules/dunder-proto/test/get.js      |   34 +
+ backend/node_modules/dunder-proto/test/index.js    |    4 +
+ backend/node_modules/dunder-proto/test/set.js      |   50 +
+ backend/node_modules/dunder-proto/tsconfig.json    |    9 +
+ backend/node_modules/ee-first/LICENSE              |   22 +
+ backend/node_modules/ee-first/README.md            |   80 +
+ backend/node_modules/ee-first/index.js             |   95 +
+ backend/node_modules/ee-first/package.json         |   29 +
+ backend/node_modules/encodeurl/LICENSE             |   22 +
+ backend/node_modules/encodeurl/README.md           |  109 +
+ backend/node_modules/encodeurl/index.js            |   60 +
+ backend/node_modules/encodeurl/package.json        |   40 +
+ backend/node_modules/es-define-property/.eslintrc  |   13 +
+ .../es-define-property/.github/FUNDING.yml         |   12 +
+ backend/node_modules/es-define-property/.nycrc     |    9 +
+ .../node_modules/es-define-property/CHANGELOG.md   |   29 +
+ backend/node_modules/es-define-property/LICENSE    |   21 +
+ backend/node_modules/es-define-property/README.md  |   49 +
+ backend/node_modules/es-define-property/index.d.ts |    3 +
+ backend/node_modules/es-define-property/index.js   |   14 +
+ .../node_modules/es-define-property/package.json   |   81 +
+ .../node_modules/es-define-property/test/index.js  |   56 +
+ .../node_modules/es-define-property/tsconfig.json  |   10 +
+ backend/node_modules/es-errors/.eslintrc           |    5 +
+ backend/node_modules/es-errors/.github/FUNDING.yml |   12 +
+ backend/node_modules/es-errors/CHANGELOG.md        |   40 +
+ backend/node_modules/es-errors/LICENSE             |   21 +
+ backend/node_modules/es-errors/README.md           |   55 +
+ backend/node_modules/es-errors/eval.d.ts           |    3 +
+ backend/node_modules/es-errors/eval.js             |    4 +
+ backend/node_modules/es-errors/index.d.ts          |    3 +
+ backend/node_modules/es-errors/index.js            |    4 +
+ backend/node_modules/es-errors/package.json        |   80 +
+ backend/node_modules/es-errors/range.d.ts          |    3 +
+ backend/node_modules/es-errors/range.js            |    4 +
+ backend/node_modules/es-errors/ref.d.ts            |    3 +
+ backend/node_modules/es-errors/ref.js              |    4 +
+ backend/node_modules/es-errors/syntax.d.ts         |    3 +
+ backend/node_modules/es-errors/syntax.js           |    4 +
+ backend/node_modules/es-errors/test/index.js       |   19 +
+ backend/node_modules/es-errors/tsconfig.json       |   49 +
+ backend/node_modules/es-errors/type.d.ts           |    3 +
+ backend/node_modules/es-errors/type.js             |    4 +
+ backend/node_modules/es-errors/uri.d.ts            |    3 +
+ backend/node_modules/es-errors/uri.js              |    4 +
+ backend/node_modules/es-object-atoms/.eslintrc     |   16 +
+ .../es-object-atoms/.github/FUNDING.yml            |   12 +
+ backend/node_modules/es-object-atoms/CHANGELOG.md  |   37 +
+ backend/node_modules/es-object-atoms/LICENSE       |   21 +
+ backend/node_modules/es-object-atoms/README.md     |   63 +
+ .../es-object-atoms/RequireObjectCoercible.d.ts    |    3 +
+ .../es-object-atoms/RequireObjectCoercible.js      |   11 +
+ backend/node_modules/es-object-atoms/ToObject.d.ts |    7 +
+ backend/node_modules/es-object-atoms/ToObject.js   |   10 +
+ backend/node_modules/es-object-atoms/index.d.ts    |    3 +
+ backend/node_modules/es-object-atoms/index.js      |    4 +
+ backend/node_modules/es-object-atoms/isObject.d.ts |    3 +
+ backend/node_modules/es-object-atoms/isObject.js   |    6 +
+ backend/node_modules/es-object-atoms/package.json  |   80 +
+ backend/node_modules/es-object-atoms/test/index.js |   38 +
+ backend/node_modules/es-object-atoms/tsconfig.json |    6 +
+ backend/node_modules/escape-html/LICENSE           |   24 +
+ backend/node_modules/escape-html/Readme.md         |   43 +
+ backend/node_modules/escape-html/index.js          |   78 +
+ backend/node_modules/escape-html/package.json      |   24 +
+ backend/node_modules/etag/HISTORY.md               |   83 +
+ backend/node_modules/etag/LICENSE                  |   22 +
+ backend/node_modules/etag/README.md                |  159 +
+ backend/node_modules/etag/index.js                 |  131 +
+ backend/node_modules/etag/package.json             |   47 +
+ backend/node_modules/express/History.md            | 3858 ++++++++
+ backend/node_modules/express/LICENSE               |   24 +
+ backend/node_modules/express/Readme.md             |  266 +
+ backend/node_modules/express/index.js              |   11 +
+ backend/node_modules/express/lib/application.js    |  631 ++
+ backend/node_modules/express/lib/express.js        |   81 +
+ backend/node_modules/express/lib/request.js        |  515 ++
+ backend/node_modules/express/lib/response.js       | 1039 +++
+ backend/node_modules/express/lib/utils.js          |  269 +
+ backend/node_modules/express/lib/view.js           |  205 +
+ backend/node_modules/express/package.json          |   98 +
+ backend/node_modules/fill-range/LICENSE            |   21 +
+ backend/node_modules/fill-range/README.md          |  237 +
+ backend/node_modules/fill-range/index.js           |  248 +
+ backend/node_modules/fill-range/package.json       |   74 +
+ backend/node_modules/finalhandler/HISTORY.md       |  233 +
+ backend/node_modules/finalhandler/LICENSE          |   22 +
+ backend/node_modules/finalhandler/README.md        |  147 +
+ backend/node_modules/finalhandler/index.js         |  293 +
+ backend/node_modules/finalhandler/package.json     |   43 +
+ backend/node_modules/forwarded/HISTORY.md          |   21 +
+ backend/node_modules/forwarded/LICENSE             |   22 +
+ backend/node_modules/forwarded/README.md           |   57 +
+ backend/node_modules/forwarded/index.js            |   90 +
+ backend/node_modules/forwarded/package.json        |   45 +
+ backend/node_modules/fresh/HISTORY.md              |   80 +
+ backend/node_modules/fresh/LICENSE                 |   23 +
+ backend/node_modules/fresh/README.md               |  117 +
+ backend/node_modules/fresh/index.js                |  136 +
+ backend/node_modules/fresh/package.json            |   46 +
+ backend/node_modules/function-bind/.eslintrc       |   21 +
+ .../node_modules/function-bind/.github/FUNDING.yml |   12 +
+ .../node_modules/function-bind/.github/SECURITY.md |    3 +
+ backend/node_modules/function-bind/.nycrc          |   13 +
+ backend/node_modules/function-bind/CHANGELOG.md    |  136 +
+ backend/node_modules/function-bind/LICENSE         |   20 +
+ backend/node_modules/function-bind/README.md       |   46 +
+ .../node_modules/function-bind/implementation.js   |   84 +
+ backend/node_modules/function-bind/index.js        |    5 +
+ backend/node_modules/function-bind/package.json    |   87 +
+ backend/node_modules/function-bind/test/.eslintrc  |    9 +
+ backend/node_modules/function-bind/test/index.js   |  252 +
+ backend/node_modules/get-intrinsic/.eslintrc       |   42 +
+ .../node_modules/get-intrinsic/.github/FUNDING.yml |   12 +
+ backend/node_modules/get-intrinsic/.nycrc          |    9 +
+ backend/node_modules/get-intrinsic/CHANGELOG.md    |  186 +
+ backend/node_modules/get-intrinsic/LICENSE         |   21 +
+ backend/node_modules/get-intrinsic/README.md       |   71 +
+ backend/node_modules/get-intrinsic/index.js        |  378 +
+ backend/node_modules/get-intrinsic/package.json    |   97 +
+ .../get-intrinsic/test/GetIntrinsic.js             |  274 +
+ backend/node_modules/get-proto/.eslintrc           |   10 +
+ backend/node_modules/get-proto/.github/FUNDING.yml |   12 +
+ backend/node_modules/get-proto/.nycrc              |    9 +
+ backend/node_modules/get-proto/CHANGELOG.md        |   21 +
+ backend/node_modules/get-proto/LICENSE             |   21 +
+ .../get-proto/Object.getPrototypeOf.d.ts           |    5 +
+ .../get-proto/Object.getPrototypeOf.js             |    6 +
+ backend/node_modules/get-proto/README.md           |   50 +
+ .../get-proto/Reflect.getPrototypeOf.d.ts          |    3 +
+ .../get-proto/Reflect.getPrototypeOf.js            |    4 +
+ backend/node_modules/get-proto/index.d.ts          |    5 +
+ backend/node_modules/get-proto/index.js            |   27 +
+ backend/node_modules/get-proto/package.json        |   81 +
+ backend/node_modules/get-proto/test/index.js       |   68 +
+ backend/node_modules/get-proto/tsconfig.json       |    9 +
+ backend/node_modules/glob-parent/CHANGELOG.md      |  110 +
+ backend/node_modules/glob-parent/LICENSE           |   15 +
+ backend/node_modules/glob-parent/README.md         |  137 +
+ backend/node_modules/glob-parent/index.js          |   42 +
+ backend/node_modules/glob-parent/package.json      |   48 +
+ backend/node_modules/gopd/.eslintrc                |   16 +
+ backend/node_modules/gopd/.github/FUNDING.yml      |   12 +
+ backend/node_modules/gopd/CHANGELOG.md             |   45 +
+ backend/node_modules/gopd/LICENSE                  |   21 +
+ backend/node_modules/gopd/README.md                |   40 +
+ backend/node_modules/gopd/gOPD.d.ts                |    1 +
+ backend/node_modules/gopd/gOPD.js                  |    4 +
+ backend/node_modules/gopd/index.d.ts               |    5 +
+ backend/node_modules/gopd/index.js                 |   15 +
+ backend/node_modules/gopd/package.json             |   77 +
+ backend/node_modules/gopd/test/index.js            |   36 +
+ backend/node_modules/gopd/tsconfig.json            |    9 +
+ backend/node_modules/has-flag/index.js             |    8 +
+ backend/node_modules/has-flag/license              |    9 +
+ backend/node_modules/has-flag/package.json         |   44 +
+ backend/node_modules/has-flag/readme.md            |   70 +
+ backend/node_modules/has-symbols/.eslintrc         |   11 +
+ .../node_modules/has-symbols/.github/FUNDING.yml   |   12 +
+ backend/node_modules/has-symbols/.nycrc            |    9 +
+ backend/node_modules/has-symbols/CHANGELOG.md      |   91 +
+ backend/node_modules/has-symbols/LICENSE           |   21 +
+ backend/node_modules/has-symbols/README.md         |   46 +
+ backend/node_modules/has-symbols/index.d.ts        |    3 +
+ backend/node_modules/has-symbols/index.js          |   14 +
+ backend/node_modules/has-symbols/package.json      |  111 +
+ backend/node_modules/has-symbols/shams.d.ts        |    3 +
+ backend/node_modules/has-symbols/shams.js          |   45 +
+ backend/node_modules/has-symbols/test/index.js     |   22 +
+ .../node_modules/has-symbols/test/shams/core-js.js |   29 +
+ .../test/shams/get-own-property-symbols.js         |   29 +
+ backend/node_modules/has-symbols/test/tests.js     |   58 +
+ backend/node_modules/has-symbols/tsconfig.json     |   10 +
+ backend/node_modules/hasown/.eslintrc              |    5 +
+ backend/node_modules/hasown/.github/FUNDING.yml    |   12 +
+ backend/node_modules/hasown/.nycrc                 |   13 +
+ backend/node_modules/hasown/CHANGELOG.md           |   40 +
+ backend/node_modules/hasown/LICENSE                |   21 +
+ backend/node_modules/hasown/README.md              |   40 +
+ backend/node_modules/hasown/index.d.ts             |    3 +
+ backend/node_modules/hasown/index.js               |    8 +
+ backend/node_modules/hasown/package.json           |   92 +
+ backend/node_modules/hasown/tsconfig.json          |    6 +
+ backend/node_modules/http-errors/HISTORY.md        |  180 +
+ backend/node_modules/http-errors/LICENSE           |   23 +
+ backend/node_modules/http-errors/README.md         |  169 +
+ backend/node_modules/http-errors/index.js          |  289 +
+ .../http-errors/node_modules/statuses/HISTORY.md   |   82 +
+ .../http-errors/node_modules/statuses/LICENSE      |   23 +
+ .../http-errors/node_modules/statuses/README.md    |  136 +
+ .../http-errors/node_modules/statuses/codes.json   |   65 +
+ .../http-errors/node_modules/statuses/index.js     |  146 +
+ .../http-errors/node_modules/statuses/package.json |   49 +
+ backend/node_modules/http-errors/package.json      |   50 +
+ .../node_modules/iconv-lite/.github/dependabot.yml |   11 +
+ .../iconv-lite/.idea/codeStyles/Project.xml        |   47 +
+ .../.idea/codeStyles/codeStyleConfig.xml           |    5 +
+ .../node_modules/iconv-lite/.idea/iconv-lite.iml   |   12 +
+ .../.idea/inspectionProfiles/Project_Default.xml   |    6 +
+ backend/node_modules/iconv-lite/.idea/modules.xml  |    8 +
+ backend/node_modules/iconv-lite/.idea/vcs.xml      |    6 +
+ backend/node_modules/iconv-lite/Changelog.md       |  212 +
+ backend/node_modules/iconv-lite/LICENSE            |   21 +
+ backend/node_modules/iconv-lite/README.md          |  130 +
+ .../iconv-lite/encodings/dbcs-codec.js             |  597 ++
+ .../node_modules/iconv-lite/encodings/dbcs-data.js |  188 +
+ backend/node_modules/iconv-lite/encodings/index.js |   23 +
+ .../node_modules/iconv-lite/encodings/internal.js  |  198 +
+ .../iconv-lite/encodings/sbcs-codec.js             |   72 +
+ .../iconv-lite/encodings/sbcs-data-generated.js    |  451 +
+ .../node_modules/iconv-lite/encodings/sbcs-data.js |  179 +
+ .../iconv-lite/encodings/tables/big5-added.json    |  122 +
+ .../iconv-lite/encodings/tables/cp936.json         |  264 +
+ .../iconv-lite/encodings/tables/cp949.json         |  273 +
+ .../iconv-lite/encodings/tables/cp950.json         |  177 +
+ .../iconv-lite/encodings/tables/eucjp.json         |  182 +
+ .../encodings/tables/gb18030-ranges.json           |    1 +
+ .../iconv-lite/encodings/tables/gbk-added.json     |   56 +
+ .../iconv-lite/encodings/tables/shiftjis.json      |  125 +
+ backend/node_modules/iconv-lite/encodings/utf16.js |  197 +
+ backend/node_modules/iconv-lite/encodings/utf32.js |  319 +
+ backend/node_modules/iconv-lite/encodings/utf7.js  |  290 +
+ .../node_modules/iconv-lite/lib/bom-handling.js    |   52 +
+ backend/node_modules/iconv-lite/lib/index.d.ts     |   41 +
+ backend/node_modules/iconv-lite/lib/index.js       |  180 +
+ backend/node_modules/iconv-lite/lib/streams.js     |  109 +
+ backend/node_modules/iconv-lite/package.json       |   44 +
+ backend/node_modules/ignore-by-default/LICENSE     |   14 +
+ backend/node_modules/ignore-by-default/README.md   |   26 +
+ backend/node_modules/ignore-by-default/index.js    |   12 +
+ .../node_modules/ignore-by-default/package.json    |   34 +
+ backend/node_modules/inherits/LICENSE              |   16 +
+ backend/node_modules/inherits/README.md            |   42 +
+ backend/node_modules/inherits/inherits.js          |    9 +
+ backend/node_modules/inherits/inherits_browser.js  |   27 +
+ backend/node_modules/inherits/package.json         |   29 +
+ backend/node_modules/ipaddr.js/LICENSE             |   19 +
+ backend/node_modules/ipaddr.js/README.md           |  233 +
+ backend/node_modules/ipaddr.js/ipaddr.min.js       |    1 +
+ backend/node_modules/ipaddr.js/lib/ipaddr.js       |  673 ++
+ backend/node_modules/ipaddr.js/lib/ipaddr.js.d.ts  |   68 +
+ backend/node_modules/ipaddr.js/package.json        |   35 +
+ backend/node_modules/is-binary-path/index.d.ts     |   17 +
+ backend/node_modules/is-binary-path/index.js       |    7 +
+ backend/node_modules/is-binary-path/license        |    9 +
+ backend/node_modules/is-binary-path/package.json   |   40 +
+ backend/node_modules/is-binary-path/readme.md      |   34 +
+ backend/node_modules/is-extglob/LICENSE            |   21 +
+ backend/node_modules/is-extglob/README.md          |  107 +
+ backend/node_modules/is-extglob/index.js           |   20 +
+ backend/node_modules/is-extglob/package.json       |   69 +
+ backend/node_modules/is-glob/LICENSE               |   21 +
+ backend/node_modules/is-glob/README.md             |  206 +
+ backend/node_modules/is-glob/index.js              |  150 +
+ backend/node_modules/is-glob/package.json          |   81 +
+ backend/node_modules/is-number/LICENSE             |   21 +
+ backend/node_modules/is-number/README.md           |  187 +
+ backend/node_modules/is-number/index.js            |   18 +
+ backend/node_modules/is-number/package.json        |   82 +
+ backend/node_modules/is-promise/LICENSE            |   19 +
+ backend/node_modules/is-promise/index.d.ts         |    2 +
+ backend/node_modules/is-promise/index.js           |    6 +
+ backend/node_modules/is-promise/index.mjs          |    3 +
+ backend/node_modules/is-promise/package.json       |   30 +
+ backend/node_modules/is-promise/readme.md          |   33 +
+ backend/node_modules/math-intrinsics/.eslintrc     |   16 +
+ .../math-intrinsics/.github/FUNDING.yml            |   12 +
+ backend/node_modules/math-intrinsics/CHANGELOG.md  |   24 +
+ backend/node_modules/math-intrinsics/LICENSE       |   21 +
+ backend/node_modules/math-intrinsics/README.md     |   50 +
+ backend/node_modules/math-intrinsics/abs.d.ts      |    1 +
+ backend/node_modules/math-intrinsics/abs.js        |    4 +
+ .../math-intrinsics/constants/maxArrayLength.d.ts  |    3 +
+ .../math-intrinsics/constants/maxArrayLength.js    |    4 +
+ .../math-intrinsics/constants/maxSafeInteger.d.ts  |    3 +
+ .../math-intrinsics/constants/maxSafeInteger.js    |    5 +
+ .../math-intrinsics/constants/maxValue.d.ts        |    3 +
+ .../math-intrinsics/constants/maxValue.js          |    5 +
+ backend/node_modules/math-intrinsics/floor.d.ts    |    1 +
+ backend/node_modules/math-intrinsics/floor.js      |    4 +
+ backend/node_modules/math-intrinsics/isFinite.d.ts |    3 +
+ backend/node_modules/math-intrinsics/isFinite.js   |   12 +
+ .../node_modules/math-intrinsics/isInteger.d.ts    |    3 +
+ backend/node_modules/math-intrinsics/isInteger.js  |   16 +
+ backend/node_modules/math-intrinsics/isNaN.d.ts    |    1 +
+ backend/node_modules/math-intrinsics/isNaN.js      |    6 +
+ .../math-intrinsics/isNegativeZero.d.ts            |    3 +
+ .../node_modules/math-intrinsics/isNegativeZero.js |    6 +
+ backend/node_modules/math-intrinsics/max.d.ts      |    1 +
+ backend/node_modules/math-intrinsics/max.js        |    4 +
+ backend/node_modules/math-intrinsics/min.d.ts      |    1 +
+ backend/node_modules/math-intrinsics/min.js        |    4 +
+ backend/node_modules/math-intrinsics/mod.d.ts      |    3 +
+ backend/node_modules/math-intrinsics/mod.js        |    9 +
+ backend/node_modules/math-intrinsics/package.json  |   86 +
+ backend/node_modules/math-intrinsics/pow.d.ts      |    1 +
+ backend/node_modules/math-intrinsics/pow.js        |    4 +
+ backend/node_modules/math-intrinsics/round.d.ts    |    1 +
+ backend/node_modules/math-intrinsics/round.js      |    4 +
+ backend/node_modules/math-intrinsics/sign.d.ts     |    3 +
+ backend/node_modules/math-intrinsics/sign.js       |   11 +
+ backend/node_modules/math-intrinsics/test/index.js |  192 +
+ backend/node_modules/math-intrinsics/tsconfig.json |    3 +
+ backend/node_modules/media-typer/HISTORY.md        |   50 +
+ backend/node_modules/media-typer/LICENSE           |   22 +
+ backend/node_modules/media-typer/README.md         |   93 +
+ backend/node_modules/media-typer/index.js          |  143 +
+ backend/node_modules/media-typer/package.json      |   33 +
+ backend/node_modules/merge-descriptors/index.d.ts  |   11 +
+ backend/node_modules/merge-descriptors/index.js    |   26 +
+ backend/node_modules/merge-descriptors/license     |   11 +
+ .../node_modules/merge-descriptors/package.json    |   50 +
+ backend/node_modules/merge-descriptors/readme.md   |   55 +
+ backend/node_modules/mime-db/HISTORY.md            |  541 ++
+ backend/node_modules/mime-db/LICENSE               |   23 +
+ backend/node_modules/mime-db/README.md             |  109 +
+ backend/node_modules/mime-db/db.json               | 9342 ++++++++++++++++++++
+ backend/node_modules/mime-db/index.js              |   12 +
+ backend/node_modules/mime-db/package.json          |   56 +
+ backend/node_modules/mime-types/HISTORY.md         |  421 +
+ backend/node_modules/mime-types/LICENSE            |   23 +
+ backend/node_modules/mime-types/README.md          |  126 +
+ backend/node_modules/mime-types/index.js           |  211 +
+ backend/node_modules/mime-types/mimeScore.js       |   52 +
+ backend/node_modules/mime-types/package.json       |   45 +
+ backend/node_modules/minimatch/LICENSE             |   15 +
+ backend/node_modules/minimatch/README.md           |  230 +
+ backend/node_modules/minimatch/minimatch.js        |  947 ++
+ backend/node_modules/minimatch/package.json        |   33 +
+ backend/node_modules/ms/index.js                   |  162 +
+ backend/node_modules/ms/license.md                 |   21 +
+ backend/node_modules/ms/package.json               |   38 +
+ backend/node_modules/ms/readme.md                  |   59 +
+ backend/node_modules/negotiator/HISTORY.md         |  114 +
+ backend/node_modules/negotiator/LICENSE            |   24 +
+ backend/node_modules/negotiator/README.md          |  212 +
+ backend/node_modules/negotiator/index.js           |   83 +
+ backend/node_modules/negotiator/lib/charset.js     |  169 +
+ backend/node_modules/negotiator/lib/encoding.js    |  205 +
+ backend/node_modules/negotiator/lib/language.js    |  179 +
+ backend/node_modules/negotiator/lib/mediaType.js   |  294 +
+ backend/node_modules/negotiator/package.json       |   43 +
+ backend/node_modules/nodemon/.prettierrc.json      |    3 +
+ backend/node_modules/nodemon/LICENSE               |   21 +
+ backend/node_modules/nodemon/README.md             |  436 +
+ backend/node_modules/nodemon/bin/nodemon.js        |   16 +
+ backend/node_modules/nodemon/bin/windows-kill.exe  |  Bin 0 -> 80384 bytes
+ backend/node_modules/nodemon/doc/cli/authors.txt   |    8 +
+ backend/node_modules/nodemon/doc/cli/config.txt    |   44 +
+ backend/node_modules/nodemon/doc/cli/help.txt      |   29 +
+ backend/node_modules/nodemon/doc/cli/logo.txt      |   20 +
+ backend/node_modules/nodemon/doc/cli/options.txt   |   36 +
+ backend/node_modules/nodemon/doc/cli/topics.txt    |    8 +
+ backend/node_modules/nodemon/doc/cli/usage.txt     |    3 +
+ backend/node_modules/nodemon/doc/cli/whoami.txt    |    9 +
+ backend/node_modules/nodemon/index.d.ts            |  125 +
+ backend/node_modules/nodemon/jsconfig.json         |    7 +
+ backend/node_modules/nodemon/lib/cli/index.js      |   49 +
+ backend/node_modules/nodemon/lib/cli/parse.js      |  230 +
+ backend/node_modules/nodemon/lib/config/command.js |   43 +
+ .../node_modules/nodemon/lib/config/defaults.js    |   34 +
+ backend/node_modules/nodemon/lib/config/exec.js    |  240 +
+ backend/node_modules/nodemon/lib/config/index.js   |   93 +
+ backend/node_modules/nodemon/lib/config/load.js    |  225 +
+ backend/node_modules/nodemon/lib/help/index.js     |   27 +
+ backend/node_modules/nodemon/lib/index.js          |    1 +
+ backend/node_modules/nodemon/lib/monitor/index.js  |    4 +
+ backend/node_modules/nodemon/lib/monitor/match.js  |  287 +
+ backend/node_modules/nodemon/lib/monitor/run.js    |  562 ++
+ .../node_modules/nodemon/lib/monitor/signals.js    |   34 +
+ backend/node_modules/nodemon/lib/monitor/watch.js  |  244 +
+ backend/node_modules/nodemon/lib/nodemon.js        |  317 +
+ backend/node_modules/nodemon/lib/rules/add.js      |   89 +
+ backend/node_modules/nodemon/lib/rules/index.js    |   53 +
+ backend/node_modules/nodemon/lib/rules/parse.js    |   43 +
+ backend/node_modules/nodemon/lib/spawn.js          |   74 +
+ backend/node_modules/nodemon/lib/utils/bus.js      |   44 +
+ backend/node_modules/nodemon/lib/utils/clone.js    |   40 +
+ backend/node_modules/nodemon/lib/utils/colour.js   |   26 +
+ backend/node_modules/nodemon/lib/utils/index.js    |  103 +
+ backend/node_modules/nodemon/lib/utils/log.js      |   82 +
+ backend/node_modules/nodemon/lib/utils/merge.js    |   47 +
+ backend/node_modules/nodemon/lib/version.js        |  100 +
+ backend/node_modules/nodemon/package.json          |   75 +
+ backend/node_modules/normalize-path/LICENSE        |   21 +
+ backend/node_modules/normalize-path/README.md      |  127 +
+ backend/node_modules/normalize-path/index.js       |   35 +
+ backend/node_modules/normalize-path/package.json   |   77 +
+ backend/node_modules/object-assign/index.js        |   90 +
+ backend/node_modules/object-assign/license         |   21 +
+ backend/node_modules/object-assign/package.json    |   42 +
+ backend/node_modules/object-assign/readme.md       |   61 +
+ backend/node_modules/object-inspect/.eslintrc      |   53 +
+ .../object-inspect/.github/FUNDING.yml             |   12 +
+ backend/node_modules/object-inspect/.nycrc         |   13 +
+ backend/node_modules/object-inspect/CHANGELOG.md   |  424 +
+ backend/node_modules/object-inspect/LICENSE        |   21 +
+ backend/node_modules/object-inspect/example/all.js |   23 +
+ .../object-inspect/example/circular.js             |    6 +
+ backend/node_modules/object-inspect/example/fn.js  |    5 +
+ .../node_modules/object-inspect/example/inspect.js |   10 +
+ backend/node_modules/object-inspect/index.js       |  544 ++
+ .../object-inspect/package-support.json            |   20 +
+ backend/node_modules/object-inspect/package.json   |  105 +
+ .../node_modules/object-inspect/readme.markdown    |   84 +
+ .../node_modules/object-inspect/test-core-js.js    |   26 +
+ backend/node_modules/object-inspect/test/bigint.js |   58 +
+ .../object-inspect/test/browser/dom.js             |   15 +
+ .../node_modules/object-inspect/test/circular.js   |   16 +
+ backend/node_modules/object-inspect/test/deep.js   |   12 +
+ .../node_modules/object-inspect/test/element.js    |   53 +
+ backend/node_modules/object-inspect/test/err.js    |   48 +
+ backend/node_modules/object-inspect/test/fakes.js  |   29 +
+ backend/node_modules/object-inspect/test/fn.js     |   76 +
+ backend/node_modules/object-inspect/test/global.js |   17 +
+ backend/node_modules/object-inspect/test/has.js    |   15 +
+ backend/node_modules/object-inspect/test/holes.js  |   15 +
+ .../object-inspect/test/indent-option.js           |  271 +
+ .../node_modules/object-inspect/test/inspect.js    |  139 +
+ .../node_modules/object-inspect/test/lowbyte.js    |   12 +
+ backend/node_modules/object-inspect/test/number.js |   58 +
+ .../node_modules/object-inspect/test/quoteStyle.js |   26 +
+ .../object-inspect/test/toStringTag.js             |   40 +
+ backend/node_modules/object-inspect/test/undef.js  |   12 +
+ backend/node_modules/object-inspect/test/values.js |  261 +
+ .../node_modules/object-inspect/util.inspect.js    |    1 +
+ backend/node_modules/on-finished/HISTORY.md        |   98 +
+ backend/node_modules/on-finished/LICENSE           |   23 +
+ backend/node_modules/on-finished/README.md         |  162 +
+ backend/node_modules/on-finished/index.js          |  234 +
+ backend/node_modules/on-finished/package.json      |   39 +
+ backend/node_modules/once/LICENSE                  |   15 +
+ backend/node_modules/once/README.md                |   79 +
+ backend/node_modules/once/once.js                  |   42 +
+ backend/node_modules/once/package.json             |   33 +
+ backend/node_modules/parseurl/HISTORY.md           |   58 +
+ backend/node_modules/parseurl/LICENSE              |   24 +
+ backend/node_modules/parseurl/README.md            |  133 +
+ backend/node_modules/parseurl/index.js             |  158 +
+ backend/node_modules/parseurl/package.json         |   40 +
+ backend/node_modules/path-to-regexp/LICENSE        |   21 +
+ backend/node_modules/path-to-regexp/Readme.md      |  224 +
+ .../node_modules/path-to-regexp/dist/index.d.ts    |  144 +
+ backend/node_modules/path-to-regexp/dist/index.js  |  409 +
+ .../node_modules/path-to-regexp/dist/index.js.map  |    1 +
+ backend/node_modules/path-to-regexp/package.json   |   64 +
+ backend/node_modules/picomatch/CHANGELOG.md        |  136 +
+ backend/node_modules/picomatch/LICENSE             |   21 +
+ backend/node_modules/picomatch/README.md           |  708 ++
+ backend/node_modules/picomatch/index.js            |    3 +
+ backend/node_modules/picomatch/lib/constants.js    |  179 +
+ backend/node_modules/picomatch/lib/parse.js        | 1091 +++
+ backend/node_modules/picomatch/lib/picomatch.js    |  342 +
+ backend/node_modules/picomatch/lib/scan.js         |  391 +
+ backend/node_modules/picomatch/lib/utils.js        |   64 +
+ backend/node_modules/picomatch/package.json        |   81 +
+ backend/node_modules/proxy-addr/HISTORY.md         |  161 +
+ backend/node_modules/proxy-addr/LICENSE            |   22 +
+ backend/node_modules/proxy-addr/README.md          |  139 +
+ backend/node_modules/proxy-addr/index.js           |  327 +
+ backend/node_modules/proxy-addr/package.json       |   47 +
+ backend/node_modules/pstree.remy/.travis.yml       |    8 +
+ backend/node_modules/pstree.remy/LICENSE           |    7 +
+ backend/node_modules/pstree.remy/README.md         |   26 +
+ backend/node_modules/pstree.remy/lib/index.js      |   37 +
+ backend/node_modules/pstree.remy/lib/tree.js       |   37 +
+ backend/node_modules/pstree.remy/lib/utils.js      |   53 +
+ backend/node_modules/pstree.remy/package.json      |   33 +
+ .../pstree.remy/tests/fixtures/index.js            |   13 +
+ .../node_modules/pstree.remy/tests/fixtures/out1   |   10 +
+ .../node_modules/pstree.remy/tests/fixtures/out2   |   29 +
+ .../node_modules/pstree.remy/tests/index.test.js   |   51 +
+ backend/node_modules/qs/.editorconfig              |   46 +
+ backend/node_modules/qs/.eslintrc                  |   39 +
+ backend/node_modules/qs/.github/FUNDING.yml        |   12 +
+ backend/node_modules/qs/.nycrc                     |   13 +
+ backend/node_modules/qs/CHANGELOG.md               |  622 ++
+ backend/node_modules/qs/LICENSE.md                 |   29 +
+ backend/node_modules/qs/README.md                  |  733 ++
+ backend/node_modules/qs/dist/qs.js                 |  141 +
+ backend/node_modules/qs/lib/formats.js             |   23 +
+ backend/node_modules/qs/lib/index.js               |   11 +
+ backend/node_modules/qs/lib/parse.js               |  328 +
+ backend/node_modules/qs/lib/stringify.js           |  356 +
+ backend/node_modules/qs/lib/utils.js               |  268 +
+ backend/node_modules/qs/package.json               |   93 +
+ backend/node_modules/qs/test/empty-keys-cases.js   |  267 +
+ backend/node_modules/qs/test/parse.js              | 1276 +++
+ backend/node_modules/qs/test/stringify.js          | 1306 +++
+ backend/node_modules/qs/test/utils.js              |  262 +
+ backend/node_modules/range-parser/HISTORY.md       |   56 +
+ backend/node_modules/range-parser/LICENSE          |   23 +
+ backend/node_modules/range-parser/README.md        |   84 +
+ backend/node_modules/range-parser/index.js         |  162 +
+ backend/node_modules/range-parser/package.json     |   44 +
+ backend/node_modules/raw-body/HISTORY.md           |  333 +
+ backend/node_modules/raw-body/LICENSE              |   22 +
+ backend/node_modules/raw-body/README.md            |  223 +
+ backend/node_modules/raw-body/SECURITY.md          |   24 +
+ backend/node_modules/raw-body/index.d.ts           |   85 +
+ backend/node_modules/raw-body/index.js             |  336 +
+ .../raw-body/node_modules/iconv-lite/Changelog.md  |  236 +
+ .../raw-body/node_modules/iconv-lite/LICENSE       |   21 +
+ .../raw-body/node_modules/iconv-lite/README.md     |  138 +
+ .../iconv-lite/encodings/dbcs-codec.js             |  532 ++
+ .../node_modules/iconv-lite/encodings/dbcs-data.js |  185 +
+ .../node_modules/iconv-lite/encodings/index.js     |   23 +
+ .../node_modules/iconv-lite/encodings/internal.js  |  218 +
+ .../iconv-lite/encodings/sbcs-codec.js             |   75 +
+ .../iconv-lite/encodings/sbcs-data-generated.js    |  451 +
+ .../node_modules/iconv-lite/encodings/sbcs-data.js |  178 +
+ .../iconv-lite/encodings/tables/big5-added.json    |  122 +
+ .../iconv-lite/encodings/tables/cp936.json         |  264 +
+ .../iconv-lite/encodings/tables/cp949.json         |  273 +
+ .../iconv-lite/encodings/tables/cp950.json         |  177 +
+ .../iconv-lite/encodings/tables/eucjp.json         |  182 +
+ .../encodings/tables/gb18030-ranges.json           |    1 +
+ .../iconv-lite/encodings/tables/gbk-added.json     |   56 +
+ .../iconv-lite/encodings/tables/shiftjis.json      |  125 +
+ .../node_modules/iconv-lite/encodings/utf16.js     |  187 +
+ .../node_modules/iconv-lite/encodings/utf32.js     |  307 +
+ .../node_modules/iconv-lite/encodings/utf7.js      |  283 +
+ .../node_modules/iconv-lite/lib/bom-handling.js    |   48 +
+ .../iconv-lite/lib/helpers/merge-exports.js        |   13 +
+ .../node_modules/iconv-lite/lib/index.d.ts         |   41 +
+ .../raw-body/node_modules/iconv-lite/lib/index.js  |  183 +
+ .../node_modules/iconv-lite/lib/streams.js         |  105 +
+ .../raw-body/node_modules/iconv-lite/package.json  |   59 +
+ backend/node_modules/raw-body/package.json         |   50 +
+ backend/node_modules/readdirp/LICENSE              |   21 +
+ backend/node_modules/readdirp/README.md            |  122 +
+ backend/node_modules/readdirp/index.d.ts           |   43 +
+ backend/node_modules/readdirp/index.js             |  287 +
+ backend/node_modules/readdirp/package.json         |  122 +
+ backend/node_modules/router/HISTORY.md             |  228 +
+ backend/node_modules/router/LICENSE                |   23 +
+ backend/node_modules/router/README.md              |  416 +
+ backend/node_modules/router/index.js               |  748 ++
+ backend/node_modules/router/lib/layer.js           |  247 +
+ backend/node_modules/router/lib/route.js           |  242 +
+ backend/node_modules/router/package.json           |   44 +
+ backend/node_modules/safer-buffer/LICENSE          |   21 +
+ .../node_modules/safer-buffer/Porting-Buffer.md    |  268 +
+ backend/node_modules/safer-buffer/Readme.md        |  156 +
+ backend/node_modules/safer-buffer/dangerous.js     |   58 +
+ backend/node_modules/safer-buffer/package.json     |   34 +
+ backend/node_modules/safer-buffer/safer.js         |   77 +
+ backend/node_modules/safer-buffer/tests.js         |  406 +
+ backend/node_modules/semver/LICENSE                |   15 +
+ backend/node_modules/semver/README.md              |  664 ++
+ backend/node_modules/semver/bin/semver.js          |  191 +
+ backend/node_modules/semver/classes/comparator.js  |  143 +
+ backend/node_modules/semver/classes/index.js       |    7 +
+ backend/node_modules/semver/classes/range.js       |  557 ++
+ backend/node_modules/semver/classes/semver.js      |  333 +
+ backend/node_modules/semver/functions/clean.js     |    8 +
+ backend/node_modules/semver/functions/cmp.js       |   54 +
+ backend/node_modules/semver/functions/coerce.js    |   62 +
+ .../node_modules/semver/functions/compare-build.js |    9 +
+ .../node_modules/semver/functions/compare-loose.js |    5 +
+ backend/node_modules/semver/functions/compare.js   |    7 +
+ backend/node_modules/semver/functions/diff.js      |   60 +
+ backend/node_modules/semver/functions/eq.js        |    5 +
+ backend/node_modules/semver/functions/gt.js        |    5 +
+ backend/node_modules/semver/functions/gte.js       |    5 +
+ backend/node_modules/semver/functions/inc.js       |   21 +
+ backend/node_modules/semver/functions/lt.js        |    5 +
+ backend/node_modules/semver/functions/lte.js       |    5 +
+ backend/node_modules/semver/functions/major.js     |    5 +
+ backend/node_modules/semver/functions/minor.js     |    5 +
+ backend/node_modules/semver/functions/neq.js       |    5 +
+ backend/node_modules/semver/functions/parse.js     |   18 +
+ backend/node_modules/semver/functions/patch.js     |    5 +
+ .../node_modules/semver/functions/prerelease.js    |    8 +
+ backend/node_modules/semver/functions/rcompare.js  |    5 +
+ backend/node_modules/semver/functions/rsort.js     |    5 +
+ backend/node_modules/semver/functions/satisfies.js |   12 +
+ backend/node_modules/semver/functions/sort.js      |    5 +
+ backend/node_modules/semver/functions/valid.js     |    8 +
+ backend/node_modules/semver/index.js               |   91 +
+ backend/node_modules/semver/internal/constants.js  |   37 +
+ backend/node_modules/semver/internal/debug.js      |   11 +
+ .../node_modules/semver/internal/identifiers.js    |   29 +
+ backend/node_modules/semver/internal/lrucache.js   |   42 +
+ .../node_modules/semver/internal/parse-options.js  |   17 +
+ backend/node_modules/semver/internal/re.js         |  223 +
+ backend/node_modules/semver/package.json           |   78 +
+ backend/node_modules/semver/preload.js             |    4 +
+ backend/node_modules/semver/range.bnf              |   16 +
+ backend/node_modules/semver/ranges/gtr.js          |    6 +
+ backend/node_modules/semver/ranges/intersects.js   |    9 +
+ backend/node_modules/semver/ranges/ltr.js          |    6 +
+ .../node_modules/semver/ranges/max-satisfying.js   |   27 +
+ .../node_modules/semver/ranges/min-satisfying.js   |   26 +
+ backend/node_modules/semver/ranges/min-version.js  |   63 +
+ backend/node_modules/semver/ranges/outside.js      |   82 +
+ backend/node_modules/semver/ranges/simplify.js     |   49 +
+ backend/node_modules/semver/ranges/subset.js       |  249 +
+ .../node_modules/semver/ranges/to-comparators.js   |   10 +
+ backend/node_modules/semver/ranges/valid.js        |   13 +
+ backend/node_modules/send/HISTORY.md               |  580 ++
+ backend/node_modules/send/LICENSE                  |   23 +
+ backend/node_modules/send/README.md                |  317 +
+ backend/node_modules/send/index.js                 |  997 +++
+ backend/node_modules/send/package.json             |   60 +
+ backend/node_modules/serve-static/HISTORY.md       |  516 ++
+ backend/node_modules/serve-static/LICENSE          |   25 +
+ backend/node_modules/serve-static/README.md        |  253 +
+ backend/node_modules/serve-static/index.js         |  208 +
+ backend/node_modules/serve-static/package.json     |   41 +
+ backend/node_modules/setprototypeof/LICENSE        |   13 +
+ backend/node_modules/setprototypeof/README.md      |   31 +
+ backend/node_modules/setprototypeof/index.d.ts     |    2 +
+ backend/node_modules/setprototypeof/index.js       |   17 +
+ backend/node_modules/setprototypeof/package.json   |   38 +
+ backend/node_modules/setprototypeof/test/index.js  |   24 +
+ .../node_modules/side-channel-list/.editorconfig   |    9 +
+ backend/node_modules/side-channel-list/.eslintrc   |   11 +
+ .../side-channel-list/.github/FUNDING.yml          |   12 +
+ backend/node_modules/side-channel-list/.nycrc      |   13 +
+ .../node_modules/side-channel-list/CHANGELOG.md    |   15 +
+ backend/node_modules/side-channel-list/LICENSE     |   21 +
+ backend/node_modules/side-channel-list/README.md   |   62 +
+ backend/node_modules/side-channel-list/index.d.ts  |   13 +
+ backend/node_modules/side-channel-list/index.js    |  113 +
+ backend/node_modules/side-channel-list/list.d.ts   |   14 +
+ .../node_modules/side-channel-list/package.json    |   77 +
+ .../node_modules/side-channel-list/test/index.js   |  104 +
+ .../node_modules/side-channel-list/tsconfig.json   |    9 +
+ .../node_modules/side-channel-map/.editorconfig    |    9 +
+ backend/node_modules/side-channel-map/.eslintrc    |   11 +
+ .../side-channel-map/.github/FUNDING.yml           |   12 +
+ backend/node_modules/side-channel-map/.nycrc       |   13 +
+ backend/node_modules/side-channel-map/CHANGELOG.md |   22 +
+ backend/node_modules/side-channel-map/LICENSE      |   21 +
+ backend/node_modules/side-channel-map/README.md    |   62 +
+ backend/node_modules/side-channel-map/index.d.ts   |   15 +
+ backend/node_modules/side-channel-map/index.js     |   68 +
+ backend/node_modules/side-channel-map/package.json |   80 +
+ .../node_modules/side-channel-map/test/index.js    |  114 +
+ .../node_modules/side-channel-map/tsconfig.json    |    9 +
+ .../side-channel-weakmap/.editorconfig             |    9 +
+ .../node_modules/side-channel-weakmap/.eslintrc    |   12 +
+ .../side-channel-weakmap/.github/FUNDING.yml       |   12 +
+ backend/node_modules/side-channel-weakmap/.nycrc   |   13 +
+ .../node_modules/side-channel-weakmap/CHANGELOG.md |   28 +
+ backend/node_modules/side-channel-weakmap/LICENSE  |   21 +
+ .../node_modules/side-channel-weakmap/README.md    |   62 +
+ .../node_modules/side-channel-weakmap/index.d.ts   |   15 +
+ backend/node_modules/side-channel-weakmap/index.js |   84 +
+ .../node_modules/side-channel-weakmap/package.json |   87 +
+ .../side-channel-weakmap/test/index.js             |  114 +
+ .../side-channel-weakmap/tsconfig.json             |    9 +
+ backend/node_modules/side-channel/.editorconfig    |    9 +
+ backend/node_modules/side-channel/.eslintrc        |   12 +
+ .../node_modules/side-channel/.github/FUNDING.yml  |   12 +
+ backend/node_modules/side-channel/.nycrc           |   13 +
+ backend/node_modules/side-channel/CHANGELOG.md     |  110 +
+ backend/node_modules/side-channel/LICENSE          |   21 +
+ backend/node_modules/side-channel/README.md        |   61 +
+ backend/node_modules/side-channel/index.d.ts       |   14 +
+ backend/node_modules/side-channel/index.js         |   43 +
+ backend/node_modules/side-channel/package.json     |   85 +
+ backend/node_modules/side-channel/test/index.js    |  104 +
+ backend/node_modules/side-channel/tsconfig.json    |    9 +
+ .../node_modules/simple-update-notifier/LICENSE    |   21 +
+ .../node_modules/simple-update-notifier/README.md  |   82 +
+ .../simple-update-notifier/build/index.d.ts        |   13 +
+ .../simple-update-notifier/build/index.js          |  210 +
+ .../simple-update-notifier/package.json            |  100 +
+ .../simple-update-notifier/src/borderedText.ts     |   12 +
+ .../simple-update-notifier/src/cache.spec.ts       |   17 +
+ .../simple-update-notifier/src/cache.ts            |   44 +
+ .../src/getDistVersion.spec.ts                     |   35 +
+ .../simple-update-notifier/src/getDistVersion.ts   |   29 +
+ .../src/hasNewVersion.spec.ts                      |   82 +
+ .../simple-update-notifier/src/hasNewVersion.ts    |   40 +
+ .../simple-update-notifier/src/index.spec.ts       |   27 +
+ .../simple-update-notifier/src/index.ts            |   34 +
+ .../simple-update-notifier/src/isNpmOrYarn.ts      |   12 +
+ .../simple-update-notifier/src/types.ts            |    8 +
+ backend/node_modules/statuses/HISTORY.md           |   87 +
+ backend/node_modules/statuses/LICENSE              |   23 +
+ backend/node_modules/statuses/README.md            |  139 +
+ backend/node_modules/statuses/codes.json           |   65 +
+ backend/node_modules/statuses/index.js             |  146 +
+ backend/node_modules/statuses/package.json         |   49 +
+ backend/node_modules/supports-color/browser.js     |    5 +
+ backend/node_modules/supports-color/index.js       |  131 +
+ backend/node_modules/supports-color/license        |    9 +
+ backend/node_modules/supports-color/package.json   |   53 +
+ backend/node_modules/supports-color/readme.md      |   66 +
+ backend/node_modules/to-regex-range/LICENSE        |   21 +
+ backend/node_modules/to-regex-range/README.md      |  305 +
+ backend/node_modules/to-regex-range/index.js       |  288 +
+ backend/node_modules/to-regex-range/package.json   |   88 +
+ backend/node_modules/toidentifier/HISTORY.md       |    9 +
+ backend/node_modules/toidentifier/LICENSE          |   21 +
+ backend/node_modules/toidentifier/README.md        |   61 +
+ backend/node_modules/toidentifier/index.js         |   32 +
+ backend/node_modules/toidentifier/package.json     |   38 +
+ backend/node_modules/touch/LICENSE                 |   15 +
+ backend/node_modules/touch/README.md               |   52 +
+ backend/node_modules/touch/bin/nodetouch.js        |  112 +
+ backend/node_modules/touch/index.js                |  224 +
+ backend/node_modules/touch/package.json            |   25 +
+ backend/node_modules/type-is/HISTORY.md            |  292 +
+ backend/node_modules/type-is/LICENSE               |   23 +
+ backend/node_modules/type-is/README.md             |  198 +
+ backend/node_modules/type-is/index.js              |  250 +
+ backend/node_modules/type-is/package.json          |   47 +
+ .../undefsafe/.github/workflows/release.yml        |   25 +
+ backend/node_modules/undefsafe/.jscsrc             |   13 +
+ backend/node_modules/undefsafe/.jshintrc           |   16 +
+ backend/node_modules/undefsafe/.travis.yml         |   18 +
+ backend/node_modules/undefsafe/LICENSE             |   22 +
+ backend/node_modules/undefsafe/README.md           |   63 +
+ backend/node_modules/undefsafe/example.js          |   14 +
+ backend/node_modules/undefsafe/lib/undefsafe.js    |  125 +
+ backend/node_modules/undefsafe/package.json        |   34 +
+ backend/node_modules/unpipe/HISTORY.md             |    4 +
+ backend/node_modules/unpipe/LICENSE                |   22 +
+ backend/node_modules/unpipe/README.md              |   43 +
+ backend/node_modules/unpipe/index.js               |   69 +
+ backend/node_modules/unpipe/package.json           |   27 +
+ backend/node_modules/vary/HISTORY.md               |   39 +
+ backend/node_modules/vary/LICENSE                  |   22 +
+ backend/node_modules/vary/README.md                |  101 +
+ backend/node_modules/vary/index.js                 |  149 +
+ backend/node_modules/vary/package.json             |   43 +
+ backend/node_modules/wrappy/LICENSE                |   15 +
+ backend/node_modules/wrappy/README.md              |   36 +
+ backend/node_modules/wrappy/package.json           |   29 +
+ backend/node_modules/wrappy/wrappy.js              |   33 +
+ backend/package-lock.json                          | 1210 +++
+ backend/package.json                               |   19 +
+ backend/server.js                                  |    0
+ backend/src/api/authApi.js                         |   45 +
+ backend/src/api/catalogoApi.js                     |    0
+ backend/src/api/climaApi.js                        |    0
+ backend/src/api/faqApi.js                          |    0
+ backend/src/api/tasasApi.js                        |    0
+ backend/src/api/trackingApi.js                     |    0
+ backend/src/controllers/auth.controller.js         |    0
+ backend/src/controllers/catalogo.controller.js     |    0
+ backend/src/controllers/clima.controller.js        |    0
+ backend/src/controllers/faq.controller.js          |    0
+ backend/src/controllers/tasas.controller.js        |    0
+ backend/src/controllers/tracking.controller.js     |    0
+ backend/src/routes/auth.routes.js                  |    0
+ backend/src/routes/catalogo.routes.js              |    0
+ backend/src/routes/clima.routes.js                 |    0
+ backend/src/routes/faq.route.js                    |    0
+ backend/src/routes/tasas.routes.js                 |    0
+ backend/src/routes/tracking.routes.js              |    0
+ 926 files changed, 99593 insertions(+)
+
+commit 2600473a9e613c139f48853e926839d8b6e4a43d
+Merge: 93933ac 6d6976e
+Author: wLucas <127319880+Osonigg@users.noreply.github.com>
+Date:   Mon Nov 17 10:10:02 2025 -0400
+
+    Merge pull request #2 from Osonigg/main
+    
+    Merge pull request #1 from Osonigg/dev
+
+commit 6d6976ef91f56f1b17cae90b8e503bf4cb77b84d
+Merge: 27fa272 93933ac
+Author: wLucas <127319880+Osonigg@users.noreply.github.com>
+Date:   Sun Nov 16 18:05:34 2025 -0400
+
+    Merge pull request #1 from Osonigg/dev
+    
+    trabajando navbar, y pages
+
+commit 93933acf0d8a357a885b4ec823d4b3f43b080516
+Author: Wilmi Lucas <wilmilucas89@gmail.com>
+Date:   Sun Nov 16 17:58:41 2025 -0400
+
+    trabajando navbar, y pages
+
+ .gitignore                    | 152 +++++-------------------------------------
+ package-lock.json             |  59 ++++++++++++++++
+ package.json                  |   2 +
+ public/favicon.ico            | Bin 3870 -> 137912 bytes
+ public/index.html             |   8 +--
+ public/logo192.png            | Bin 5347 -> 0 bytes
+ public/logo2.png              | Bin 0 -> 162774 bytes
+ public/logo512.png            | Bin 9664 -> 0 bytes
+ public/manifest.json          |   4 +-
+ src/App.css                   |  26 +-------
+ src/App.js                    |  15 -----
+ src/App.jsx                   |  42 ++++++++++++
+ src/components/Navigation.css |  86 ++++++++++++++++++++++++
+ src/components/Navigation.jsx |  89 +++++++++++++++++++++++++
+ src/index.css                 |   2 +
+ src/index.js                  |   3 +
+ src/logo.png                  | Bin 0 -> 162774 bytes
+ src/logo.svg                  |   1 -
+ src/pages/About.jsx           |  12 ++++
+ src/pages/CarBasket.jsx       |  12 ++++
+ src/pages/Catologo.jsx        |  12 ++++
+ src/pages/Contact.jsx         |  12 ++++
+ src/pages/Home.jsx            |  12 ++++
+ src/pages/Login.jsx           |  31 +++++++++
+ src/pages/Register.jsx        |  35 ++++++++++
+ 25 files changed, 434 insertions(+), 181 deletions(-)
+
+commit 27fa272840ced780e792c68298413473a4e516b6
+Author: Wilmi Lucas <wilmilucas89@gmail.com>
+Date:   Fri Nov 14 13:10:31 2025 -0400
+
+    Este es mi repositorio
+
+ README.md              |    72 +-
+ package-lock.json      | 16221 +++++++++++++++++++++++++++++++++++++++++++++++
+ package.json           |    39 +
+ public/favicon.ico     |   Bin 0 -> 3870 bytes
+ public/index.html      |    43 +
+ public/logo192.png     |   Bin 0 -> 5347 bytes
+ public/logo512.png     |   Bin 0 -> 9664 bytes
+ public/manifest.json   |    25 +
+ public/robots.txt      |     3 +
+ src/App.css            |    38 +
+ src/App.js             |    15 +
+ src/App.test.js        |     8 +
+ src/index.css          |    13 +
+ src/index.js           |    17 +
+ src/logo.svg           |     1 +
+ src/reportWebVitals.js |    13 +
+ src/setupTests.js      |     5 +
+ 17 files changed, 16511 insertions(+), 2 deletions(-)
+
+commit ab77fa204488eaab3624e3ee32ce2dd2b0652a58
+Author: Wilmi <127319880+Osonigg@users.noreply.github.com>
+Date:   Fri Nov 14 11:58:54 2025 -0400
+
+    Initial commit
+
+ .gitignore | 139 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ README.md  |   2 +
+ 2 files changed, 141 insertions(+)
