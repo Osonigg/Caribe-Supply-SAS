@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from "react";
-import { useLocation, Link, useNavigate } from "react-router-dom";
+import React, { useCallback } from "react";
+import { useLocation, useNavigate } from "react-router-dom"; 
 import productsData from "./productsData";
 import Product from "./Product";
 
@@ -10,14 +10,12 @@ function Catalogo() {
     const navigate = useNavigate();
 
     const searchParams = new URLSearchParams(location.search);
-    const urlCategory = searchParams.get('category') || 'todos';
-    const urlPage = parseInt(searchParams.get('page')) || 1;
+    
+    // Obtener valores DIRECTAMENTE de la URL
+    const activeCategory = searchParams.get('category') || 'todos';
+    const currentPage = parseInt(searchParams.get('page')) || 1;
 
-    const [activeCategory, setActiveCategory] = useState(urlCategory);
-    const [currentPage, setCurrentPage] = useState(urlPage);
-
-    // 1. Usamos useCallback para que esta función no cambie en cada render
-    //    y solo se recree si 'navigate' cambia (lo cual no sucede)
+    // Función para actualizar la URL
     const updateUrl = useCallback((category, page) => {
         let path = "/catalog";
         let params = [];
@@ -33,35 +31,16 @@ function Catalogo() {
             path += `?${params.join('&')}`;
         }
         navigate(path);
-    }, [navigate]); // Solo depende de 'navigate'
-
-
-    // 2. Corregimos las dependencias del useEffect
-    useEffect(() => {
-        setActiveCategory(urlCategory);
-        
-        if (urlPage !== currentPage) {
-             setCurrentPage(urlPage);
-        } else if (urlCategory !== activeCategory) {
-            setCurrentPage(1);
-            // Al usar updateUrl, necesitamos que esté en el array
-            // o que esté envuelta en useCallback (como hicimos arriba)
-            updateUrl(urlCategory, 1); 
-        }
-        
-    }, [urlCategory, urlPage, activeCategory, currentPage, updateUrl]);
+    }, [navigate]);
 
 
     // Handler para cambio de categoría
     const handleCategoryChange = (categoryKey) => {
-        setActiveCategory(categoryKey); 
-        setCurrentPage(1);
         updateUrl(categoryKey, 1);
     };
 
     // Handler para cambio de página
     const handlePageChange = (newPage) => {
-        setCurrentPage(newPage);
         updateUrl(activeCategory, newPage);
     };
     
@@ -99,15 +78,17 @@ function Catalogo() {
                     <ul className="nav nav-tabs flex-wrap">
                         {filters.map((filter) => (
                             <li className="nav-item" key={filter.key}>
-                                <Link
+                                {/* SE CAMBIÓ <a> POR <button> para accesibilidad */}
+                                <button
+                                    type="button" // Se recomienda especificar el tipo
                                     className={`nav-link text-secondary ${
                                         activeCategory === filter.key ? "active" : ""
                                     }`}
+                                    // Simplemente llama al handler sin e.preventDefault()
                                     onClick={() => handleCategoryChange(filter.key)}
-                                    to="#"
                                 >
                                     {filter.label}
-                                </Link>
+                                </button>
                             </li>
                         ))}
                     </ul>
