@@ -6,7 +6,7 @@ const productsData = [
         description: 'Tanque de gas Fortigas de 12 libras, ideal para uso doméstico o comercial. Fabricado con materiales duraderos y seguros.',
         price: 2035.00,
         image: 'assets/tanque.jpg',
-        category: 'home-supply',
+        category: 'hogar',
     },
     {
         id: 2,
@@ -14,7 +14,7 @@ const productsData = [
         description: 'Potente bocina Kbroad con excelente calidad de volumen y bajos, perfecta para amenizar fiestas y eventos. Incluye garantía.',
         price: 1500.00,
         image: 'assets/bocina.jpg',
-        category: 'electronics',
+        category: 'accesorios',
     },
     {
         id: 3,
@@ -22,7 +22,7 @@ const productsData = [
         description: 'Elegante árbol de Navidad artificial \'Frost\' de 6 pies, ideal para decorar el hogar durante las festividades con un aspecto nevado de alta calidad.',
         price: 4500.00,
         image: 'assets/arbol.jpg',
-        category: 'seasonal',
+        category: 'hogar',
     },
     {
         id: 4,
@@ -30,14 +30,14 @@ const productsData = [
         description: 'Silla plástica de diseño cómodo y gran resistencia, perfecta para uso en exteriores, terrazas o jardines. Disponible en varios colores.',
         price: 3100.00,
         image: 'assets/silla.jpg',
-        category: 'furniture',
+        category: 'plasticos',
     },
     {
         id: 'art001',
         name: 'Tazas de aluminio',
         description: 'Juego de tazas de aluminio de alta resistencia, ideales para el día a día o para camping.',
         price: 850,
-        category: 'otros',
+        category: 'hogar',
         image: 'assets/tazas.png'
     },
     {
@@ -45,7 +45,7 @@ const productsData = [
         name: 'Pulsera de Larimar',
         description: 'Hermosa pulsera artesanal engarzada con Larimar, la piedra semipreciosa nacional de la República Dominicana.',
         price: 3200,
-        category: 'joyeria',
+        category: 'accesorios',
         image: 'assets/larimar.png'
     },
     {
@@ -85,7 +85,7 @@ const productsData = [
         name: 'Collar Ambar',
         description: 'Elegante collar con piedra de Ámbar dominicano, conocido por su claridad y color único. Pieza de joyería auténtica.',
         price: 2500,
-        category: 'joyeria',
+        category: 'accesorios',
         image: 'assets/ambar.png'
     },
     {
@@ -101,7 +101,7 @@ const productsData = [
         name: 'Pilones',
         description: 'Par de pilones (morteros) de madera, utensilio esencial en la cocina dominicana para majar especias.',
         price: 430,
-        category: 'otros',
+        category: 'hogar',
         image: 'assets/pilones.png'
     },
     {
@@ -109,7 +109,7 @@ const productsData = [
         name: 'Grecas',
         description: 'Cafetera tipo Greca tradicional. El método ideal para preparar el auténtico café dominicano en casa.',
         price: 650,
-        category: 'otros',
+        category: 'hogar',
         image: 'assets/grecas.png'
     },
     {
@@ -125,7 +125,7 @@ const productsData = [
         name: 'Souvenir',
         description: 'Pequeño souvenir o recuerdo típico de la República Dominicana, ideal para regalar.',
         price: 250,
-        category: 'otros',
+        category: 'accesorios',
         image: 'assets/souvenir.png'
     },
     {
@@ -133,7 +133,7 @@ const productsData = [
         name: 'Carteras de Guano',
         description: 'Carteras o bolsos tejidos a mano con fibra de guano, una artesanía ecológica y tradicional.',
         price: 700,
-        category: 'otros',
+        category: 'accesorios',
         image: 'assets/cartera.png'
     },
     {
@@ -149,7 +149,7 @@ const productsData = [
         name: 'Maracas',
         description: 'Juego de maracas de madera, perfectas para decorar o usar como instrumento musical.',
         price: 350,
-        category: 'otros',
+        category: 'artesania',
         image: 'assets/maracas.png'
     },
     {
@@ -157,7 +157,7 @@ const productsData = [
         name: 'Dominos RD',
         description: 'Juego de Dominó con diseño y temática de la República Dominicana.',
         price: 600,
-        category: 'otros',
+        category: 'accesorios',
         image: 'assets/dominos.png'
     },
     {
@@ -165,7 +165,7 @@ const productsData = [
         name: 'Gorra RD',
         description: 'Gorra moderna con bordado o diseño alusivo a la bandera y el país (RD).',
         price: 950,
-        category: 'gorras',
+        category: 'accesorios',
         image: 'assets/gorra1.png'
     },
     {
@@ -173,7 +173,7 @@ const productsData = [
         name: 'Gorra Las Aguilas',
         description: 'Gorra oficial del equipo de béisbol "Las Águilas Cibaeñas". Ideal para fanáticos.',
         price: 950,
-        category: 'gorras',
+        category: 'accesorios',
         image: 'assets/gorra2.png'
     },
     {
@@ -181,7 +181,7 @@ const productsData = [
         name: 'Gorra Licey',
         description: 'Gorra oficial del equipo de béisbol "Los Tigres del Licey". Perfecta para los seguidores del equipo.',
         price: 950,
-        category: 'gorras',
+        category: 'accesorios',
         image: 'assets/gorra3.png'
     },
     {
@@ -189,7 +189,7 @@ const productsData = [
         name: 'Gorra Los Gigantes',
         description: 'Gorra oficial del equipo de béisbol "Los Gigantes del Cibao".',
         price: 950,
-        category: 'gorras',
+        category: 'accesorios',
         image: 'assets/gorra4.png'
     },
     {
@@ -197,7 +197,7 @@ const productsData = [
         name: 'Merengue',
         description: 'Pintura artística que captura la alegría y el ritmo del baile nacional, el Merengue.',
         price: 3200,
-        category: 'pinturas',
+        category: 'artesania',
         image: 'assets/pintura1.png'
     },
     {
@@ -205,7 +205,7 @@ const productsData = [
         name: 'Samaná: Playa Bonita',
         description: 'Pintura de paisaje que retrata la belleza natural de Playa Bonita en la península de Samaná.',
         price: 500,
-        category: 'pinturas',
+        category: 'artesania',
         image: 'assets/pintura2.png'
     },
     {
@@ -213,7 +213,7 @@ const productsData = [
         name: 'La Costa',
         description: 'Obra de arte que evoca la tranquilidad y el colorido de la costa caribeña dominicana.',
         price: 500,
-        category: 'pinturas',
+        category: 'artesania',
         image: 'assets/pintura3.png'
     },
     {
@@ -273,4 +273,5 @@ const productsData = [
         image: 'assets/kit7.png'
     }
 ];
+
 export default productsData;

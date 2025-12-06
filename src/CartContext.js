@@ -1,4 +1,4 @@
-// CartContext.jsx
+// CartContext.jsx (Corregido)
 import React, { createContext, useState, useContext } from 'react';
 
 // 1. CREACIÓN DEL CONTEXTO
@@ -47,6 +47,11 @@ export const CartProvider = ({ children }) => {
         item.id === id ? { ...item, quantity: quantity } : item
     ));
   };
+  
+  // ⭐️ ¡AGREGADO 1: DEFINICIÓN DE LA FUNCIÓN clearCart! ⭐️
+  const clearCart = () => {
+    setCartItems([]);
+  };
 
   // VALORES EXPORTADOS
   const contextValue = {
@@ -54,6 +59,8 @@ export const CartProvider = ({ children }) => {
     addToCart, 
     removeItem, 
     updateQuantity,
+    // ⭐️ ¡AGREGADO 2: INCLUIR clearCart en el contexto! ⭐️
+    clearCart, 
     totalItems: cartItems.reduce((acc, item) => acc + item.quantity, 0),
   };
 
