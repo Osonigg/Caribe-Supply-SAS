@@ -23,7 +23,7 @@ function App() {
       <header className="App-header ">
         <div className="container d-flex p-1 mt-1">
           <aside className="container col-12 col-md-8 col-md-4 mb-3 me-auto text-dark">
-            api bolsa
+          
           </aside>
           <ThemeToggle />
         </div>
